@@ -51,7 +51,7 @@ de l'ordre de la centaine de kHz et pas de la centaine de MHz ce qui ne correspo
 
 On se repenche donc sur l'énoncé et sur le contenu du PDF pour y trouver des indices!
 
-Dans l'énoncé on nous parle d'un plan pour espionner que un de nos collègues à son insu en posant une antenne chez lui, ce qui a fini de me mettre sur la piste est le titre du challenge: `Plombier du câble`.
+Dans l'énoncé on nous parle d'un plan pour espionner un de nos collègues à son insu en posant une antenne chez lui, ce qui a fini de me mettre sur la piste est le titre du challenge: `Plombier du câble`.
 
 <br>
 
