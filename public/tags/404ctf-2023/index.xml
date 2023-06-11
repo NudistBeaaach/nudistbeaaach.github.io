@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>404CTF 2023 on Blog de TaylorDeDordogne</title>
+    <link>/tags/404ctf-2023/</link>
+    <description>Recent content in 404CTF 2023 on Blog de TaylorDeDordogne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/404ctf-2023/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plombier du câble &amp; Gestionnaire de perruche de Sparrman</title>
+      <link>/write-ups/plombier-du-c%C3%A2ble-gestionnaire-de-perruche-de-sparrman/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/plombier-du-c%C3%A2ble-gestionnaire-de-perruche-de-sparrman/</guid>
+      <description>Plombier du câble Introduction Ce challenge de RF exploitait une particularité des câbles HDMI, l&amp;rsquo;énoncé se présentait comme ceci:
+Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d&amp;#39;acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister. Ce dernier développe en effet un amour tout particulier pour le théâtre depuis ces jeunes années, où il écrivit un drame historique : Henri III et sa cour.</description>
+    </item>
+    
+    <item>
+      <title>Une citation pas comme les autres</title>
+      <link>/write-ups/une-citation-pas-comme-les-autres/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/une-citation-pas-comme-les-autres/</guid>
+      <description>Introduction Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&amp;rsquo;exploiter des format strings, mais à cause d&amp;rsquo;une imprécision pour la première partie j&amp;rsquo;ai fait pop un shell pour la première partie sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&amp;rsquo;ai utilisé pour exploiter le binaire! L&amp;rsquo;énoncé se présentait comme ceci:
+Un coin lecture rempli de nombreux livres est à la disposition des clients.</description>
+    </item>
+    
+    <item>
+      <title>Vélocipède Mécanique</title>
+      <link>/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</guid>
+      <description>Introduction Ce challenge faisait partie de la catégorie Reverse, l&amp;rsquo;énoncé se présentait comme ceci:
+En vagabondant dans le café, vous rencontrez le mystérieux Balzac. Il vous appelle dans un coin discret et vous tend une boîte étrange. Il vous dit que c&amp;#39;est une &amp;#34;VM&amp;#34;, ou &amp;#34;Vélocipède Mécanique&amp;#34;, une machine de fabrication étrangère qui ressemble à une machine à écrire, mais qui semble bien plus avancée. Il vous tend également une feuille qu&amp;#39;il appelle un &amp;#34;programme&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Cracken</title>
+      <link>/write-ups/cracken/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/cracken/</guid>
+      <description>Introduction Hello, pour ce premier Write-Up de l&amp;rsquo;édition 2023 du 404CTf, on commence avec un challenge de Forensics. L&amp;rsquo;énoncé se présente comme ceci:
+Au milieu du café trône une table depuis laquelle un homme scrute ses semblables en engloutissant un breuvage étrange. Vous l&amp;#39;observez du coin de l&amp;#39;œil depuis plusieurs minutes déjà quand la porte du café s&amp;#39;ouvre avec fracas. Un homme surgit alors, criant comme si le café était tout à lui.</description>
+    </item>
+    
+  </channel>
+</rss>

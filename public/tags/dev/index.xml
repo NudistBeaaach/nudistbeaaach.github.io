@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev on Blog de TaylorDeDordogne</title>
+    <link>/tags/dev/</link>
+    <description>Recent content in Dev on Blog de TaylorDeDordogne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pas si chronophage</title>
+      <link>/write-ups/pas_si_chronophage/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/pas_si_chronophage/</guid>
+      <description>DGHACK 2022: Pas si chronophage Ce challenge de programmation était un challenge de captcha nécessitant un vrai travail de traitement d&amp;rsquo;image et donc super cool! Effectivement les captchas présentant des lettres peuvent être résolus facilement en utilisant des OCRs mais pour celui-ci où le captcha était une horloge je n&amp;rsquo;ai pas trouvé d&amp;rsquo;IA gratuite et adaptée au challenge, j&amp;rsquo;ai opté pour une méthode plus compliquée mais aussi beaucoup plus intéressante que d&amp;rsquo;utiliser une IA toute faite en plus de m&amp;rsquo;avoir fait me replonger dans OpenCv :)</description>
+    </item>
+    
+  </channel>
+</rss>

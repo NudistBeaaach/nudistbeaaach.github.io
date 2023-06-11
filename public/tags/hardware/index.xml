@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on Blog de TaylorDeDordogne</title>
+    <link>/tags/hardware/</link>
+    <description>Recent content in Hardware on Blog de TaylorDeDordogne</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cubik&#39; Cipher</title>
+      <link>/write-ups/cubik-cipher/</link>
+      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/write-ups/cubik-cipher/</guid>
+      <description>Introduction Cubik&amp;rsquo;Cipher est un challenge de catégorie Hardware issu de l&amp;rsquo;édition 2022 du HackDay, se présentant comme ceci:
+Il y&amp;rsquo;a un mois, un espion a réussi à s&amp;rsquo;infiltrer dans le repère secret d&amp;rsquo;un ennemi!
+Celui ci était en train de développer son propre chiffreur de données!
+Depuis il semblerait que l&amp;rsquo;ennemi l&amp;rsquo;ait terminé, à nous de construire le déchiffreur grâce auquel nous pourrons l&amp;rsquo;espionner sans qu&amp;rsquo;il s&amp;rsquo;en rende compte!
+Le flag est de la forme HACKDAY{&amp;hellip;}</description>
+    </item>
+    
+  </channel>
+</rss>
