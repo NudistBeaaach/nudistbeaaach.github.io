@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HackTheBox on Blog de TaylorDeDordogne</title>
-    <link>/tags/hackthebox/</link>
+    <link>https://nudistbeaaach.github.io/tags/hackthebox/</link>
     <description>Recent content in HackTheBox on Blog de TaylorDeDordogne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Convoluted boot</title>
-      <link>/write-ups/convoluted-boot/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/convoluted-boot/</link>
       <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/write-ups/convoluted-boot/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/convoluted-boot/</guid>
       <description>Introduction Ce challenge était un challenge de Cracking basé sur un bootkit disponible sur HackTheBox. J&amp;rsquo;ai fait ce challenge avec l&amp;rsquo;ami 0poss que je remercie pour son aide! Mais bref, commençons, l&amp;rsquo;énoncé se présente comme ceci:
 Some nodes in our data center have been producing unexpected errors and crash for a while now. When analyzing the systems offline, we couldn&amp;#39;t find anything wrong with them. After a very throurough investigation, we think we have it nailed down to the netboot server handling the distributions on the PXE network, we suspect a bootkit is involved.</description>
     </item>

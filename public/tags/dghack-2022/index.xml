@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DG&#39;Hack 2022 on Blog de TaylorDeDordogne</title>
-    <link>/tags/dghack-2022/</link>
+    <link>https://nudistbeaaach.github.io/tags/dghack-2022/</link>
     <description>Recent content in DG&#39;Hack 2022 on Blog de TaylorDeDordogne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/dghack-2022/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/dghack-2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pas si chronophage</title>
-      <link>/write-ups/pas_si_chronophage/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/pas_si_chronophage/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/write-ups/pas_si_chronophage/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/pas_si_chronophage/</guid>
       <description>DGHACK 2022: Pas si chronophage Ce challenge de programmation était un challenge de captcha nécessitant un vrai travail de traitement d&amp;rsquo;image et donc super cool! Effectivement les captchas présentant des lettres peuvent être résolus facilement en utilisant des OCRs mais pour celui-ci où le captcha était une horloge je n&amp;rsquo;ai pas trouvé d&amp;rsquo;IA gratuite et adaptée au challenge, j&amp;rsquo;ai opté pour une méthode plus compliquée mais aussi beaucoup plus intéressante que d&amp;rsquo;utiliser une IA toute faite en plus de m&amp;rsquo;avoir fait me replonger dans OpenCv :)</description>
     </item>
     
     <item>
       <title>Curlify</title>
-      <link>/write-ups/curlify/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/curlify/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/write-ups/curlify/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/curlify/</guid>
       <description>DGHACK 2022: Curlify Hello, pour ce premier Write up de l&amp;rsquo;édition 2022 du DG&amp;rsquo;Hack on commence par un challenge Web!
 Introduction Curlify était un challenge impliquant un mécanisme de SSRF plutôt intéressant, l&amp;rsquo;objéctif étant de lire le contenu du fichier flag.php.
 Premier aperçu en arrivant sur la page web principale index.php, on arrive devant un input nous proposant de &amp;quot;curlifier&amp;quot; une url:
@@ -30,10 +30,10 @@ Cet input nous permettra de faire faire des requêtes GET (et uniquement GET) pa
     
     <item>
       <title>Sandchat</title>
-      <link>/write-ups/sandchat/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/sandchat/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/write-ups/sandchat/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/sandchat/</guid>
       <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.
 Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:
 On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>

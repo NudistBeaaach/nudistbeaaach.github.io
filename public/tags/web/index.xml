@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Blog de TaylorDeDordogne</title>
-    <link>/tags/web/</link>
+    <link>https://nudistbeaaach.github.io/tags/web/</link>
     <description>Recent content in Web on Blog de TaylorDeDordogne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Curlify</title>
-      <link>/write-ups/curlify/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/curlify/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>/write-ups/curlify/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/curlify/</guid>
       <description>DGHACK 2022: Curlify Hello, pour ce premier Write up de l&amp;rsquo;édition 2022 du DG&amp;rsquo;Hack on commence par un challenge Web!
 Introduction Curlify était un challenge impliquant un mécanisme de SSRF plutôt intéressant, l&amp;rsquo;objéctif étant de lire le contenu du fichier flag.php.
 Premier aperçu en arrivant sur la page web principale index.php, on arrive devant un input nous proposant de &amp;quot;curlifier&amp;quot; une url:
