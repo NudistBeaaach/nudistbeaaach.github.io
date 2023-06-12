@@ -317,7 +317,7 @@
   
   <div class="content"><h2 id="plombier-du-câble">Plombier du câble</h2>
 <h3 id="introduction">Introduction</h3>
-<p>Ce challenge de RF exploitait une particularité des câbles <code>HDMI</code>, l&rsquo;énoncé se présentait comme ceci:</p>
+<p>Ce challenge de RF assez original exploitait une particularité des câbles <code>HDMI</code> qui permettait de faire de l&rsquo;<code>eavesdropping</code> du contenu d&rsquo;un écran, l&rsquo;énoncé se présentait comme ceci:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d&#39;acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister. Ce dernier développe en effet un amour tout particulier pour le théâtre depuis ces jeunes années, où il écrivit un drame historique : Henri III et sa cour.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Le temps, à l&#39;image d&#39;un sablier, s&#39;écoule tranquillement.
@@ -388,7 +388,7 @@ Et ces ondes garbage, une fois décodées, permettent d&rsquo;avoir un apercu en
 </span></span><span class="line"><span class="cl">Elle se lève pour étreindre son honneur décoré Chevalier de la Légion d&#39;honneur, qui n&#39;est autre que ce très cher Alexandre DUMAS.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Vous voilà dans un état de disgrâce. Une mission de taille, très technique, et aucune information, car vous avez le sommeil facile. Vous prenez votre décaième café, et sortant votre ordinateur personnel dont le poids et la taille permettent un transport facile notamment en extérieur, vous vous lancez dans ce laborieux travail en quête d&#39;un lieu où se trouverait le terminus du long et périlleux voyage de notre perruche de Sparrman.
-</span></span></code></pre></div><p>Il va donc s&rsquo;agir de retrouver un lieu en particulier. Comme pour un des autres challenges de <code>RF</code>, le titre de celui-ci est un acronyme de <code>GPS</code>, et en parcourant l&rsquo;énoncé on arrive à trouver les informations minimales sur notre signal: Il est échantilloné à <code>8Msps</code> et le type de donnée est au format 8 bit complexe (<code>IChar</code> dans gnuradio, c&rsquo;est le format d&rsquo;enregistrement notamment utilisé par les <code>HackRF</code>). Et comme aucune fréquence ne nous est donné, on part du principe que le signal a été enregistré à la fréquence GPS civile: <code>1 575,42 MHz</code>.</p>
+</span></span></code></pre></div><p>Il va donc s&rsquo;agir de retrouver un lieu en particulier. Comme pour un des autres challenges de <code>RF</code>, le titre de celui-ci est un acronyme, on sait qu&rsquo;il va falloir aller chercher du côté du protocole <code>GPS</code>. Et en parcourant l&rsquo;énoncé on arrive à trouver les informations minimales sur notre signal: Il est échantilloné à <code>8Msps</code> et le type de donnée est au format 8 bit complexe (<code>IChar</code> dans gnuradio, c&rsquo;est le format d&rsquo;enregistrement notamment utilisé par les <code>HackRF</code>). Et comme aucune fréquence ne nous est donné, on part du principe que le signal a été enregistré à la fréquence GPS civile: <code>1 575,42 MHz</code>.</p>
 <h3 id="rappel-sur-le-gps">Rappel sur le GPS</h3>
 <p>Le système GPS se base sur un ensemble de 31 satellites (24 pour <code>GLONASS</code>, l&rsquo;équivalent russe). Chaque satellite possède un unique code pseudo-random nommé <code>C/A</code> (<code>Coarse Acquisition</code>) qui permet au récepteur d&rsquo;identifier correctement de quel satellite provient le signal qu&rsquo;il reçoit, la modulation utilisée est une modulation en phase (<code>BPSK</code>) fonction du nombre <code>C/A</code>. En pratique cette modulation rend le signal complexe à décoder, si bien qu&rsquo;il apparait comme proche du bruit:</p>
 <div>
@@ -411,7 +411,7 @@ Et ces ondes garbage, une fois décodées, permettent d&rsquo;avoir un apercu en
 Au sol, il existe des stations de contrôle de l&rsquo;US Air Force, qui surveillent les satellites, calculent et leurs transmettent leurs éphémérides exactes qu&rsquo;il relayeront aux autres récepteurs GPS. Les éphémérides sont redemandées par les satellites aux stations de contrôle toutes les heures et l&rsquo;almanach toutes les semaines.</p>
 <h3 id="décodage-de-la-trame-gps">Décodage de la trame GPS</h3>
 <p>Bon maintenant, on peut en revenir au challenge 🙂!
-Pour décoder cette trame GPS on va utiliser un programme spécialisé là dedans: <a href="https://gnss-sdr.org">GNSS-SDR</a>, qui par ailleurs propose un excellent tutoriel pour prendre se familiariser avec le décodage GPS. <code>GNSS-SDR</code> va prendre en argument un fichier de config dans lequel nous devons mettre les caractéristiques du signal et il est même possible de traiter le signal avec divers filtres directement dans la config!
+On possède une trame GPS et il va falloir la décoder pour retrouver les coordonnées,Pour y arriver on va utiliser un programme spécialisé là dedans: <a href="https://gnss-sdr.org">GNSS-SDR</a>, qui par ailleurs propose un excellent tutoriel pour se familiariser avec le décodage GPS. <code>GNSS-SDR</code> va prendre en argument un fichier de config dans lequel nous devons mettre les caractéristiques du signal, et il est même possible de traiter le signal avec divers filtres directement dans la config!
 Voilà la configuration à utiliser et en dessous les explication:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[GNSS-SDR]
 </span></span><span class="line"><span class="cl">
@@ -474,8 +474,7 @@ Voilà la configuration à utiliser et en dessous les explication:</p>
 </span></span><span class="line"><span class="cl">PVT.rtcm_MT1019_rate_ms=5000
 </span></span><span class="line"><span class="cl">PVT.rtcm_MT1077_rate_ms=1000
 </span></span><span class="line"><span class="cl">PVT.rinex_version=2
-</span></span></code></pre></div><p>Voilà comment adapter la config à notre signal, en fonction des différents blocs:</p>
-<p><em>SIGNAL_SOURCE CONFIG:</em></p>
+</span></span></code></pre></div><p><em>SIGNAL_SOURCE CONFIG:</em></p>
 <p>Il s&rsquo;agit du bloc d&rsquo;entrée dans lequel on va mettre les caractéristiques de base de notre signal</p>
 <ul>
 <li><strong>SignalSource.filename</strong>, c&rsquo;est le chemin vers le fichier contenant le signal.</li>
@@ -487,7 +486,7 @@ Voilà la configuration à utiliser et en dessous les explication:</p>
 <ul>
 <li><strong>DataTypeAdapter.implementation</strong>, c&rsquo;est là qu&rsquo;on va spécifier la conversion de données entre notre signal et le signal attendue par le reste de la config, on met donc <code>Ibyte_To_Complex</code>.</li>
 <li><strong>InputFilter.implementation</strong>, c&rsquo;est le type de filtre que l&rsquo;on veut appliquer sur notre signal, dans notre cas on ne veut pas apporter de modifications donc on met <code>Pass_Through</code>.</li>
-<li><strong>InputFilter.item_type</strong>, le type attendu par le filtre, comme dit précédemment dans notre cas ce sera un <code>gr_complexe</code>.</li>
+<li><strong>InputFilter.item_type</strong>, le type attendu par le filtre, comme dit précédemment dans notre cas ce sera un <code>gr_complex</code>.</li>
 <li><strong>Resampler.item_type</strong>, idem mais pour le resampler.</li>
 <li><strong>Resampler.sample_freq_in</strong> et <strong>Resampler.sample_freq_out</strong>, ce sont la fréquence d&rsquo;entrée du resampler (dans notre cas 8Msps) et la fréquence attendue par GNSS-SDR (2Msps)</li>
 </ul>
