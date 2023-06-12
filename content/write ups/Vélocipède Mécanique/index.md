@@ -17,7 +17,7 @@ Balzac vous demande de l'étudier et d'essayer de découvrir tous ses secrets. C
 ```
 Deux fichiers étaient fournis avec ça: `vm` et `reverse_my_vm.vmr`. Il s'agit donc d'une machine virtuelle, et on a le programme qui sera exécuté par cette dernière. Par la suite on verra que cette VM implémente relativement peu d'instructions, par conséquent ca ne devrais pas être trop difficile donc autant le solve d'une manière intelligente (histoire de pouvoir quand même en tirer quelque chose de nouveau 🙂)!
 <br>
-C'est pourquoi au lieu de coder un simple désasembleur ou d'utiliser l'exécution symbolique on va utiliser [Qiling](https://qiling.io), un framework d'émulation qui va nous permettre de récupérer une `trace` d'exécution de la VM.
+C'est pourquoi au lieu de coder un simple désasembleur ou d'utiliser l'exécution symbolique on va utiliser [Qiling](https://qiling.io), un framework d'émulation basé sur `Unicorn` qui va nous permettre de récupérer une `trace` d'exécution de la VM.
 
 Mais tout d'abord on peut lancer le programme une première fois, on doit lui fournir son script en argument:
 
@@ -73,7 +73,7 @@ Ok on lance le script, et...
 [x]     bl    : 0x0
 [x]     ax    : 0xe7
 ```
-On se prend une grosse erreur, c'est du au fait que le la version proposée de la libc par le rootfs `x8664_linux`, n'est pas celle attendue par le binaire, pour régler ce problème on peut utiliser notre propre filesystem pour régler ce problème (ma libc étant la `2.35`) Et on se prend une erreur différente:
+On se prend une grosse erreur, c'est du au fait que le la version proposée de la libc par le rootfs `x8664_linux`, n'est pas celle attendue par le binaire, pour régler ce problème on peut utiliser notre propre filesystem (ma libc étant la `2.35`). Et cette fois ci on se prend une erreur différente:
 
 ```bash
 /lib/x86_64-linux-gnu/libc.so.6: CPU ISA level is lower than required
@@ -187,7 +187,7 @@ Ensuite la fontion main va appeller une fonction que l'on nommera `vm_start`.
 
 ### Analyse de la fonction vm_start
 
-Cette fonction s'apparente fortement à la boucle qui va probablement parcourir le code de notre programme.
+Cette fonction s'apparente à une boucle qui va parcourir le code de notre programme.
 
 <div>
     <img src="assets/VM_loop.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
@@ -196,18 +196,18 @@ Cette fonction s'apparente fortement à la boucle qui va probablement parcourir 
 On y voit l'appel à trois fonctions:
 
 * **sub_2061** que l'on va renommer `handler_exit` et va faire quitter la VM puis libérer sa mémoire.
-* **sub_1440** que l'on va renommer `vm_run` et qui va se charger d'exécuter chaque instruction (on y reviendra)
+* **sub_1440** que l'on va renommer `vm_run` et qui va se charger d'exécuter chaque instruction (on y reviendra).
 * **sub_208c** qui prend en paramètre "main" et que l'on va analyser maintenant!
 
 ### Analyse de la fonction find_symbol
 
-L'objectif de cette fonction va être de trouver un symbole dans le code de la VM, elle est appellé au début de l'exécution du code pour trouver la fonction `main` de la VM. Renommons les principales variables:
+L'objectif de cette fonction va être de trouver un symbole dans le code de la VM, elle est appellé au début de l'exécution du code pour trouver la fonction `main`. Renommons les principales variables:
 
 <div>
     <img src="assets/find_symbol.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
 
-La fonction va itérer parmis le code jusqu'à trouver un certain motif, par exemple pour trouver une fonction nommée `func`, le programme va chercher ce motif dans le programme de la VM:
+La fonction va itérer parmis le code jusqu'à trouver un certain motif qui indique le début du code associé au symbole. Par exemple pour trouver une fonction nommée `func`, le programme va chercher ce motif dans le programme de la VM:
 
 ```goat
 +------+-------------+--------+------+
@@ -231,7 +231,7 @@ On remarque aussi plusieurs appels à une fonction que j'ai nommé `vm_error` et
     <img src="assets/vm_error.PNG", style="max-width:130%;margin-left: 50%;transform: translateX(-50%);">
 </div>
 
-Maintenant on va passer à la fonction principale, qui va fetch chaque opcode et exécuter les différentes instructions.
+Maintenant on va passer à la fonction principale, cell qui va fetch chaque opcode et exécuter les différentes instructions associées.
 
 ### Analyse du dispacher de la VM
 
@@ -244,7 +244,7 @@ En regardant le graphe du dispacher, ce dernier s'apparente au graphe d'un switc
 Il y'a 17 handlers, donc chaque opcode tient sur 1 octet, les bytes suivants l'opcodes caractérisent les opérandes de l'instruction. Voilà les différentes instructions faisables par le processeur virtuel:
 
 * **NOP**
-* **JZ**: Saut conditionnel en fonction de si un registre que l'on nommera `A` est nul ou non.
+* **JZ**: Saut conditionnel en fonction de si un registre, que l'on nommera `A`, est nul ou non.
 * **MOV CST**: Met la constante passée en opérande dans le registre passé en opérande.
 * **PRINT**: Affiche la chaine de caractère pointée par le registre A.
 * **READ**: Lit une chaine depuis `stdin` vers la stack.
@@ -285,7 +285,7 @@ La fonction sous le nom `access_memory` va juste se charger de déréférencer l
     <img src="assets/xref.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
 
-Et c'est là qu'on va pouvoir obtenir une trace de notre machine virutelle:
+Et c'est grâce à l'usage de ces fonctions qu'on va pouvoir obtenir une trace d'exécution de notre VM:
 
 * On peut hook chaque accès aux registres virtuels grâce à la fonction `access_register_bank`.
 * On peut hook chaque accès à la mémoire du code avec la fonction `access_memory`.
@@ -332,7 +332,7 @@ HANDLERS = {
 }
 ```
 
-Super nickel! Maintenant on crée des listes pour log chaque accès aux opérandes, ensuite on va hook les accès aux registres:
+Super nickel 👨‍🍳! Maintenant on crée des listes pour log chaque accès aux registres:
 
 ```python
 STACK = list()
@@ -355,7 +355,7 @@ def hook_register_access(ql: Qiling) -> None:
 ql.hook_address(hook_register_access, register_bank_access_ret + BASE)
 ```
 
-On fait de même avec les opérandes constantes et les appels de fonction:
+On fait de même avec les opérandes mémoires et les appels de fonction:
 
 ```python
 # Ces adresses correspondent respectivement à l'instruction `ret` de la fonction `access_memory` pour récupérer l'opérande utilisée par l'instruction suivante
@@ -377,7 +377,7 @@ ql.hook_address(hook_memory_access, memory_access_ret + BASE)
 ql.hook_address(hook_stackframes, func_finder_prolog + BASE)
 ```
 
-Et finalement on va hook au milieu de chaque handler pour afficher l'instruction qui est en train d'être exécuté et avec quelle valeurs:
+Et finalement on va hook au milieu de chaque handler pour afficher l'instruction qui est en train d'être exécuté, pour savoir quelles opérandes elle utilise, il suffir d'aller voir dans les listes de logging qu'on a créé:
 
 ```python
 def hook_handlers(ql: Qiling) -> None:
@@ -570,12 +570,10 @@ Ok donc là on a plein de choses intéressantes, déjà on voit l'appel à la fo
 [=] 	(sub) A -> 0x2b , R3 -> 0x1
 [=] 	(jz) [0x196ed] -> 0xffffffd2
 ```
-A chaque fois que ce doe se répète, la valeur contenue dans A est décrémentée de 1, et ensuite on a un saut conditionnel vers `0x196ed`: On a affaire à une boucle qui va visiblement XORer une zone de mémoire avec notre input. Si vous vous souvenez au début quand on avait lancé l'exécutable avec une clé aléatoire on avait eu une erreur comme quoi la fonction `check_key` n'a pas pu être trouvé, en fait il s'agit de packing ,la VM va déchiffrer la suite de son code avec notre clé qui doit faire donc 8 caractères!
+A chaque fois que ce code se répète, la valeur contenue dans A est décrémentée de 1, et ensuite on a un saut conditionnel vers `0x196ed`: On a affaire à une boucle qui va visiblement XORer une zone de mémoire avec notre input. Si vous vous souvenez au début quand on avait lancé l'exécutable avec une clé aléatoire on avait eu une erreur comme quoi la fonction `check_key` n'a pas pu être trouvé, en fait il s'agit de packing ,la VM va déchiffrer la suite de son code avec notre clé qui doit faire donc 8 caractères!
 
 Mais comment sommes nous censés trouver la clé pour accéder à la suite du code si on n'a aucune idée de ce dernier me direz vous?
 Et bien on sait au moins que le programme va tenter, après le déchiffrement d'appeller la fonction `check_key` et on sait à quoi doit ressembler le motif qui indique la présence d'une fonction à un endroit précis dans le code 😀!
-
-<br>
 
 On est donc dans une situation triviale de XOR avec clair connu:
 Les premiers octets à déchiffrer sont `0x11213d63` et `0x33195222` et que leur version déchiffrée doit correspondre à `b"\x01\x09check_"`. Donc:
@@ -601,7 +599,8 @@ Congrats! Your flag is: A|p7Ko[JoW.x
 Ok donc le programme nous demande maintenant un mot de passe avec lequel il va visiblement faire des opérations qui devraient nous afficher un flag si le mot de passe est corret. Pour le découvrir il nous suffit de relancer notre tracer:
 
 ```bash
-Now, enter the passcode: [=] 	write(fd = 0x1, buf = 0x55555556d710, count = 0x19) = 0x19
+Now, enter the passcode: 
+[=] 	write(fd = 0x1, buf = 0x55555556d710, count = 0x19) = 0x19
 [=] 	(print) 
 [=] 	(mov) B -> 0x47415753 , [0x1943a] -> 0x100
 ABCD
