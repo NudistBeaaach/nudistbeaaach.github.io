@@ -6,7 +6,17 @@
     <description>Recent content on Blog de TaylorDeDordogne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Box : Escape</title>
+      <link>https://nudistbeaaach.github.io/write-ups/htb-escape/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nudistbeaaach.github.io/write-ups/htb-escape/</guid>
+      <description>Introduction Cette box était une machine windows de niveau medium qui permettait de privec en utilisant une vulnérabilité de type ESC1! On va commencer tout de suite en lançant un scan nmap comme pour toutes les box HTB.
+Reconnaissance Scans Le scan présente bien toutes les caractéristiques d&amp;rsquo;un Domain Controller, on y voit les ports 445 et 139 pour le smb, le port 88 pour le ``Kerberos 5 ticket service` et le service DNS habituel:</description>
+    </item>
+    
     <item>
       <title>Plombier du câble &amp; Gestionnaire de perruche de Sparrman</title>
       <link>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble-gestionnaire-de-perruche-de-sparrman/</link>

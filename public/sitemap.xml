@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nudistbeaaach.github.io/tags/404ctf-2023/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nudistbeaaach.github.io/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/tags/hackthebox/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/tags/pentest/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/tags/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/write-ups/htb-escape/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/write-ups/</loc>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nudistbeaaach.github.io/tags/404ctf-2023/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble-gestionnaire-de-perruche-de-sparrman/</loc>
@@ -17,13 +32,7 @@
     <loc>https://nudistbeaaach.github.io/tags/rf/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nudistbeaaach.github.io/tags/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nudistbeaaach.github.io/write-ups/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nudistbeaaach.github.io/tags/re/</loc>
@@ -48,9 +57,6 @@
     <lastmod>2023-01-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nudistbeaaach.github.io/write-ups/convoluted-boot/</loc>
-    <lastmod>2023-01-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nudistbeaaach.github.io/tags/hackthebox/</loc>
     <lastmod>2023-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nudistbeaaach.github.io/write-ups/curlify/</loc>
