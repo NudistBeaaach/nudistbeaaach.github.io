@@ -9,7 +9,7 @@ tags: ["RF", "404CTF 2023"]
 
 ### Introduction
 
-Ce challenge de RF exploitait une particularité des câbles `HDMI`, l'énoncé se présentait comme ceci:
+Ce challenge de RF assez original exploitait une particularité des câbles `HDMI` qui permettait de faire de l'`eavesdropping` du contenu d'un écran, l'énoncé se présentait comme ceci:
 
 ```txt
 Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d'acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister. Ce dernier développe en effet un amour tout particulier pour le théâtre depuis ces jeunes années, où il écrivit un drame historique : Henri III et sa cour.
@@ -107,7 +107,7 @@ Elle se lève pour étreindre son honneur décoré Chevalier de la Légion d'hon
 
 Vous voilà dans un état de disgrâce. Une mission de taille, très technique, et aucune information, car vous avez le sommeil facile. Vous prenez votre décaième café, et sortant votre ordinateur personnel dont le poids et la taille permettent un transport facile notamment en extérieur, vous vous lancez dans ce laborieux travail en quête d'un lieu où se trouverait le terminus du long et périlleux voyage de notre perruche de Sparrman.
 ```
-Il va donc s'agir de retrouver un lieu en particulier. Comme pour un des autres challenges de `RF`, le titre de celui-ci est un acronyme de `GPS`, et en parcourant l'énoncé on arrive à trouver les informations minimales sur notre signal: Il est échantilloné à `8Msps` et le type de donnée est au format 8 bit complexe (`IChar` dans gnuradio, c'est le format d'enregistrement notamment utilisé par les `HackRF`). Et comme aucune fréquence ne nous est donné, on part du principe que le signal a été enregistré à la fréquence GPS civile: `1 575,42 MHz`.
+Il va donc s'agir de retrouver un lieu en particulier. Comme pour un des autres challenges de `RF`, le titre de celui-ci est un acronyme, on sait qu'il va falloir aller chercher du côté du protocole `GPS`. Et en parcourant l'énoncé on arrive à trouver les informations minimales sur notre signal: Il est échantilloné à `8Msps` et le type de donnée est au format 8 bit complexe (`IChar` dans gnuradio, c'est le format d'enregistrement notamment utilisé par les `HackRF`). Et comme aucune fréquence ne nous est donné, on part du principe que le signal a été enregistré à la fréquence GPS civile: `1 575,42 MHz`.
 
 ### Rappel sur le GPS
 
@@ -134,8 +134,8 @@ Au sol, il existe des stations de contrôle de l'US Air Force, qui surveillent l
 
 ### Décodage de la trame GPS
 
-Bon maintenant, on peut en revenir au challenge 🙂! 
-Pour décoder cette trame GPS on va utiliser un programme spécialisé là dedans: [GNSS-SDR](https://gnss-sdr.org), qui par ailleurs propose un excellent tutoriel pour prendre se familiariser avec le décodage GPS. `GNSS-SDR` va prendre en argument un fichier de config dans lequel nous devons mettre les caractéristiques du signal et il est même possible de traiter le signal avec divers filtres directement dans la config!
+Bon maintenant, on peut en revenir au challenge 🙂!
+On possède une trame GPS et il va falloir la décoder pour retrouver les coordonnées,Pour y arriver on va utiliser un programme spécialisé là dedans: [GNSS-SDR](https://gnss-sdr.org), qui par ailleurs propose un excellent tutoriel pour se familiariser avec le décodage GPS. `GNSS-SDR` va prendre en argument un fichier de config dans lequel nous devons mettre les caractéristiques du signal, et il est même possible de traiter le signal avec divers filtres directement dans la config!
 Voilà la configuration à utiliser et en dessous les explication:
 
 ```txt
@@ -202,8 +202,6 @@ PVT.rtcm_MT1077_rate_ms=1000
 PVT.rinex_version=2
 ```
 
-Voilà comment adapter la config à notre signal, en fonction des différents blocs:
-
 *SIGNAL_SOURCE CONFIG:*
 
 Il s'agit du bloc d'entrée dans lequel on va mettre les caractéristiques de base de notre signal
@@ -218,7 +216,7 @@ Il s'agit du bloc dans lequel on peut apporter des modifications à notre signal
 
 * **DataTypeAdapter.implementation**, c'est là qu'on va spécifier la conversion de données entre notre signal et le signal attendue par le reste de la config, on met donc `Ibyte_To_Complex`.
 * **InputFilter.implementation**, c'est le type de filtre que l'on veut appliquer sur notre signal, dans notre cas on ne veut pas apporter de modifications donc on met `Pass_Through`.
-* **InputFilter.item_type**, le type attendu par le filtre, comme dit précédemment dans notre cas ce sera un `gr_complexe`.
+* **InputFilter.item_type**, le type attendu par le filtre, comme dit précédemment dans notre cas ce sera un `gr_complex`.
 * **Resampler.item_type**, idem mais pour le resampler.
 * **Resampler.sample_freq_in** et **Resampler.sample_freq_out**, ce sont la fréquence d'entrée du resampler (dans notre cas 8Msps) et la fréquence attendue par GNSS-SDR (2Msps)
 

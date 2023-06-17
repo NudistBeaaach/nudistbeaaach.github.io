@@ -322,7 +322,7 @@
 </span></span><span class="line"><span class="cl">Balzac vous demande de l&#39;étudier et d&#39;essayer de découvrir tous ses secrets. C&#39;est un honneur qu&#39;il vous fasse confiance pour cette mission, mais vous ne savez pas encore par où commencer.
 </span></span></code></pre></div><p>Deux fichiers étaient fournis avec ça: <code>vm</code> et <code>reverse_my_vm.vmr</code>. Il s&rsquo;agit donc d&rsquo;une machine virtuelle, et on a le programme qui sera exécuté par cette dernière. Par la suite on verra que cette VM implémente relativement peu d&rsquo;instructions, par conséquent ca ne devrais pas être trop difficile donc autant le solve d&rsquo;une manière intelligente (histoire de pouvoir quand même en tirer quelque chose de nouveau 🙂)!
 <br>
-C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utiliser l&rsquo;exécution symbolique on va utiliser <a href="https://qiling.io">Qiling</a>, un framework d&rsquo;émulation qui va nous permettre de récupérer une <code>trace</code> d&rsquo;exécution de la VM.</p>
+C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utiliser l&rsquo;exécution symbolique on va utiliser <a href="https://qiling.io">Qiling</a>, un framework d&rsquo;émulation basé sur <code>Unicorn</code> qui va nous permettre de récupérer une <code>trace</code> d&rsquo;exécution de la VM.</p>
 <p>Mais tout d&rsquo;abord on peut lancer le programme une première fois, on doit lui fournir son script en argument:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./vm reverse_my_vm.vmr 
 </span></span><span class="line"><span class="cl">Please enter the key: <span class="nb">test</span>
@@ -364,7 +364,7 @@ C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utilise
 </span></span><span class="line"><span class="cl"><span class="o">[</span>x<span class="o">]</span>     bh    : 0x0
 </span></span><span class="line"><span class="cl"><span class="o">[</span>x<span class="o">]</span>     bl    : 0x0
 </span></span><span class="line"><span class="cl"><span class="o">[</span>x<span class="o">]</span>     ax    : 0xe7
-</span></span></code></pre></div><p>On se prend une grosse erreur, c&rsquo;est du au fait que le la version proposée de la libc par le rootfs <code>x8664_linux</code>, n&rsquo;est pas celle attendue par le binaire, pour régler ce problème on peut utiliser notre propre filesystem pour régler ce problème (ma libc étant la <code>2.35</code>) Et on se prend une erreur différente:</p>
+</span></span></code></pre></div><p>On se prend une grosse erreur, c&rsquo;est du au fait que le la version proposée de la libc par le rootfs <code>x8664_linux</code>, n&rsquo;est pas celle attendue par le binaire, pour régler ce problème on peut utiliser notre propre filesystem (ma libc étant la <code>2.35</code>). Et cette fois ci on se prend une erreur différente:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/lib/x86_64-linux-gnu/libc.so.6: CPU ISA level is lower than required
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span>     writev<span class="o">(</span><span class="nv">fd</span> <span class="o">=</span> 0x2, <span class="nv">vec</span> <span class="o">=</span> 0x80000000d490, <span class="nv">vlen</span> <span class="o">=</span> 0x2<span class="o">)</span> <span class="o">=</span> 0x46
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span>     exit_group<span class="o">(</span><span class="nv">code</span> <span class="o">=</span> 0x7f<span class="o">)</span> <span class="o">=</span> ?
@@ -522,22 +522,22 @@ C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utilise
 <p>On remarque que l&rsquo;adresse de la mémoire de la VM (<code>memory</code>) et la taille de la mémoire (<code>memory_range</code>) sont stockées dans la <code>.bss</code>.</p>
 <p>Ensuite la fontion main va appeller une fonction que l&rsquo;on nommera <code>vm_start</code>.</p>
 <h3 id="analyse-de-la-fonction-vm_start">Analyse de la fonction vm_start</h3>
-<p>Cette fonction s&rsquo;apparente fortement à la boucle qui va probablement parcourir le code de notre programme.</p>
+<p>Cette fonction s&rsquo;apparente à une boucle qui va parcourir le code de notre programme.</p>
 <div>
     <img src="assets/VM_loop.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
 <p>On y voit l&rsquo;appel à trois fonctions:</p>
 <ul>
 <li><strong>sub_2061</strong> que l&rsquo;on va renommer <code>handler_exit</code> et va faire quitter la VM puis libérer sa mémoire.</li>
-<li><strong>sub_1440</strong> que l&rsquo;on va renommer <code>vm_run</code> et qui va se charger d&rsquo;exécuter chaque instruction (on y reviendra)</li>
+<li><strong>sub_1440</strong> que l&rsquo;on va renommer <code>vm_run</code> et qui va se charger d&rsquo;exécuter chaque instruction (on y reviendra).</li>
 <li><strong>sub_208c</strong> qui prend en paramètre &ldquo;main&rdquo; et que l&rsquo;on va analyser maintenant!</li>
 </ul>
 <h3 id="analyse-de-la-fonction-find_symbol">Analyse de la fonction find_symbol</h3>
-<p>L&rsquo;objectif de cette fonction va être de trouver un symbole dans le code de la VM, elle est appellé au début de l&rsquo;exécution du code pour trouver la fonction <code>main</code> de la VM. Renommons les principales variables:</p>
+<p>L&rsquo;objectif de cette fonction va être de trouver un symbole dans le code de la VM, elle est appellé au début de l&rsquo;exécution du code pour trouver la fonction <code>main</code>. Renommons les principales variables:</p>
 <div>
     <img src="assets/find_symbol.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
-<p>La fonction va itérer parmis le code jusqu&rsquo;à trouver un certain motif, par exemple pour trouver une fonction nommée <code>func</code>, le programme va chercher ce motif dans le programme de la VM:</p>
+<p>La fonction va itérer parmis le code jusqu&rsquo;à trouver un certain motif qui indique le début du code associé au symbole. Par exemple pour trouver une fonction nommée <code>func</code>, le programme va chercher ce motif dans le programme de la VM:</p>
 
 
 
@@ -629,7 +629,7 @@ C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utilise
 <div>
     <img src="assets/vm_error.PNG", style="max-width:130%;margin-left: 50%;transform: translateX(-50%);">
 </div>
-<p>Maintenant on va passer à la fonction principale, qui va fetch chaque opcode et exécuter les différentes instructions.</p>
+<p>Maintenant on va passer à la fonction principale, cell qui va fetch chaque opcode et exécuter les différentes instructions associées.</p>
 <h3 id="analyse-du-dispacher-de-la-vm">Analyse du dispacher de la VM</h3>
 <p>En regardant le graphe du dispacher, ce dernier s&rsquo;apparente au graphe d&rsquo;un switch case classique, ou chaque handler va représenter une instruction gérée par l&rsquo;architecture de la VM.</p>
 <div>
@@ -638,7 +638,7 @@ C&rsquo;est pourquoi au lieu de coder un simple désasembleur ou d&rsquo;utilise
 <p>Il y&rsquo;a 17 handlers, donc chaque opcode tient sur 1 octet, les bytes suivants l&rsquo;opcodes caractérisent les opérandes de l&rsquo;instruction. Voilà les différentes instructions faisables par le processeur virtuel:</p>
 <ul>
 <li><strong>NOP</strong></li>
-<li><strong>JZ</strong>: Saut conditionnel en fonction de si un registre que l&rsquo;on nommera <code>A</code> est nul ou non.</li>
+<li><strong>JZ</strong>: Saut conditionnel en fonction de si un registre, que l&rsquo;on nommera <code>A</code>, est nul ou non.</li>
 <li><strong>MOV CST</strong>: Met la constante passée en opérande dans le registre passé en opérande.</li>
 <li><strong>PRINT</strong>: Affiche la chaine de caractère pointée par le registre A.</li>
 <li><strong>READ</strong>: Lit une chaine depuis <code>stdin</code> vers la stack.</li>
@@ -671,7 +671,7 @@ Penchons nous par exemple sur le handler qui va gérer l&rsquo;instruction <code
 <div>
     <img src="assets/xref.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
-<p>Et c&rsquo;est là qu&rsquo;on va pouvoir obtenir une trace de notre machine virutelle:</p>
+<p>Et c&rsquo;est grâce à l&rsquo;usage de ces fonctions qu&rsquo;on va pouvoir obtenir une trace d&rsquo;exécution de notre VM:</p>
 <ul>
 <li>On peut hook chaque accès aux registres virtuels grâce à la fonction <code>access_register_bank</code>.</li>
 <li>On peut hook chaque accès à la mémoire du code avec la fonction <code>access_memory</code>.</li>
@@ -712,7 +712,7 @@ On enregistre chaque accès aux registres et à la mémoire, ensuite on va hook 
 </span></span><span class="line"><span class="cl">    <span class="mh">0x155c</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&#34;readfile&#34;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="mh">0x1563</span> <span class="p">:</span> <span class="p">(</span><span class="s2">&#34;exit&#34;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Super nickel! Maintenant on crée des listes pour log chaque accès aux opérandes, ensuite on va hook les accès aux registres:</p>
+</span></span></code></pre></div><p>Super nickel 👨‍🍳! Maintenant on crée des listes pour log chaque accès aux registres:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">STACK</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">LAST_ACCESS_REGS</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -731,7 +731,7 @@ On enregistre chaque accès aux registres et à la mémoire, ensuite on va hook 
 </span></span><span class="line"><span class="cl">    <span class="n">LAST_ACCESS_REGS</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">reg</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">ql</span><span class="o">.</span><span class="n">hook_address</span><span class="p">(</span><span class="n">hook_register_access</span><span class="p">,</span> <span class="n">register_bank_access_ret</span> <span class="o">+</span> <span class="n">BASE</span><span class="p">)</span>
-</span></span></code></pre></div><p>On fait de même avec les opérandes constantes et les appels de fonction:</p>
+</span></span></code></pre></div><p>On fait de même avec les opérandes mémoires et les appels de fonction:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Ces adresses correspondent respectivement à l&#39;instruction `ret` de la fonction `access_memory` pour récupérer l&#39;opérande utilisée par l&#39;instruction suivante</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># et au prologue de la fonction `find_symbol` pour voir quelle fonction va être appellée (le nom de la fonction se trouvera logiquement dans RDI)</span>
 </span></span><span class="line"><span class="cl">
@@ -749,7 +749,7 @@ On enregistre chaque accès aux registres et à la mémoire, ensuite on va hook 
 </span></span><span class="line"><span class="cl"><span class="n">ql</span><span class="o">.</span><span class="n">hook_address</span><span class="p">(</span><span class="n">hook_memory_access</span><span class="p">,</span> <span class="n">memory_access_ret</span> <span class="o">+</span> <span class="n">BASE</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">ql</span><span class="o">.</span><span class="n">hook_address</span><span class="p">(</span><span class="n">hook_stackframes</span><span class="p">,</span> <span class="n">func_finder_prolog</span> <span class="o">+</span> <span class="n">BASE</span><span class="p">)</span>
-</span></span></code></pre></div><p>Et finalement on va hook au milieu de chaque handler pour afficher l&rsquo;instruction qui est en train d&rsquo;être exécuté et avec quelle valeurs:</p>
+</span></span></code></pre></div><p>Et finalement on va hook au milieu de chaque handler pour afficher l&rsquo;instruction qui est en train d&rsquo;être exécuté, pour savoir quelles opérandes elle utilise, il suffir d&rsquo;aller voir dans les listes de logging qu&rsquo;on a créé:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hook_handlers</span><span class="p">(</span><span class="n">ql</span><span class="p">:</span> <span class="n">Qiling</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">rip</span> <span class="o">=</span> <span class="n">ql</span><span class="o">.</span><span class="n">arch</span><span class="o">.</span><span class="n">regs</span><span class="o">.</span><span class="n">rip</span> <span class="o">-</span> <span class="n">BASE</span>
 </span></span><span class="line"><span class="cl">    <span class="n">handler</span> <span class="o">=</span> <span class="n">HANDLERS</span><span class="p">[</span><span class="n">rip</span><span class="p">]</span>
@@ -931,10 +931,9 @@ On enregistre chaque accès aux registres et à la mémoire, ensuite on va hook 
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	<span class="o">(</span>mov<span class="o">)</span> R3 -&gt; 0x4 , <span class="o">[</span>0x196e5<span class="o">]</span> -&gt; 0x1
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	<span class="o">(</span>sub<span class="o">)</span> A -&gt; 0x2b , R3 -&gt; 0x1
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	<span class="o">(</span>jz<span class="o">)</span> <span class="o">[</span>0x196ed<span class="o">]</span> -&gt; 0xffffffd2
-</span></span></code></pre></div><p>A chaque fois que ce doe se répète, la valeur contenue dans A est décrémentée de 1, et ensuite on a un saut conditionnel vers <code>0x196ed</code>: On a affaire à une boucle qui va visiblement XORer une zone de mémoire avec notre input. Si vous vous souvenez au début quand on avait lancé l&rsquo;exécutable avec une clé aléatoire on avait eu une erreur comme quoi la fonction <code>check_key</code> n&rsquo;a pas pu être trouvé, en fait il s&rsquo;agit de packing ,la VM va déchiffrer la suite de son code avec notre clé qui doit faire donc 8 caractères!</p>
+</span></span></code></pre></div><p>A chaque fois que ce code se répète, la valeur contenue dans A est décrémentée de 1, et ensuite on a un saut conditionnel vers <code>0x196ed</code>: On a affaire à une boucle qui va visiblement XORer une zone de mémoire avec notre input. Si vous vous souvenez au début quand on avait lancé l&rsquo;exécutable avec une clé aléatoire on avait eu une erreur comme quoi la fonction <code>check_key</code> n&rsquo;a pas pu être trouvé, en fait il s&rsquo;agit de packing ,la VM va déchiffrer la suite de son code avec notre clé qui doit faire donc 8 caractères!</p>
 <p>Mais comment sommes nous censés trouver la clé pour accéder à la suite du code si on n&rsquo;a aucune idée de ce dernier me direz vous?
 Et bien on sait au moins que le programme va tenter, après le déchiffrement d&rsquo;appeller la fonction <code>check_key</code> et on sait à quoi doit ressembler le motif qui indique la présence d&rsquo;une fonction à un endroit précis dans le code 😀!</p>
-<br>
 <p>On est donc dans une situation triviale de XOR avec clair connu:
 Les premiers octets à déchiffrer sont <code>0x11213d63</code> et <code>0x33195222</code> et que leur version déchiffrée doit correspondre à <code>b&quot;\x01\x09check_&quot;</code>. Donc:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">enc</span> <span class="o">=</span> <span class="mh">0x33195222</span> <span class="o">&lt;&lt;</span> <span class="mi">32</span> <span class="o">|</span> <span class="mh">0x11213d63</span>
@@ -949,7 +948,8 @@ Les premiers octets à déchiffrer sont <code>0x11213d63</code> et <code>0x33195
 </span></span><span class="line"><span class="cl">Congrats! Your flag is: A<span class="p">|</span>p7Ko<span class="o">[</span>JoW.x
 </span></span><span class="line"><span class="cl">                                    HB
 </span></span></code></pre></div><p>Ok donc le programme nous demande maintenant un mot de passe avec lequel il va visiblement faire des opérations qui devraient nous afficher un flag si le mot de passe est corret. Pour le découvrir il nous suffit de relancer notre tracer:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Now, enter the passcode: <span class="o">[=]</span> 	write<span class="o">(</span><span class="nv">fd</span> <span class="o">=</span> 0x1, <span class="nv">buf</span> <span class="o">=</span> 0x55555556d710, <span class="nv">count</span> <span class="o">=</span> 0x19<span class="o">)</span> <span class="o">=</span> 0x19
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Now, enter the passcode: 
+</span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	write<span class="o">(</span><span class="nv">fd</span> <span class="o">=</span> 0x1, <span class="nv">buf</span> <span class="o">=</span> 0x55555556d710, <span class="nv">count</span> <span class="o">=</span> 0x19<span class="o">)</span> <span class="o">=</span> 0x19
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	<span class="o">(</span>print<span class="o">)</span> 
 </span></span><span class="line"><span class="cl"><span class="o">[=]</span> 	<span class="o">(</span>mov<span class="o">)</span> B -&gt; 0x47415753 , <span class="o">[</span>0x1943a<span class="o">]</span> -&gt; 0x100
 </span></span><span class="line"><span class="cl">ABCD
