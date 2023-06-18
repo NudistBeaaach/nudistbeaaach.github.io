@@ -6,7 +6,7 @@ tags: ["PWN", "404CTF 2023"]
 
 ## Introduction
 
-Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d'exploiter des `format strings`, mais à cause d'une imprécision pour la première partie j'ai fait pop un shell pour la première partie sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j'ai utilisé pour exploiter le binaire! L'énoncé se présentait comme ceci:
+Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d'exploiter des `format strings`, mais à cause d'une imprécision dans l'énoncé de la première partie j'ai fait pop un shell sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j'ai utilisé pour exploiter le binaire! L'énoncé se présentait comme ceci:
 
 ```txt
 Un coin lecture rempli de nombreux livres est à la disposition des clients. En parcourant les étagères, vous tombez sur un livre qui semble être un recueil de citations.

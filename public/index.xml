@@ -33,7 +33,7 @@ Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. 
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</guid>
-      <description>Introduction Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&amp;rsquo;exploiter des format strings, mais à cause d&amp;rsquo;une imprécision pour la première partie j&amp;rsquo;ai fait pop un shell pour la première partie sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&amp;rsquo;ai utilisé pour exploiter le binaire! L&amp;rsquo;énoncé se présentait comme ceci:
+      <description>Introduction Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&amp;rsquo;exploiter des format strings, mais à cause d&amp;rsquo;une imprécision dans l&amp;rsquo;énoncé de la première partie j&amp;rsquo;ai fait pop un shell sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&amp;rsquo;ai utilisé pour exploiter le binaire! L&amp;rsquo;énoncé se présentait comme ceci:
 Un coin lecture rempli de nombreux livres est à la disposition des clients.</description>
     </item>
     
