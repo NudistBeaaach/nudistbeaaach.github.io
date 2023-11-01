@@ -6,7 +6,17 @@
     <description>Recent content in PWN on Blog de TaylorDeDordogne</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Calculator in Shadow</title>
+      <link>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</link>
+      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</guid>
+      <description>Introduction J&amp;rsquo;ai eu la chance de pouvoir participer aux qualifications de l&amp;rsquo;ECW 2023 durant lequel j&amp;rsquo;ai pu flag un challenge de PWN super intéressant proposé par Thales, j&amp;rsquo;en fait donc un write-up histoire de montrer de quoi il s&amp;rsquo;agissait 😉. L&amp;rsquo;objectif était d&amp;rsquo;exploiter un binaire RISC-V implémentant des fonctionalités de sécurités additionnelles mises en place par l&amp;rsquo;intermédiaire d&amp;rsquo;un patch de qemu. Commençons tout de suite!
+Prise en main du challenge L&amp;rsquo;énoncé se présentait comme ceci:</description>
+    </item>
+    
     <item>
       <title>Une citation pas comme les autres</title>
       <link>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</link>
