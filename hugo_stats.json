@@ -117,6 +117,7 @@
     ],
     "ids": [
       "TableOfContents",
+      "accès",
       "accès-à-la-base-de-données",
       "analyse-de-la-capture-mémoire",
       "analyse-de-la-capture-réseau",
@@ -153,6 +154,7 @@
       "décodage-de-la-trame-gps",
       "décodage-des-données",
       "ecriture-du-shellcode",
+      "enumeration",
       "evasion-de-la-sandbox",
       "explication",
       "explication-du-code",
@@ -197,6 +199,7 @@
       "reverse-de-la-fonction-de-transmission-des-données",
       "reverse-de-la-fonction-principale-du-payload",
       "reverse-engineering",
+      "rétro-ingéniérie",
       "scans",
       "scripts-de-solve-complets",
       "seconde-partie",
