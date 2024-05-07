@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RF on Blog de TaylorDeDordogne</title>
-    <link>https://nudistbeaaach.github.io/tags/rf/</link>
+    <link>http://localhost:1313/tags/rf/</link>
     <description>Recent content in RF on Blog de TaylorDeDordogne</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>taylordedordogne@gmail.com (TaylorDeDordogne)</managingEditor>
     <webMaster>taylordedordogne@gmail.com (TaylorDeDordogne)</webMaster>
     <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nudistbeaaach.github.io/tags/rf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/rf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plombier du câble &amp; Gestionnaire de perruche de Sparrman</title>
-      <link>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</link>
+      <link>http://localhost:1313/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</guid>
+      <guid>http://localhost:1313/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</guid>
       <description>Plombier du câble Introduction Ce challenge de RF assez original exploitait une particularité des câbles HDMI qui permettait de faire de l&amp;rsquo;eavesdropping du contenu d&amp;rsquo;un écran, l&amp;rsquo;énoncé se présentait comme ceci:&#xA;Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d&amp;#39;acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister.</description>
     </item>
   </channel>
