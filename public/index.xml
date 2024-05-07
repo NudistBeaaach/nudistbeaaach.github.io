@@ -2,96 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog de TaylorDeDordogne</title>
-    <link>https://nudistbeaaach.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Blog de TaylorDeDordogne</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>taylordedordogne@gmail.com (TaylorDeDordogne)</managingEditor>
     <webMaster>taylordedordogne@gmail.com (TaylorDeDordogne)</webMaster>
     <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nudistbeaaach.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows Box : Napper</title>
-      <link>https://nudistbeaaach.github.io/write-ups/htb-napper/</link>
+      <link>http://localhost:1313/write-ups/htb-napper/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/htb-napper/</guid>
+      <guid>http://localhost:1313/write-ups/htb-napper/</guid>
       <description>Introduction Cette box windows avait la particularité de ne pas reposer sur de l&amp;rsquo;exploitation d&amp;rsquo;Active Directory comme c&amp;rsquo;est souvent le cas sur HackTheBox. Même si la première partie pour flag l&amp;rsquo;user était assez peu technique, la privesc reposait sur du Reverse Engineering d&amp;rsquo;un binaire codé en Go. Donc j&amp;rsquo;ai décidé d&amp;rsquo;en faire un Write Up! On commence par un scan nmap comme d&amp;rsquo;hab!&#xA;Reconnaissance Comme précisé dans l&amp;rsquo;intro, la machine à attaquer ne fait pas partie d&amp;rsquo;un domaine, on n&amp;rsquo;a donc pas les ports spécifiques à un controlleur de domaine:</description>
     </item>
     <item>
       <title>The Calculator in Shadow</title>
-      <link>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</link>
+      <link>http://localhost:1313/write-ups/the-calculator-in-shadow/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</guid>
+      <guid>http://localhost:1313/write-ups/the-calculator-in-shadow/</guid>
       <description>Introduction J&amp;rsquo;ai eu la chance de pouvoir participer aux qualifications de l&amp;rsquo;ECW 2023 durant lequel j&amp;rsquo;ai pu flag un challenge de PWN super intéressant proposé par Thales, j&amp;rsquo;en fait donc un write-up histoire de montrer de quoi il s&amp;rsquo;agissait 😉. L&amp;rsquo;objectif était d&amp;rsquo;exploiter un binaire RISC-V implémentant des fonctionalités de sécurités additionnelles mises en place par l&amp;rsquo;intermédiaire d&amp;rsquo;un patch de qemu. Commençons tout de suite!&#xA;Prise en main du challenge L&amp;rsquo;énoncé se présentait comme ceci:</description>
     </item>
     <item>
       <title>Windows Box : Escape</title>
-      <link>https://nudistbeaaach.github.io/write-ups/htb-escape/</link>
+      <link>http://localhost:1313/write-ups/htb-escape/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/htb-escape/</guid>
+      <guid>http://localhost:1313/write-ups/htb-escape/</guid>
       <description>Introduction Cette box était une machine windows de niveau medium qui faisait intervenir notamment une privesc basée sur la demande de certificat au sein de l&amp;rsquo;Active Directory! On va commencer tout de suite en lançant un scan nmap comme pour toutes les boxs HTB.&#xA;Reconnaissance Scans Le scan présente bien toutes les caractéristiques d&amp;rsquo;un Domain Controller, on y voit les ports 445 et 139 pour le smb, le port 88 pour le TGS et le service DNS habituel:</description>
     </item>
     <item>
       <title>Plombier du câble &amp; Gestionnaire de perruche de Sparrman</title>
-      <link>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</link>
+      <link>http://localhost:1313/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</guid>
+      <guid>http://localhost:1313/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/</guid>
       <description>Plombier du câble Introduction Ce challenge de RF assez original exploitait une particularité des câbles HDMI qui permettait de faire de l&amp;rsquo;eavesdropping du contenu d&amp;rsquo;un écran, l&amp;rsquo;énoncé se présentait comme ceci:&#xA;Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d&amp;#39;acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister.</description>
     </item>
     <item>
       <title>Une citation pas comme les autres</title>
-      <link>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</link>
+      <link>http://localhost:1313/write-ups/une-citation-pas-comme-les-autres/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</guid>
+      <guid>http://localhost:1313/write-ups/une-citation-pas-comme-les-autres/</guid>
       <description>Introduction Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&amp;rsquo;exploiter des format strings, mais à cause d&amp;rsquo;une imprécision dans l&amp;rsquo;énoncé de la première partie j&amp;rsquo;ai fait pop un shell sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&amp;rsquo;ai utilisé pour exploiter le binaire! L&amp;rsquo;énoncé se présentait comme ceci:&#xA;Un coin lecture rempli de nombreux livres est à la disposition des clients.</description>
     </item>
     <item>
       <title>Vélocipède Mécanique</title>
-      <link>https://nudistbeaaach.github.io/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</link>
+      <link>http://localhost:1313/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</guid>
+      <guid>http://localhost:1313/write-ups/v%C3%A9locip%C3%A8de-m%C3%A9canique/</guid>
       <description>Introduction Ce challenge faisait partie de la catégorie Reverse, l&amp;rsquo;énoncé se présentait comme ceci:&#xA;En vagabondant dans le café, vous rencontrez le mystérieux Balzac. Il vous appelle dans un coin discret et vous tend une boîte étrange. Il vous dit que c&amp;#39;est une &amp;#34;VM&amp;#34;, ou &amp;#34;Vélocipède Mécanique&amp;#34;, une machine de fabrication étrangère qui ressemble à une machine à écrire, mais qui semble bien plus avancée. Il vous tend également une feuille qu&amp;#39;il appelle un &amp;#34;programme&amp;#34;.</description>
     </item>
     <item>
       <title>Cracken</title>
-      <link>https://nudistbeaaach.github.io/write-ups/cracken/</link>
+      <link>http://localhost:1313/write-ups/cracken/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/cracken/</guid>
+      <guid>http://localhost:1313/write-ups/cracken/</guid>
       <description>Introduction Hello, pour ce premier Write-Up de l&amp;rsquo;édition 2023 du 404CTf, on commence avec un challenge de Forensics. L&amp;rsquo;énoncé se présente comme ceci:&#xA;Au milieu du café trône une table depuis laquelle un homme scrute ses semblables en engloutissant un breuvage étrange. Vous l&amp;#39;observez du coin de l&amp;#39;œil depuis plusieurs minutes déjà quand la porte du café s&amp;#39;ouvre avec fracas. Un homme surgit alors, criant comme si le café était tout à lui.</description>
     </item>
     <item>
       <title>Pas si chronophage</title>
-      <link>https://nudistbeaaach.github.io/write-ups/pas_si_chronophage/</link>
+      <link>http://localhost:1313/write-ups/pas_si_chronophage/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/pas_si_chronophage/</guid>
+      <guid>http://localhost:1313/write-ups/pas_si_chronophage/</guid>
       <description>DGHACK 2022: Pas si chronophage Ce challenge de programmation était un challenge de captcha nécessitant un vrai travail de traitement d&amp;rsquo;image et donc super cool! Effectivement les captchas présentant des lettres peuvent être résolus facilement en utilisant des OCRs mais pour celui-ci où le captcha était une horloge je n&amp;rsquo;ai pas trouvé d&amp;rsquo;IA gratuite et adaptée au challenge, j&amp;rsquo;ai opté pour une méthode plus compliquée mais aussi beaucoup plus intéressante que d&amp;rsquo;utiliser une IA toute faite en plus de m&amp;rsquo;avoir fait me replonger dans OpenCv :)</description>
     </item>
     <item>
       <title>Convoluted boot</title>
-      <link>https://nudistbeaaach.github.io/write-ups/convoluted-boot/</link>
+      <link>http://localhost:1313/write-ups/convoluted-boot/</link>
       <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/convoluted-boot/</guid>
+      <guid>http://localhost:1313/write-ups/convoluted-boot/</guid>
       <description>Introduction Ce challenge était un challenge de Cracking basé sur un bootkit disponible sur HackTheBox. J&amp;rsquo;ai fait ce challenge avec l&amp;rsquo;ami 0poss que je remercie pour son aide! Mais bref, commençons, l&amp;rsquo;énoncé se présente comme ceci:&#xA;Some nodes in our data center have been producing unexpected errors and crash for a while now. When analyzing the systems offline, we couldn&amp;#39;t find anything wrong with them. After a very throurough investigation, we think we have it nailed down to the netboot server handling the distributions on the PXE network, we suspect a bootkit is involved.</description>
     </item>
     <item>
       <title>Curlify</title>
-      <link>https://nudistbeaaach.github.io/write-ups/curlify/</link>
+      <link>http://localhost:1313/write-ups/curlify/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/curlify/</guid>
+      <guid>http://localhost:1313/write-ups/curlify/</guid>
       <description>DGHACK 2022: Curlify Hello, pour ce premier Write up de l&amp;rsquo;édition 2022 du DG&amp;rsquo;Hack on commence par un challenge Web!&#xA;Introduction Curlify était un challenge impliquant un mécanisme de SSRF plutôt intéressant, l&amp;rsquo;objéctif étant de lire le contenu du fichier flag.php.&#xA;Premier aperçu en arrivant sur la page web principale index.php, on arrive devant un input nous proposant de &amp;quot;curlifier&amp;quot; une url:&#xA;Cet input nous permettra de faire faire des requêtes GET (et uniquement GET) par le serveur.</description>
     </item>
     <item>
       <title>Sandchat</title>
-      <link>https://nudistbeaaach.github.io/write-ups/sandchat/</link>
+      <link>http://localhost:1313/write-ups/sandchat/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/sandchat/</guid>
+      <guid>http://localhost:1313/write-ups/sandchat/</guid>
       <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&#xA;Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:&#xA;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>
     </item>
     <item>
       <title>Cubik&#39; Cipher</title>
-      <link>https://nudistbeaaach.github.io/write-ups/cubik-cipher/</link>
+      <link>http://localhost:1313/write-ups/cubik-cipher/</link>
       <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>https://nudistbeaaach.github.io/write-ups/cubik-cipher/</guid>
+      <guid>http://localhost:1313/write-ups/cubik-cipher/</guid>
       <description>Introduction Cubik&amp;rsquo;Cipher est un challenge de catégorie Hardware issu de l&amp;rsquo;édition 2022 du HackDay, se présentant comme ceci:&#xA;Il y&amp;rsquo;a un mois, un espion a réussi à s&amp;rsquo;infiltrer dans le repère secret d&amp;rsquo;un ennemi!&#xA;Celui ci était en train de développer son propre chiffreur de données!&#xA;Depuis il semblerait que l&amp;rsquo;ennemi l&amp;rsquo;ait terminé, à nous de construire le déchiffreur grâce auquel nous pourrons l&amp;rsquo;espionner sans qu&amp;rsquo;il s&amp;rsquo;en rende compte!&#xA;Le flag est de la forme HACKDAY{&amp;hellip;}</description>
     </item>
   </channel>
