@@ -6,6 +6,7 @@
       "blockquote",
       "body",
       "br",
+      "center",
       "code",
       "details",
       "div",
@@ -42,6 +43,7 @@
       "text",
       "time",
       "title",
+      "u",
       "ul"
     ],
     "classes": [
