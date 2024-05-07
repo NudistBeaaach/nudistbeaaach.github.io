@@ -1,0 +1,15 @@
+{{ define "main" }}
+<center>
+	<h1>Salut! 👋</h1>
+	<p>
+		Sur ce blog je posterai régulièrement mes Write-Ups ainsi que des articles
+		en rapport avec le hacking !
+	</p>
+</center>
+  <u>Write-Ups</u>
+  <ul style="columns: 2;-webkit-columns: 2;-moz-columns: 2;">
+  {{ range where .Site.RegularPages "Section" "==" "write-ups" }}
+      <li style="list-style-type: circle;"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+  {{ end }}
+  </ul>
+{{ end }}
