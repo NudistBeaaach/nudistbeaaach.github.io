@@ -2,21 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>System on Blog de TaylorDeDordogne</title>
-    <link>https://nudistbeaaach.github.io/tags/system/</link>
+    <link>http://localhost:1313/tags/system/</link>
     <description>Recent content in System on Blog de TaylorDeDordogne</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/system/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>taylordedordogne@gmail.com (TaylorDeDordogne)</managingEditor>
+    <webMaster>taylordedordogne@gmail.com (TaylorDeDordogne)</webMaster>
+    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sandchat</title>
-      <link>https://nudistbeaaach.github.io/write-ups/sandchat/</link>
-      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/write-ups/sandchat/</guid>
-      <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.
-Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:
-On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>
+      <link>http://localhost:1313/write-ups/sandchat/</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/write-ups/sandchat/</guid>
+      <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&#xA;Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:&#xA;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>
     </item>
-    
   </channel>
 </rss>

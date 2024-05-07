@@ -2,136 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog de TaylorDeDordogne</title>
-    <link>https://nudistbeaaach.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Blog de TaylorDeDordogne</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://nudistbeaaach.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ECW 2023</title>
-      <link>https://nudistbeaaach.github.io/tags/ecw-2023/</link>
-      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/ecw-2023/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWN</title>
-      <link>https://nudistbeaaach.github.io/tags/pwn/</link>
-      <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/pwn/</guid>
-      <description></description>
-    </item>
-    
+    <managingEditor>taylordedordogne@gmail.com (TaylorDeDordogne)</managingEditor>
+    <webMaster>taylordedordogne@gmail.com (TaylorDeDordogne)</webMaster>
+    <lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HackTheBox</title>
-      <link>https://nudistbeaaach.github.io/tags/hackthebox/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/hackthebox/</guid>
+      <link>http://localhost:1313/tags/hackthebox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/hackthebox/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pentest</title>
-      <link>https://nudistbeaaach.github.io/tags/pentest/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/pentest/</guid>
+      <link>http://localhost:1313/tags/pentest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/pentest/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>ECW 2023</title>
+      <link>http://localhost:1313/tags/ecw-2023/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/ecw-2023/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PWN</title>
+      <link>http://localhost:1313/tags/pwn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/pwn/</guid>
+      <description></description>
+    </item>
     <item>
       <title>404CTF 2023</title>
-      <link>https://nudistbeaaach.github.io/tags/404ctf-2023/</link>
-      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/404ctf-2023/</guid>
+      <link>http://localhost:1313/tags/404ctf-2023/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/404ctf-2023/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RF</title>
-      <link>https://nudistbeaaach.github.io/tags/rf/</link>
-      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/rf/</guid>
+      <link>http://localhost:1313/tags/rf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/rf/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RE</title>
-      <link>https://nudistbeaaach.github.io/tags/re/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/re/</guid>
+      <link>http://localhost:1313/tags/re/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/re/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Forensics</title>
-      <link>https://nudistbeaaach.github.io/tags/forensics/</link>
-      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/forensics/</guid>
+      <link>http://localhost:1313/tags/forensics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/forensics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dev</title>
-      <link>https://nudistbeaaach.github.io/tags/dev/</link>
-      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/dev/</guid>
+      <link>http://localhost:1313/tags/dev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/dev/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DG&#39;Hack 2022</title>
-      <link>https://nudistbeaaach.github.io/tags/dghack-2022/</link>
-      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/dghack-2022/</guid>
+      <link>http://localhost:1313/tags/dghack-2022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/dghack-2022/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Web</title>
-      <link>https://nudistbeaaach.github.io/tags/web/</link>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/web/</guid>
+      <link>http://localhost:1313/tags/web/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/web/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>System</title>
-      <link>https://nudistbeaaach.github.io/tags/system/</link>
-      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/system/</guid>
+      <link>http://localhost:1313/tags/system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/system/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HackDay 2022</title>
-      <link>https://nudistbeaaach.github.io/tags/hackday-2022/</link>
-      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/hackday-2022/</guid>
+      <link>http://localhost:1313/tags/hackday-2022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/hackday-2022/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Hardware</title>
-      <link>https://nudistbeaaach.github.io/tags/hardware/</link>
-      <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nudistbeaaach.github.io/tags/hardware/</guid>
+      <link>http://localhost:1313/tags/hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
+      <guid>http://localhost:1313/tags/hardware/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

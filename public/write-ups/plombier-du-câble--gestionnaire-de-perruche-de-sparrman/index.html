@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Plombier du câble &amp; Gestionnaire de perruche de Sparrman
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript><link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;700&family=Overpass:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav>
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/write-ups/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Write Ups</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/" class="focus:underline focus:outline-none font-bold after:md:mx-2 after:mx-0.5">Plombier du câble &amp; Gestionnaire de perruche de Sparrman</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav>
+    <a href="http://localhost:1313//index.xml"
+      ><svg
+        width="18px"
+        height="18px"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+        />
+      </svg>
+    </a>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav>
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/write-ups/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Write Ups</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/write-ups/plombier-du-c%C3%A2ble--gestionnaire-de-perruche-de-sparrman/" class="focus:underline focus:outline-none font-bold after:md:mx-2 after:mx-0.5">Plombier du câble &amp; Gestionnaire de perruche de Sparrman</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav>
+    <a href="http://localhost:1313//index.xml"
+      ><svg
+        width="18px"
+        height="18px"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+        />
+      </svg>
+    </a>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Plombier du câble & Gestionnaire de perruche de Sparrman</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2023/06/10&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/rf/" id="tag">RF</a>
+      
+        
+        <a href="/tags/404ctf-2023/" id="tag">404CTF 2023</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#plombier-du-câble">Plombier du câble</a>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#analyse-du-signal">Analyse du signal</a></li>
+      </ol>
+    </li>
+    <li><a href="#gestionnaire-de-perruche-de-sparrman">Gestionnaire de perruche de Sparrman</a>
+      <ol>
+        <li><a href="#introduction-1">Introduction</a></li>
+        <li><a href="#rappel-sur-le-gps">Rappel sur le GPS</a></li>
+        <li><a href="#décodage-de-la-trame-gps">Décodage de la trame GPS</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h2 id="plombier-du-câble">Plombier du câble</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Ce challenge de RF assez original exploitait une particularité des câbles <code>HDMI</code> qui permettait de faire de l&rsquo;<code>eavesdropping</code> du contenu d&rsquo;un écran, l&rsquo;énoncé se présentait comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Nous y voilà. Il est encore tôt dans la matinée du 3e martis du mois Kankin. À votre table en bois d&#39;acajou, vous retrouvez vos resplendissants compagnons Alexandre et Simone. Vous entendez la fin du récit de monsieur DUMAS sur la dernière pièce de théâtre à laquelle il a pu assister. Ce dernier développe en effet un amour tout particulier pour le théâtre depuis ces jeunes années, où il écrivit un drame historique : Henri III et sa cour.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Le temps, à l&#39;image d&#39;un sablier, s&#39;écoule tranquillement.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Notre trio, autour de leur quatrième pause café de la douce matinée, ont l&#39;air bien nerveux, mais toutefois portent un air rempli de fourberie. Ils ont enfin eu l&#39;éclair de génie pour espionner l&#39;infâme collègue : un plan aux aspects loufoque, mais qui attire vivement votre attention.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Simone DE BEAUVOIR est une figure d&#39;intelligence. Son père lui disait qu&#39;elle aurait pu faire Polytechnique si elle était un homme.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Elle vous explique le détail de l&#39;affaire : pénétrer dans la plus grande légalité chez notre victime, déployer une antenne et écouter. Mais vu votre talent pour le moins inexistant en matière de discrétion, votre mission sera juste de traiter le signal une fois acquis.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C&#39;est ainsi, durant cette journée dont le temps ne se manifeste guerre au beau, dans ce petit café coquet où se situe notre énergumène, situé rue de l&#39;ancienne comédie, dans une petite ville de France, d&#39;une superficie de 105.40 hectares, que nos deux héroïques figures représentant le combat contre la mesquinerie, Alexandre et Simone, déployèrent leur antenne directive de 10 cm, dans l&#39;objectif d&#39;intercepter les communications afin que VOUS les traitiez pour découvrir la sombre, tenace et inéluctable vérité.
+</span></span></code></pre></div><p>le challenge fournissait avec celà deux fichiers:</p>
+<ul>
+<li>Une archive contenant le fichier du signal (<code>capture_plombier.raw</code>)</li>
+<li>Un fichier pdf contenant des informations supplémentaires sur notre cible</li>
+</ul>
+<p>Voilà le contenu du pdf:</p>
+<div>
+    <img src="assets/pdf.PNG", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On y apprend plusieurs choses, certaines comme la fréquence d&rsquo;échantillonage semblent pertinentes tandis que d&rsquo;autres comme la longueur de l&rsquo;antenne ou le modèle de l&rsquo;écran semblent assez dérisoires (On verra plus tard que c&rsquo;était pas forcément le cas 😉).</p>
+<h3 id="analyse-du-signal">Analyse du signal</h3>
+<p>On rentre le signal dans <code>GnuRadio</code> pour afficher la <code>FFT</code> et la <code>Constellation</code>, et on obtient ceci:</p>
+<div>
+    <img src="assets/recon.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Une constellation qui s&rsquo;apparente à du <code>FM</code>, mais non seulement la FFT ne ressemble pas du tout à un spectre FM, mais la fréquence est
+de l&rsquo;ordre de la centaine de kHz et pas de la centaine de MHz ce qui ne correspond pas au bandes FM traditionnelles. Après avoir tout de même tenté de démoduler avec les principaux types de modulations sans succès, il apparait que la solution doit se trouver autre part 🙁.</p>
+<p>On se repenche donc sur l&rsquo;énoncé et sur le contenu du PDF pour y trouver des indices!</p>
+<p>Dans l&rsquo;énoncé on nous parle d&rsquo;un plan pour espionner un de nos collègues à son insu en posant une antenne chez lui, ce qui a fini de me mettre sur la piste est le titre du challenge: <code>Plombier du câble</code>.</p>
+<br>
+<p>En fait, je me suis souvenu d&rsquo;une technique que j&rsquo;avais vu sur un super <a href="https://github.com/PierreAdams/HackRF-One-French">article</a> de <a href="https://github.com/PierreAdams">Pierre Adams</a> et qui consistait à capter et décoder les ondes électromagnétiques émises par un câble <code>HDMI</code>. En effet chaque câble HDMI émet ce que l&rsquo;on appelle des ondes <code>garbage</code> à une fréquence qui lui est propre aux alentours de 295 kHz et oui, c&rsquo;est exactement le cas de notre signal!
+Et ces ondes garbage, une fois décodées, permettent d&rsquo;avoir un apercu en temps réel du contenu affiché sur l&rsquo;écran!</p>
+<p>Pour extraire le contenu de l&rsquo;écran il va falloir utiliser un logiciel appellé <code>TempestSDR</code> et disposer de plusieurs informations:</p>
+<ul>
+<li>Le taux de rafraichissement de l&rsquo;écran</li>
+<li>Sa résolution</li>
+<li>La fréquence à laquelle sont émises les ondes garbage</li>
+</ul>
+<p>Et comme expliqué précédemment, le pdf fournis en début du challenge nous donne le modéle de l&rsquo;écran utilisé par notre victime: Un écran <code>HP 32s</code>. En allant chercher ce modèle on trouve toutes les informations dont nous avons besoin:</p>
+<div>
+    <img src="assets/config_ecran.png", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On télécharge TempestSDR et apres avoir rentré la bonne configuration et lancé le décodage on peut voir l&rsquo;écran de notre victime, on y voit qu&rsquo;elle joue à Tetris puis relis un document sur Word:</p>
+<div>
+    <img src="assets/tempest_main.png", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et au bout d&rsquo;une trentaine de secondes, on voit un QR code s&rsquo;afficher à l&rsquo;écran:</p>
+<div>
+    <img src="assets/tempest_qr_code.png", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et vous le voyez venir, une fois décodé, ce QR code nous donnait le flag 😀.</p>
+<h2 id="gestionnaire-de-perruche-de-sparrman">Gestionnaire de perruche de Sparrman</h2>
+<h3 id="introduction-1">Introduction</h3>
+<p>Ce challenge était lui aussi très court mais vu le peu de write-up que j&rsquo;ai vu traitant de <code>GPS</code>, je pense qu&rsquo;en parler un peu ne fera pas de mal! L&rsquo;énoncé commence comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Le tonnerre continue de gronder farouchement dehors. Les ondes sonores des gouttes de pluie s&#39;écrasant à l&#39;extérieur stimulent vos oreilles délicates. La soif vous empare.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Heureusement, vos synapses au sein de votre gigantesque cerveau sont très réactives : d&#39;un geste vif, vous interpellez le personnel afin d&#39;acquérir une boisson revigorante, en espérant revoir Simone.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">L&#39;histoire n&#39;aurait évidemment pas lieu si elle n&#39;était pas entre les murs formant Le Procope, c&#39;est pour cela qu&#39;à votre plus grande joie, vous voilà face à face avec madame DE BEAUVOIR. Hélas, celle-ci semble inquiète. Vous le savez si bien dorénavant, celle-ci partage un amour poignant avec le grand Jean-Paul SAT, et ce dernier semble impliqué dans une certaine association.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">L&#39;idée est simple, et par sa simplicité, elle devient difficile. Alexandre DUMAS, par sa taille, son charisme, et son génie, viendra donc sous peu pour mettre au point la finalité d&#39;un plan afin de voler des données confidentielles.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Pour l&#39;heure, Simone a pu trouver une perruche, mais pas n&#39;importe laquelle ! Une perruche de Sparrman. La particularité de ce Cyanoramphus novaezelandiae est qu&#39;il est particulièrement familier, il est donc parfait pour suivre cet incorruptible corrupteur qu&#39;est Jean-Paul SAT, ainsi que les personnes qu&#39;ils fréquentent.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Pendant cette harangue, le sommeil vous gagne. À votre réveil, vous entendez les dernières paroles : « ... seulement 8 millions d&#39;échantillonnages par seconde ! Du génie n&#39;est-ce pas ? Pas la peine de m&#39;applaudir, vous allez me faire rougir ! Bon par contre du fait de la taille de l&#39;animal, du pelage inexistant, de son plumage, du ramage qui s&#39;en rapporte, le signal sera sûrement de mauvaise qualité. Mais vous avez des talents, j&#39;en suis certaine. Oh, et voilà Alexandre qui arrive bientôt. Dernière précision : c&#39;est du 8 bits, en complexe. Bonne chance ! »
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Elle se lève pour étreindre son honneur décoré Chevalier de la Légion d&#39;honneur, qui n&#39;est autre que ce très cher Alexandre DUMAS.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Vous voilà dans un état de disgrâce. Une mission de taille, très technique, et aucune information, car vous avez le sommeil facile. Vous prenez votre décaième café, et sortant votre ordinateur personnel dont le poids et la taille permettent un transport facile notamment en extérieur, vous vous lancez dans ce laborieux travail en quête d&#39;un lieu où se trouverait le terminus du long et périlleux voyage de notre perruche de Sparrman.
+</span></span></code></pre></div><p>Il va donc s&rsquo;agir de retrouver un lieu en particulier. Comme pour un des autres challenges de <code>RF</code>, le titre de celui-ci est un acronyme, on sait qu&rsquo;il va falloir aller chercher du côté du protocole <code>GPS</code>. Et en parcourant l&rsquo;énoncé on arrive à trouver les informations minimales sur notre signal: Il est échantilloné à <code>8Msps</code> et le type de donnée est au format 8 bit complexe (<code>IChar</code> dans gnuradio, c&rsquo;est le format d&rsquo;enregistrement notamment utilisé par les <code>HackRF</code>). Et comme aucune fréquence ne nous est donné, on part du principe que le signal a été enregistré à la fréquence GPS civile: <code>1 575,42 MHz</code>.</p>
+<h3 id="rappel-sur-le-gps">Rappel sur le GPS</h3>
+<p>Le système GPS se base sur un ensemble de 31 satellites (24 pour <code>GLONASS</code>, l&rsquo;équivalent russe). Chaque satellite possède un unique code pseudo-random nommé <code>C/A</code> (<code>Coarse Acquisition</code>) qui permet au récepteur d&rsquo;identifier correctement de quel satellite provient le signal qu&rsquo;il reçoit, la modulation utilisée est une modulation en phase (<code>BPSK</code>) fonction du nombre <code>C/A</code>. En pratique cette modulation rend le signal complexe à décoder, si bien qu&rsquo;il apparait comme proche du bruit:</p>
+<div>
+    <img src="assets/perruche_fft.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Le positionnement GPS fonctionne grâce à au moins 3 satellites qui transmettent leurs position à chaque instant pour que le récepteur puisse en déduire sa position grâce à un calcul de <code>Trilatéralisation</code>:</p>
+<div>
+    <img src="assets/gps_schema.png", style="max-width:90%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Deux types de données sont transmises par le système GPS:</p>
+<ul>
+<li>
+<p>Les <code>Éphémérides</code>, Les éphémérides GPS contiennent des informations précises sur l&rsquo;orbite, la position et la vitesse de chaque satellite GPS en temps réel. Étant donné qu&rsquo;elles changent d&rsquo;heure en heure, les récepteurs les mettent à jour toutes les 30 minutes environ pour garantir une précision optimale dans les calculs de positionnement. Ce sont donc ces éphémérides qui permettent au récepteur de se positionner et qui sont par conséquent émises en permanence (toutes les 30 secondes).</p>
+</li>
+<li>
+<p>L&rsquo;<code>Almanach</code>,  il s&rsquo;agit d&rsquo;un ensemble de données moins précises, mais plus générales, sur les positions orbitales et les heures de passage des satellites GPS, il contient aussi les codes pseudo-random de chaque satellite. L&rsquo;almanach est transmis à une fréquence plus faible et est généralement mis à jour une fois par jour par les satellites. L&rsquo;almanach peut être conservé plusieurs semaines en mémoire pour faire en sorte que le système fonctionne même en cas de perte de signal. Et il peut aussi être utilisé pour trouver les meilleurs satellites pour établir un positionnement plus rapide.</p>
+</li>
+</ul>
+<p><strong>Remarque</strong>:
+Au sol, il existe des stations de contrôle de l&rsquo;US Air Force, qui surveillent les satellites, calculent et leurs transmettent leurs éphémérides exactes qu&rsquo;il relayeront aux autres récepteurs GPS. Les éphémérides sont redemandées par les satellites aux stations de contrôle toutes les heures et l&rsquo;almanach toutes les semaines.</p>
+<h3 id="décodage-de-la-trame-gps">Décodage de la trame GPS</h3>
+<p>Bon maintenant, on peut en revenir au challenge 🙂!
+On possède une trame GPS et il va falloir la décoder pour retrouver les coordonnées,Pour y arriver on va utiliser un programme spécialisé là dedans: <a href="https://gnss-sdr.org">GNSS-SDR</a>, qui par ailleurs propose un excellent tutoriel pour se familiariser avec le décodage GPS. <code>GNSS-SDR</code> va prendre en argument un fichier de config dans lequel nous devons mettre les caractéristiques du signal, et il est même possible de traiter le signal avec divers filtres directement dans la config!
+Voilà la configuration à utiliser et en dessous les explication:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[GNSS-SDR]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### GLOBAL OPTIONS ##################
+</span></span><span class="line"><span class="cl">GNSS-SDR.internal_fs_sps=2000000
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### SIGNAL_SOURCE CONFIG ############
+</span></span><span class="line"><span class="cl">SignalSource.implementation=File_Signal_Source
+</span></span><span class="line"><span class="cl">SignalSource.filename=./brdc1210_23n.bin
+</span></span><span class="line"><span class="cl">SignalSource.item_type=ibyte
+</span></span><span class="line"><span class="cl">SignalSource.sampling_frequency=8000000
+</span></span><span class="line"><span class="cl">SignalSource.samples=0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### SIGNAL_CONDITIONER CONFIG ############
+</span></span><span class="line"><span class="cl">SignalConditioner.implementation=Signal_Conditioner
+</span></span><span class="line"><span class="cl">DataTypeAdapter.implementation=Ibyte_To_Complex
+</span></span><span class="line"><span class="cl">InputFilter.implementation=Pass_Through
+</span></span><span class="line"><span class="cl">InputFilter.item_type=gr_complex
+</span></span><span class="line"><span class="cl">Resampler.implementation=Direct_Resampler
+</span></span><span class="line"><span class="cl">Resampler.sample_freq_in=8000000
+</span></span><span class="line"><span class="cl">Resampler.sample_freq_out=2000000
+</span></span><span class="line"><span class="cl">Resampler.item_type=gr_complex
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### CHANNELS GLOBAL CONFIG ############
+</span></span><span class="line"><span class="cl">Channels_1C.count=8
+</span></span><span class="line"><span class="cl">Channels.in_acquisition=8
+</span></span><span class="line"><span class="cl">Channel.signal=1C
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### ACQUISITION GLOBAL CONFIG ############
+</span></span><span class="line"><span class="cl">Acquisition_1C.implementation=GPS_L1_CA_PCPS_Acquisition
+</span></span><span class="line"><span class="cl">Acquisition_1C.item_type=gr_complex
+</span></span><span class="line"><span class="cl">Acquisition_1C.pfa=0.01
+</span></span><span class="line"><span class="cl">Acquisition_1C.doppler_max=10000
+</span></span><span class="line"><span class="cl">Acquisition_1C.doppler_step=250
+</span></span><span class="line"><span class="cl">Acquisition_1C.blocking=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### TRACKING GLOBAL CONFIG ############
+</span></span><span class="line"><span class="cl">Tracking_1C.implementation=GPS_L1_CA_DLL_PLL_Tracking
+</span></span><span class="line"><span class="cl">Tracking_1C.item_type=gr_complex
+</span></span><span class="line"><span class="cl">Tracking_1C.pll_bw_hz=40.0;
+</span></span><span class="line"><span class="cl">Tracking_1C.dll_bw_hz=4.0;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### TELEMETRY DECODER GPS CONFIG ############
+</span></span><span class="line"><span class="cl">TelemetryDecoder_1C.implementation=GPS_L1_CA_Telemetry_Decoder
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### OBSERVABLES CONFIG ############
+</span></span><span class="line"><span class="cl">Observables.implementation=Hybrid_Observables
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">;######### PVT CONFIG ############
+</span></span><span class="line"><span class="cl">PVT.implementation=RTKLIB_PVT
+</span></span><span class="line"><span class="cl">PVT.positioning_mode=Single
+</span></span><span class="line"><span class="cl">PVT.output_rate_ms=100
+</span></span><span class="line"><span class="cl">PVT.display_rate_ms=500
+</span></span><span class="line"><span class="cl">PVT.iono_model=Broadcast
+</span></span><span class="line"><span class="cl">PVT.trop_model=Saastamoinen
+</span></span><span class="line"><span class="cl">PVT.flag_rtcm_server=true
+</span></span><span class="line"><span class="cl">PVT.flag_rtcm_tty_port=false
+</span></span><span class="line"><span class="cl">PVT.rtcm_dump_devname=/dev/pts/1
+</span></span><span class="line"><span class="cl">PVT.rtcm_tcp_port=2101
+</span></span><span class="line"><span class="cl">PVT.rtcm_MT1019_rate_ms=5000
+</span></span><span class="line"><span class="cl">PVT.rtcm_MT1077_rate_ms=1000
+</span></span><span class="line"><span class="cl">PVT.rinex_version=2
+</span></span></code></pre></div><p><em>SIGNAL_SOURCE CONFIG:</em></p>
+<p>Il s&rsquo;agit du bloc d&rsquo;entrée dans lequel on va mettre les caractéristiques de base de notre signal</p>
+<ul>
+<li><strong>SignalSource.filename</strong>, c&rsquo;est le chemin vers le fichier contenant le signal.</li>
+<li><strong>SignalSource.item_type</strong>, c&rsquo;est le type de données utilisées par le signal, dans notre cas c&rsquo;est <code>ibyte</code>.</li>
+<li><strong>SignalSource.sampling_frequency</strong>, c&rsquo;est la fréquence d&rsquo;échantillonage du signal.</li>
+</ul>
+<p><em>SIGNAL_CONDITIONER CONFIG:</em></p>
+<p>Il s&rsquo;agit du bloc dans lequel on peut apporter des modifications à notre signal. Il est constitué d&rsquo;un adaptateur, d&rsquo;un filtre et d&rsquo;un resampler</p>
+<ul>
+<li><strong>DataTypeAdapter.implementation</strong>, c&rsquo;est là qu&rsquo;on va spécifier la conversion de données entre notre signal et le signal attendue par le reste de la config, on met donc <code>Ibyte_To_Complex</code>.</li>
+<li><strong>InputFilter.implementation</strong>, c&rsquo;est le type de filtre que l&rsquo;on veut appliquer sur notre signal, dans notre cas on ne veut pas apporter de modifications donc on met <code>Pass_Through</code>.</li>
+<li><strong>InputFilter.item_type</strong>, le type attendu par le filtre, comme dit précédemment dans notre cas ce sera un <code>gr_complex</code>.</li>
+<li><strong>Resampler.item_type</strong>, idem mais pour le resampler.</li>
+<li><strong>Resampler.sample_freq_in</strong> et <strong>Resampler.sample_freq_out</strong>, ce sont la fréquence d&rsquo;entrée du resampler (dans notre cas 8Msps) et la fréquence attendue par GNSS-SDR (2Msps)</li>
+</ul>
+<p>Et voilà! On ne touche pas au reste de la config.
+On lance maintenant le programme comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gnss-sdr --config-file<span class="o">=</span>gnss.conf
+</span></span></code></pre></div><p>Et au bout de 30 secondes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Position at 2023-May-01 00:03:23.000000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394428877 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828917337 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> 18.036 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: 1.401 <span class="o">[</span>m/s<span class="o">]</span>, North: 0.788 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> -0.944 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Position at 2023-May-01 00:03:23.500000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394405209 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828817604 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> 20.948 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: 1.613 <span class="o">[</span>m/s<span class="o">]</span>, North: 0.156 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> -1.256 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Current receiver time: <span class="m">3</span> min <span class="m">43</span> s
+</span></span><span class="line"><span class="cl">New GPS NAV message received in channel 0: subframe <span class="m">2</span> from satellite GPS PRN <span class="m">28</span> <span class="o">(</span>Block IIR<span class="o">)</span>
+</span></span><span class="line"><span class="cl">New GPS NAV message received in channel 6: subframe <span class="m">2</span> from satellite GPS PRN <span class="m">22</span> <span class="o">(</span>Block IIR<span class="o">)</span>
+</span></span><span class="line"><span class="cl">New GPS NAV message received in channel 4: subframe <span class="m">2</span> from satellite GPS PRN <span class="m">31</span> <span class="o">(</span>Block IIR-M<span class="o">)</span>
+</span></span><span class="line"><span class="cl">New GPS NAV message received in channel 1: subframe <span class="m">2</span> from satellite GPS PRN <span class="m">21</span> <span class="o">(</span>Block IIR<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Satellite GPS PRN <span class="m">22</span> <span class="o">(</span>Block IIR<span class="o">)</span> is not healthy, not used <span class="k">for</span> navigation
+</span></span><span class="line"><span class="cl">New GPS NAV message received in channel 2: subframe <span class="m">2</span> from satellite GPS PRN <span class="m">32</span> <span class="o">(</span>Block IIF<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Position at 2023-May-01 00:03:24.000000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394328048 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828891534 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> -8.822 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: -0.514 <span class="o">[</span>m/s<span class="o">]</span>, North: 0.654 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> -0.813 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Position at 2023-May-01 00:03:24.500000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394465683 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828845733 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> 10.952 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: -0.399 <span class="o">[</span>m/s<span class="o">]</span>, North: 1.080 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> -1.418 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Current receiver time: <span class="m">3</span> min <span class="m">44</span> s
+</span></span><span class="line"><span class="cl">Position at 2023-May-01 00:03:25.000000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394700811 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828782262 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> 74.545 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: -2.136 <span class="o">[</span>m/s<span class="o">]</span>, North: -2.142 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> 5.140 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Position at 2023-May-01 00:03:25.500000 UTC using <span class="m">4</span> observations is <span class="nv">Lat</span> <span class="o">=</span> -21.394658573 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Long</span> <span class="o">=</span> 165.828786711 <span class="o">[</span>deg<span class="o">]</span>, <span class="nv">Height</span> <span class="o">=</span> 75.674 <span class="o">[</span>m<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Velocity: East: -1.080 <span class="o">[</span>m/s<span class="o">]</span>, North: 1.703 <span class="o">[</span>m/s<span class="o">]</span>, <span class="nv">Up</span> <span class="o">=</span> 0.097 <span class="o">[</span>m/s<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Current receiver time: <span class="m">3</span> min <span class="m">45</span> s
+</span></span></code></pre></div><p>On a des coordonnées 😄!</p>
+<p>En se rendant aux <a href="https://www.google.com/maps/@-21.394405209,165.828817604,20.948z">coordonnées</a> sur Google Maps on tombe sur le Collège de Kouaoua en Nouvelle-Calédonie.</p>
+<div>
+    <img src="assets/flag.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>Ces deux challenges de RF, bien qu&rsquo;assez peu techniques, étaient vraiment intéressant. L&rsquo;un parce qu&rsquo;il faisait intervenir une méthode d&rsquo;espionnage vraiment très originale (peu réaliste mais bon) et l&rsquo;autre car il m&rsquo;aura permis de revoir le système GPS 🙃.</p>
+</div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <ul class="flex text-md space-x-3 sm:space-x-6">
+          
+        </ul>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2024
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

