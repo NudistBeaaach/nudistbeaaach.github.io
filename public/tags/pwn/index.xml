@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PWN on Blog de TaylorDeDordogne</title>
-    <link>http://localhost:1313/tags/pwn/</link>
+    <link>https://nudistbeaaach.github.io/tags/pwn/</link>
     <description>Recent content in PWN on Blog de TaylorDeDordogne</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>taylordedordogne@gmail.com (TaylorDeDordogne)</managingEditor>
     <webMaster>taylordedordogne@gmail.com (TaylorDeDordogne)</webMaster>
     <lastBuildDate>Wed, 25 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nudistbeaaach.github.io/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Calculator in Shadow</title>
-      <link>http://localhost:1313/write-ups/the-calculator-in-shadow/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/the-calculator-in-shadow/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/the-calculator-in-shadow/</guid>
       <description>Introduction J&amp;rsquo;ai eu la chance de pouvoir participer aux qualifications de l&amp;rsquo;ECW 2023 durant lequel j&amp;rsquo;ai pu flag un challenge de PWN super intéressant proposé par Thales, j&amp;rsquo;en fait donc un write-up histoire de montrer de quoi il s&amp;rsquo;agissait 😉. L&amp;rsquo;objectif était d&amp;rsquo;exploiter un binaire RISC-V implémentant des fonctionalités de sécurités additionnelles mises en place par l&amp;rsquo;intermédiaire d&amp;rsquo;un patch de qemu. Commençons tout de suite!&#xA;Prise en main du challenge L&amp;rsquo;énoncé se présentait comme ceci:</description>
     </item>
     <item>
       <title>Une citation pas comme les autres</title>
-      <link>http://localhost:1313/write-ups/une-citation-pas-comme-les-autres/</link>
+      <link>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/une-citation-pas-comme-les-autres/</guid>
+      <guid>https://nudistbeaaach.github.io/write-ups/une-citation-pas-comme-les-autres/</guid>
       <description>Introduction Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&amp;rsquo;exploiter des format strings, mais à cause d&amp;rsquo;une imprécision dans l&amp;rsquo;énoncé de la première partie j&amp;rsquo;ai fait pop un shell sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&amp;rsquo;ai utilisé pour exploiter le binaire! L&amp;rsquo;énoncé se présentait comme ceci:&#xA;Un coin lecture rempli de nombreux livres est à la disposition des clients.</description>
     </item>
   </channel>
