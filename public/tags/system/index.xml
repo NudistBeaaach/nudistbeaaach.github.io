@@ -12,10 +12,10 @@
     <atom:link href="http://localhost:1313/tags/system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sandchat</title>
-      <link>http://localhost:1313/write-ups/sandchat/</link>
+      <link>http://localhost:1313/posts/sandchat/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/sandchat/</guid>
-      <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&#xA;Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:&#xA;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>
+      <guid>http://localhost:1313/posts/sandchat/</guid>
+      <description>&lt;h1 id=&#34;dghack-2022-sandchat&#34;&gt;DGHACK 2022: Sandchat&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Sandchat est un challenge de d&amp;rsquo;escape de &lt;code&gt;sandbox&lt;/code&gt; et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&lt;/p&gt;&#xA;&lt;h2 id=&#34;evasion-de-la-sandbox&#34;&gt;Evasion de la sandbox&lt;/h2&gt;&#xA;&lt;p&gt;Une fois connecté en &lt;code&gt;ssh&lt;/code&gt; on arrive dans l&amp;rsquo;application de maintenance en question:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./assets/Capture_0.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot:&#xA;&lt;code&gt;backup&lt;/code&gt;, cette commande permet d&amp;rsquo;afficher le contenu encodé en &lt;code&gt;base64&lt;/code&gt; d&amp;rsquo;un des fichiers du sous-dossier &lt;code&gt;etc&lt;/code&gt;.&#xA;Dans l&amp;rsquo;optique de télécharger le binaire de la sandbox, on peut abuser de la commande &lt;code&gt;backup&lt;/code&gt; comme ceci:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

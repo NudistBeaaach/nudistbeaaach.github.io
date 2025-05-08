@@ -12,10 +12,10 @@
     <atom:link href="http://localhost:1313/tags/ecw-2023/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Calculator in Shadow</title>
-      <link>http://localhost:1313/write-ups/the-calculator-in-shadow/</link>
+      <link>http://localhost:1313/posts/the-calculator-in-shadow/</link>
       <pubDate>Wed, 25 Oct 2023 00:00:00 +0000</pubDate><author>taylordedordogne@gmail.com (TaylorDeDordogne)</author>
-      <guid>http://localhost:1313/write-ups/the-calculator-in-shadow/</guid>
-      <description>Introduction J&amp;rsquo;ai eu la chance de pouvoir participer aux qualifications de l&amp;rsquo;ECW 2023 durant lequel j&amp;rsquo;ai pu flag un challenge de PWN super intéressant proposé par Thales, j&amp;rsquo;en fait donc un write-up histoire de montrer de quoi il s&amp;rsquo;agissait 😉. L&amp;rsquo;objectif était d&amp;rsquo;exploiter un binaire RISC-V implémentant des fonctionalités de sécurités additionnelles mises en place par l&amp;rsquo;intermédiaire d&amp;rsquo;un patch de qemu. Commençons tout de suite!&#xA;Prise en main du challenge L&amp;rsquo;énoncé se présentait comme ceci:</description>
+      <guid>http://localhost:1313/posts/the-calculator-in-shadow/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;J&amp;rsquo;ai eu la chance de pouvoir participer aux qualifications de l&amp;rsquo;ECW 2023 durant lequel j&amp;rsquo;ai pu flag un challenge de PWN super intéressant proposé par Thales, j&amp;rsquo;en fait donc un write-up histoire de montrer de quoi il s&amp;rsquo;agissait 😉. L&amp;rsquo;objectif était d&amp;rsquo;exploiter un binaire &lt;code&gt;RISC-V&lt;/code&gt; implémentant des fonctionalités de sécurités additionnelles mises en place par l&amp;rsquo;intermédiaire d&amp;rsquo;un patch de qemu. Commençons tout de suite!&lt;/p&gt;&#xA;&lt;h2 id=&#34;prise-en-main-du-challenge&#34;&gt;Prise en main du challenge&lt;/h2&gt;&#xA;&lt;p&gt;L&amp;rsquo;énoncé se présentait comme ceci:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

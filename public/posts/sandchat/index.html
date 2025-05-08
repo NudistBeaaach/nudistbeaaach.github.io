@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Sandchat
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/sandchat/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Sandchat</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/sandchat/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Sandchat</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Sandchat</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2023/01/04&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/system/" id="tag">System</a>
+      
+        
+        <a href="/tags/dghack-2022/" id="tag">DG&#39;Hack 2022</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#evasion-de-la-sandbox">Evasion de la sandbox</a></li>
+    <li><a href="#exploitation-du-serveur-irc">Exploitation du serveur IRC</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h1 id="dghack-2022-sandchat">DGHACK 2022: Sandchat</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Sandchat est un challenge de d&rsquo;escape de <code>sandbox</code> et de pwn, on dispose d&rsquo;un accès ssh à une application de surveillance d&rsquo;un serveur, et il va s&rsquo;agir dans un premier temps de s&rsquo;en échapper.</p>
+<h2 id="evasion-de-la-sandbox">Evasion de la sandbox</h2>
+<p>Une fois connecté en <code>ssh</code> on arrive dans l&rsquo;application de maintenance en question:</p>
+<p><img src="./assets/Capture_0.PNG" alt=""></p>
+<p>On a donc plusieurs options à disposition et une d&rsquo;elles sort du lot:
+<code>backup</code>, cette commande permet d&rsquo;afficher le contenu encodé en <code>base64</code> d&rsquo;un des fichiers du sous-dossier <code>etc</code>.
+Dans l&rsquo;optique de télécharger le binaire de la sandbox, on peut abuser de la commande <code>backup</code> comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">backup ../../../proc/self/exe
+</span></span></code></pre></div><p>Et bingo!</p>
+<p><img src="./assets/Capture_1.PNG" alt=""></p>
+<p>On va pouvoir commencer à reverse le binaire pour essayer de trouver un moyen de s&rsquo;échapper de la sandbox. Quasiment tout le code est contenu dans la fonction <code>main</code> et on remarque vite des chaines de caractères intriguantes:</p>
+<p><img src="./assets/strings.PNG" alt=""></p>
+<p>On peut conjecturer qu&rsquo;il y&rsquo;a une option cachée pour créer ses propres <code>alias</code> dans cette sandbox, reste plus qu&rsquo;à trouver comment y accéder. Après avoir fouillé un peu dans la fonction main on tombe sur cette comparaison:</p>
+<p><img src="./assets/comp.PNG" alt=""></p>
+<p>Ce bout de code va <code>XORer</code> deux constantes numériques avant de stocker le résultat en mémoire sous la forme d&rsquo;une chaine de caractères (<code>0x2cdaddf5 ^ 0x44bbae9d = b'hash'</code>)
+et fait un appel à <code>strcmp</code> avec notre input et cette chaine de caractères, on essaie donc de créer un alias <code>/bin/sh</code> en utilisant cette commande cachée ce qui s&rsquo;avère payant:</p>
+<p><img src="./assets/Capture_2.PNG" alt=""></p>
+<p>Mais là surprise, pas de flag apparent! Le challenge n&rsquo;est donc visiblement pas encore terminé. En regardant dans le dossier <code>/home</code> on découvre l&rsquo;existence d&rsquo;un utilisateur <code>circ_server</code>.</p>
+<p><img src="./assets/Capture_3.PNG" alt=""></p>
+<p>Sûrement un compte associé à un serveur <code>IRC</code>, cette théorie nous est confirmée lorsque on tente de voir les ports ouverts sur la machine:</p>
+<p><img src="./assets/Capture_4.PNG" alt=""></p>
+<h2 id="exploitation-du-serveur-irc">Exploitation du serveur IRC</h2>
+<p>Dans le dossier <code>/opt</code>, on trouve le progamme visiblement associé à ce service:</p>
+<p><img src="./assets/Capture_5.PNG" alt=""></p>
+<p>On télécharge le binaire et on repasse dans <code>Binary Ninja</code>! On a beaucoup de chance, le binaire n&rsquo;est pas <code>strippé</code>: On peut donc comprendre plus facilement le fonctionnement de ce programme et on trouve notamment une chaine de caractères assez intéressante:</p>
+<p><img src="./assets/admin.PNG" alt=""></p>
+<p>On se doute que pour finir le challenge, il va maintenant s&rsquo;agir de passer amdinistrateur de ce serveur <code>IRC</code>.</p>
+<p>Le serveur a un fonctionnement plutôt basique: il s&rsquo;occupe de chaque nouvelle connexion avec la fonction <code>connect_user</code> et compare chaque nouvelle commande à un set de commandes disponibles, l&rsquo;une d&rsquo;elle <code>uafprint</code> (le nom de la vuln est donné dans le nom de fonction lmao) permet d&rsquo;afficher les informations de l&rsquo;utilisateur, elles sont au nombre de 2:</p>
+<ul>
+<li>
+<p><strong>pseudo</strong>: Le <code>nickname IRC</code> de l&rsquo;utilisateur. C&rsquo;est un simple pointeur vers un chunk contenant notre chaine de caractère.</p>
+</li>
+<li>
+<p><strong>channel</strong>: Une description associée à un canal de communication <code>IRC</code>. C&rsquo;est un pointeur vers une zone de 24 octets, 16 pour notre description et 8 libres (pour l&rsquo;exploitation on utilisera le canal <code>#WhiteHat</code>).</p>
+</li>
+<li>
+<p><strong>IsIrCorp</strong>: Cet attribut indique si on est administrateur du serveur ou non.</p>
+</li>
+</ul>
+<p>Ces deux types de données sont alloués dynamiquement, l&rsquo;attribut <code>pseudo</code> peut avoir une taille personalisée alors que l&rsquo;attribut <code>channel</code> a toujours une taille de 24 octets. Le programme définit aussi deux variables qui indiquent si les chunks associés à nos deux attributs sont libres ou non:</p>
+<p><img src="./assets/freed.PNG" alt=""></p>
+<p>On remarque dans la fonction <code>uafprint</code> que pour que l&rsquo;utilisateur soit considéré comme administrateur il faut que les 8 derniers octets libres de l&rsquo;attribut <code>channel</code> suivants notre description ne soient pas nuls.</p>
+<p>Il est possible d&rsquo;effacer les attributs <code>pseudo</code> et <code>channel</code> en appellant la fonction <code>uafreset</code> et on voit tout de suite que la fonction ne change pas les variables <code>is_channel_freed</code> et <code>is_userName_freed</code>après avoir libérés les chunks associés, un <code>Double Free</code> est donc possible, mais il est encore plus simple d&rsquo;opter pour un <code>User After Free</code>.
+En effet, pour changer de description pour un canal spécifique on utilise la syntaxe suivante:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujet <span class="c1">#WhiteHat: description</span>
+</span></span></code></pre></div><p>Cette chaine de caractère sera ensuite parsée dans la fonction <code>receive_topic</code> mais si on fournit une chaine de cette forme:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sujet <span class="c1">#WhiteHat</span>
+</span></span></code></pre></div><p>Le programme va se contenter d&rsquo;effacer la description actuelle du canal <code>#WhiteHat</code> en appellant la fonction <code>topicfree</code> et c&rsquo;est là que se trouve la seconde vulnérabilité, cette fonction va bien changer la variable <code>is_channel_freed</code> mais ne va pas remettre le pointeur <code>channel</code> à <code>NULL</code>. L&rsquo;exploitation deviens alors évidente:</p>
+<ul>
+<li><code>sujet #WhiteHat: test</code> | On crée une nouvelle description pour notre canal.</li>
+<li><code>sujet #WhiteHat</code> | On libère cette description. (le chunk de 24 octets est libéré et est mis au sommet du <code>fastbin</code>).</li>
+<li><code>pseudo AAAAAAAAAAAAAAAAAAAAAAA</code> | On alloue un pseudo de 24 caractères (l&rsquo;input en contient seulement 23 car un <code>nullbyte</code> est rajouté par le programme et étant donné que le <code>fastbin</code> contient notre ancien chunk associé au <code>channel</code> ce dernier est retourné).</li>
+</ul>
+<p>Et le pointeur <code>channel</code> pointe encore sur ce nouveau chunk et comme Les 8 derniers octets de notre pseudo ne sont pas nuls la condition pour être admin est remplie!</p>
+<p><img src="./assets/gotadmin.PNG" alt=""></p>
+<p>Il ne reste plus qu&rsquo;à réitérer l&rsquo;exploit sur le serveur pour obtenir le flag!</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Ce challenge a été une bonne surprise, même si la partie <code>pwn</code> était extrèmement basique elle a permis au chall d&rsquo;être un peu plus qu&rsquo;une escape de sandbox ;)</p>
+</div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <a href="http://localhost:1313//index.xml"
+          ><svg
+            width="18px"
+            height="18px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </a>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2025
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

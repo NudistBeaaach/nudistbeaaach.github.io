@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta
+    name="description"
+    content="Author: Kien Nguyen <kiennt2609@gmail.com>
+      A minimal Hugo theme with Tailwind CSS"
+  />
+  <title>
+    
+      Blog de TaylorDeDordogne
+      | Cracken
+    
+  </title>
+  <meta name="author" content="map[email:taylordedordogne@gmail.com name:TaylorDeDordogne]" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link
+    rel="icon"
+    href="/favicon_io/favicon.ico"
+    type="image/x-icon"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-16x16.png"
+    size="16x16"
+    type="image/png"
+  />
+  <link
+    rel="icon"
+    href="/favicon_io/favicon-32x32.png"
+    size="32x32"
+    type="image/png"
+  />
+
+  <link
+    rel="preload"
+    type="text/css"
+    href="/css/rose-pine.min.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/rose-pine.min.css"
+      integrity=""
+    />
+  </noscript>
+<link
+    rel="preload"
+    type="text/css"
+    href="/css/toigian.css"
+    integrity=""
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/toigian.css"
+      integrity=""
+    />
+  </noscript>
+
+  
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/light.css"
+    integrity=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="/css/dark.css"
+    integrity=""
+  />
+
+  <script>
+    
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  
+  
+  <script
+    async
+    defer
+    src="/js/main.js"
+    integrity=""
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, securityLevel: "loose" });
+  </script>
+  
+  
+</head>
+<body><header style="--layer: 10">
+  <div
+    aria-hidden="true"
+    class="absolute top-[-1000px] left-0 z-[calc(var(--layer)+1)] h-[calc(1000px+var(--page-top))] w-full bg-base"
+  ></div>
+
+  <div
+    class="fixed top-0 left-0 z-[var(--layer)] flex h-header-height w-full items-center border-b px-page-gutter before:absolute before:inset-0 before:z-[-1] before:bg-base [@supports(backdrop-filter:blur(0))]:before:bg-base [@supports(backdrop-filter:blur(0))]:before:backdrop-blur-md"
+  ><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/cracken/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Cracken</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+</div>
+</header>
+<main class="flex justify-center px-page-gutter py-page-top">
+      <div class="min-h-content w-full max-w-content space-y-10 sm:space-y-20"><div
+  class="lowercase italic mx-auto flex w-full max-w-content items-center justify-between"
+>
+  <nav class="mr-3">
+    <ol class="flex text-md items-center">
+      
+  
+    
+  
+    
+  
+  
+  
+  <li>
+    
+    
+    <a href="/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Blog de TaylorDeDordogne</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+  <li>
+    
+    
+    <a href="/posts/" class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">Posts</a>
+  </li>
+  
+    <li class="text-muted focus:underline focus:outline-none pr-1 whitespace-nowrap">/</li>
+  
+
+  
+  
+  
+    
+  
+  <li>
+    
+    
+    <a href="/posts/cracken/" class="focus:underline focus:outline-none font-bold pr-1 hidden md:block">Cracken</a>
+  </li>
+  
+
+    </ol>
+  </nav>
+  <nav class="ml-3">
+    <ul class="flex text-md whitespace-nowrap">
+      
+    </ul>
+  </nav>
+</div>
+
+
+<article>
+  <h1>Cracken</h1>
+  <time class="text-sm italic tabular-nums text-muted"
+  >2023/06/01&nbsp;</time
+>
+
+  
+
+  
+    <div class="section">
+      
+        
+        <a href="/tags/forensics/" id="tag">Forensics</a>
+      
+        
+        <a href="/tags/404ctf-2023/" id="tag">404CTF 2023</a>
+      
+    </div>
+  
+
+
+<div id="toc">
+  
+    
+      <details open>
+        <summary>Table of contents</summary>
+        <div id="toc-list"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#analyse-de-la-capture-mémoire">Analyse de la capture mémoire</a></li>
+    <li><a href="#analyse-de-la-capture-réseau">Analyse de la capture réseau</a></li>
+    <li><a href="#reverse-engineering">Reverse engineering</a>
+      <ol>
+        <li><a href="#reverse-de-la-fonction-principale-du-payload">Reverse de la fonction principale du payload</a></li>
+        <li><a href="#reverse-de-la-fonction-de-transmission-des-données">Reverse de la fonction de transmission des données</a></li>
+      </ol>
+    </li>
+    <li><a href="#décodage-des-données">Décodage des données</a>
+      <ol>
+        <li><a href="#extraction-des-noms-de-domaines-de-la-capture-réseau">Extraction des noms de domaines de la capture réseau</a></li>
+        <li><a href="#déchiffrement-des-commandes">Déchiffrement des commandes</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav></div>
+      </details>
+    
+  
+</div>
+<div class="content"><h2 id="introduction">Introduction</h2>
+<p>Hello, pour ce premier Write-Up de l&rsquo;édition 2023 du <code>404CTf</code>, on commence avec un challenge de Forensics. L&rsquo;énoncé se présente comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">Au milieu du café trône une table depuis laquelle un homme scrute ses semblables en engloutissant un breuvage étrange. Vous l&#39;observez du coin de l&#39;œil depuis plusieurs minutes déjà quand la porte du café s&#39;ouvre avec fracas. Un homme surgit alors, criant comme si le café était tout à lui.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">« Capitaine ! »
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Vous comprenez immédiatement qu&#39;il s&#39;adresse à votre homme, qui aborde par ailleurs la plus belle casquette de marin qu&#39;il vous ait été donné d&#39;observer.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">« Du respect matelot ! rétorque-t-il. Ne troublez pas ainsi mes hôtes !
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">— Mes excuses capitaine, ainsi qu&#39;à ces messieurs et dames, mais je me dois de vous informer des évènements qui viennent de frapper le nautilus. Notre nouveau mousse a voulu profiter de notre rare escale pour utiliser internet, et je lui ai ouvert une session sur le système, mais cet inconscient s&#39;est laissé attraper par un courriel agicheur et j&#39;ai bien peur que le nautilus ait été compromis par un pirate !
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">— Comment ! s&#39;exclame alors le capitaine Némo, dont la barbe finement taillée contient à peine la colère qui rougit ses joues. Vous ne pouvez donc vous tenir cinq minutes ! Je suppose que vous avez pris les mesures adéquates ?
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">— Bien sûr capitaine, j&#39;ai pris soin de faire un dump de la machine affectée et ait entrepris de capturer le réseau passant par le routeur, nous devrions pouvoir investiguer l&#39;affaire. Connaissez-vous quelqu&#39;un qui pourrait mener l&#39;analyse ? Commandez et j&#39;irai à sa rencontre. »
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Vous même féru d&#39;analyse forensique lors de vos temps perdus, vous marmonnez alors :
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">« Je pourrais bien m&#39;en charger, moi. »
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Némo vous entends, et ni une, ni deux, son regard vous fusille.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">« Attention, on ne parle pas en vain ici, vous allez vous y coller ! »
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Le matelot vous remet alors une clé USB...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Analysez les données remises par le matelot et retrouvez précisément le document exfiltré par le Malware à son C2.
+</span></span></code></pre></div><p>Et avec ceci, il nous est donné une archive contenant trois fichiers:</p>
+<ul>
+<li><em>Network.png</em> : Le schéma de l&rsquo;infrastructure réseau du nautilus</li>
+<li><em>WS02-20230524-025804.raw</em> : Un fichier s&rsquo;apparentant à la capture mémoire du poste infecté</li>
+<li><em>capture.pcap</em> : La capture réseau effecutée par le matelot</li>
+</ul>
+<p>Il va donc s&rsquo;agir de retrouver ce que l&rsquo;attaquant à réussi à récupérer sur le poste infecté. On va commencer par jeter un oeil au dump mémoire fourni avec le challenge.</p>
+<h2 id="analyse-de-la-capture-mémoire">Analyse de la capture mémoire</h2>
+<p>Avec <code>Volatility3</code> on commence par lister les processus sur la machine comme ceci:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 vol.py -f cracken.raw windows.pstree.PsTree
+</span></span></code></pre></div><p>Et on remarque toute de suite le processus de PID <code>4016</code>, avec un nom inhabituel lancé depuis l&rsquo;explorateur de fichier et notamment parent d&rsquo;un shell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">* 9056  696     LogonUI.exe     0x8584d91c70c0  0       -       1       False   2023-05-24 01:07:08.000000      2023-05-24 01:11:01.000000 
+</span></span><span class="line"><span class="cl">* 432   696     userinit.exe    0x8584d809b080  0       -       1       False   2023-05-24 00:45:59.000000      2023-05-24 00:46:41.000000 
+</span></span><span class="line"><span class="cl">** 2568 432     explorer.exe    0x8584d6bb8080  86      -       1       False   2023-05-24 00:45:59.000000      N/A
+</span></span><span class="line"><span class="cl">*** 3968        2568    SecurityHealth  0x8584d90e5080  1       -       1       False   2023-05-24 00:46:21.000000      N/A
+</span></span><span class="line"><span class="cl">*** 7976        2568    cmd.exe 0x8584d9f5c0c0  1       -       1       False   2023-05-24 02:57:32.000000      N/A
+</span></span><span class="line"><span class="cl">**** 11248      7976    conhost.exe     0x8584daed4080  6       -       1       False   2023-05-24 02:57:32.000000      N/A
+</span></span><span class="line"><span class="cl">**** 7272       7976    DumpIt.exe      0x8584d9fa00c0  3       -       1       True    2023-05-24 02:58:02.000000      N/A
+</span></span><span class="line"><span class="cl">*** 1264        2568    WINWORD.EXE     0x8584da4860c0  16      -       1       False   2023-05-24 00:55:55.000000      N/A
+</span></span><span class="line"><span class="cl">*** 4016        2568    Formation Gran  0x8584daee1080  1       -       1       False   2023-05-24 02:53:14.000000      N/A
+</span></span><span class="line"><span class="cl">**** 6524       4016    cmd.exe 0x8584da3e4080  1       -       1       False   2023-05-24 02:53:16.000000      N/A
+</span></span><span class="line"><span class="cl">***** 7656      6524    conhost.exe     0x8584da3e1080  4       -       1       False   2023-05-24 02:53:17.000000      N/A
+</span></span><span class="line"><span class="cl">*** 5404        2568    Notepad.exe     0x8584d9f03080  7       -       1       False   2023-05-24 00:57:14.000000      N/A
+</span></span><span class="line"><span class="cl">*** 1916        2568    OneDrive.exe    0x8584d950d080  25      -       1       True    2023-05-24 00:46:22.000000      N/A
+</span></span><span class="line"><span class="cl">6780    6704    msteams.exe     0x8584d95450c0  19      -       1       False   2023-05-24 00:46:34.000000      N/A
+</span></span><span class="line"><span class="cl">* 6820  6780    msedgewebview2  0x8584d99a0080  46      -       1       False   2023-05-24 00:46:38.000000      N/A
+</span></span><span class="line"><span class="cl">** 6688 6820    msedgewebview2  0x8584d9520080  7       -       1       False   2023-05-24 00:46:38.000000      N/A
+</span></span><span class="line"><span class="cl">** 7552 6820    msedgewebview2  0x8584da4c2080  9       -       1       False   2023-05-24 00:46:42.000000      N/A
+</span></span><span class="line"><span class="cl">** 7588 6820    msedgewebview2  0x8584da86b080  20      -       1       False   2023-05-24 00:46:42.000000      N/A
+</span></span><span class="line"><span class="cl">** 7500 6820    msedgewebview2  0x8584da4c0080  12      -       1       False   2023-05-24 00:46:41.000000      N/A
+</span></span><span class="line"><span class="cl">** 7452 6820    msedgewebview2  0x8584da48f080  17      -       1       False   2023-05-24 00:46:41.000000      N/A
+</span></span><span class="line"><span class="cl">6836    5388    Teams.exe       0x8584d94ec080  0       -       1       False   2023-05-24 00:46:34.000000      2023-05-24 00:48:19.000000 
+</span></span><span class="line"><span class="cl">5792    2936    firefox.exe     0x8584da4ca0c0  70      -       1       False   2023-05-24 00:49:04.000000      N/A
+</span></span><span class="line"><span class="cl">* 7296  5792    firefox.exe     0x8584d90650c0  15      -       1       False   2023-05-24 00:49:31.000000      N/A
+</span></span><span class="line"><span class="cl">* 8064  5792    firefox.exe     0x8584da5450c0  8       -       1       False   2023-05-24 00:49:44.000000      N/A
+</span></span><span class="line"><span class="cl">* 5348  5792    firefox.exe     0x8584d3f380c0  29      -       1       False   2023-05-24 00:49:09.000000      N/A
+</span></span><span class="line"><span class="cl">* 3272  5792    firefox.exe     0x8584d6b9c0c0  16      -       1       False   2023-05-24 01:29:41.000000      N/A
+</span></span><span class="line"><span class="cl">* 936   5792    firefox.exe     0x8584daecd080  18      -       1       False   2023-05-24 02:57:45.000000      N/A
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>Pour voir le nom de l&rsquo;exécutable en entier on fait un:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 vol.py -f cracken.raw windows.cmdline.CmdLine <span class="p">|</span> grep <span class="s2">&#34;4016&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">4016</span>    Formation Gran  <span class="s2">&#34;C:\Users\Matelot\Downloads\Formation Grand Moussaillon.exe&#34;</span>
+</span></span></code></pre></div><p>Il s&rsquo;agit probablement du malware que le matelot a téléchargé, pour en savoir plus sur le code qui a été exécuté on va dumper le binaire en question:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 vol.py -f cracken.raw windows.dumpfiles.DumpFiles --pid<span class="o">=</span><span class="m">4016</span> -o malware_dump
+</span></span></code></pre></div><p>on retrouve dans le dossier <code>malware_dump</code>, tous les modules faisants partie de notre processus et on peut identifier facilement le module principal correspondant au programme malveillant.</p>
+<h2 id="analyse-de-la-capture-réseau">Analyse de la capture réseau</h2>
+<p>Mais avant de commencer le reverse, on va jeter un oeil à la capture réseau pour avoir une idée de comment le malware va exfiltrer les données depuis le poste infecté</p>
+<div>
+    <img src="assets/Capture.PNG", style="max-width:150%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On remarque beaucoup de requêtes DNS de type <code>TXT</code> faites sur des domaines ressemblants tous à cette forme:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">&lt;préfixe ressemblent à de la base32&gt;.7.cxu5zdk80j3rtqqm1xk5nikxitq2ubxyz
+</span></span></code></pre></div><p>Ce procédé s&rsquo;apparente fortement à de l&rsquo;<a href="https://digital-security.quodagis.fr/ressources/ressource/exfiltration-de-donnees-les-techniques-icmp-et-dns-tunneling-855">Exfiltration DNS</a>. En se fiant à la cartographie réseau fournie avec le challenge on remarque que l&rsquo;IP faisant les requêtes (<code>192.168.56.18</code>) appartient au même réseau que le poste infecté, ce doit donc être ce dernier qui fait les requêtes DNS. L&rsquo;IP cible correspond quant à elle au <code>Domain Controller</code> (<code>192.168.28.10</code>). Si la capture réseau montre les requêtes DNS comme destinées, dans un premier temps, au Domain Controller c&rsquo;est parce que dans un <code>Active Directory</code>, au moins un des domain controller doit faire office de DNS pour tous les postes enregistrés sur son domaine.</p>
+<p><img src="assets/Network.png" alt=""></p>
+<p>En essayant de décoder les préfixes des noms de domaines, on obtient aucune information lisible: Un chiffrement additionel doit être utilisé.
+On se résoud à se pencher sur le Reverse du malware récupéré depuis la capture mémoire pour en savoir plus sur la technique d&rsquo;exfiltration.</p>
+<h2 id="reverse-engineering">Reverse engineering</h2>
+<p>Une fois le binaire ouvert dans <code>Binary Ninja</code>, certains symboles sont directement détectés comme faisant partis des fonctions standards du C++. En partant du symbole <code>_start</code>, on trouve facilement une fonction qui s&rsquo;apparente à la fonction <code>main</code>, après avoir renommé quelques fonctions, voilà à quoi elle ressemble:</p>
+<div>
+    <img src="assets/main.png", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On y retrouve le suffixe des noms de domains servant à l&rsquo;exfiltration, on voit aussi un appel à une première fonction que j&rsquo;ai appellé <code>gen_key</code> (on la traitera plus tard), puis un appel à <code>payload</code> et un appel et un appel à <code>destroy_key</code>. Cette dernière va se charger de libérer deux <code>HANDLEs</code>, celui d&rsquo;une clé de chiffrement et un autre associé à un algorithme de chiffrement.</p>
+<div>
+    <img src="assets/destroy_key.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Cela nous donne déjà une idée de la structure utilisée par le programme pour stocker les clés de chiffrement (La structure n&rsquo;est pas complète mais pour l&rsquo;instant seul le début nous intéresse):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">KEY</span> <span class="n">__packed</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">AES_alg_handle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">AES_key_handle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">IV_ptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><strong>Remarque:</strong>
+Étant donné que le malware est codé en C++, beaucoup de fonctions et de bouts de code ne seront pas utiles pour le Reverse mais serviront à gérer de nouveaux buffers, faire des opérations sur des zones mémoires ou sur des strings et plus précisément à gérer la <a href="https://pvs-studio.com/en/blog/terms/6658/">SSO</a>.</p>
+<h3 id="reverse-de-la-fonction-principale-du-payload">Reverse de la fonction principale du payload</h3>
+<p>Comme expliqué précédemment, La fonction <code>main</code> va appeller une fonction que l&rsquo;on nommera <code>payload</code> et qui va constituer la base du Reverse Shell. La première chose que va faire la fonction payload est de créer un nouveau processus <code>cmd.exe</code> dont les paramètres <code>hStdInput, hStdOutput, hStdError</code> sont redirigés vers des pipes auquel le programme principal aura accès.
+C&rsquo;est une technique très répandue qui permet de mettre en place un Reverse shell très facilement, il suffira alors au malware de faire le lien entre le C2 et le shell par l&rsquo;intermédiaire des pipes.
+Le programme va instancier une structure qui contiendra les <code>HANDLEs</code> qui permettront d&rsquo;avoir accès aux pipes pour envoyer les commandes au processus enfant. On crée donc cette structure dans Binary Ninja:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">C2Connection</span> <span class="n">__packed</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">child_read_stdin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">father_write_stdin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">father_read_stdout</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">HANDLE</span> <span class="n">child_write_stdout</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">struct</span> <span class="n">PROCESS_INFORMATION</span> <span class="n">process_infos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>Et après avoir renommé et retypé toutes les variables on obtient un code assez clair:</p>
+<div>
+    <img src="assets/create_process.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>On en déduit que la pipeline de transfert des commandes envoyées au reverse shell peut se représenter comme ceci:</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 712 89"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 288,0 L 336,0' fill='none' stroke='currentColor'></path>
+<path d='M 336,0 L 384,0' fill='none' stroke='currentColor'></path>
+<path d='M 592,0 L 648,0' fill='none' stroke='currentColor'></path>
+<path d='M 16,16 L 112,16' fill='none' stroke='currentColor'></path>
+<path d='M 392,16 L 576,16' fill='none' stroke='currentColor'></path>
+<path d='M 672,16 L 680,16' fill='none' stroke='currentColor'></path>
+<path d='M 120,32 L 280,32' fill='none' stroke='currentColor'></path>
+<path d='M 16,48 L 112,48' fill='none' stroke='currentColor'></path>
+<path d='M 384,48 L 568,48' fill='none' stroke='currentColor'></path>
+<path d='M 664,48 L 680,48' fill='none' stroke='currentColor'></path>
+<path d='M 288,64 L 384,64' fill='none' stroke='currentColor'></path>
+<path d='M 592,64 L 648,64' fill='none' stroke='currentColor'></path>
+<path d='M 16,16 L 16,48' fill='none' stroke='currentColor'></path>
+<path d='M 112,16 L 112,32' fill='none' stroke='currentColor'></path>
+<path d='M 112,32 L 112,48' fill='none' stroke='currentColor'></path>
+<path d='M 288,0 L 288,64' fill='none' stroke='currentColor'></path>
+<path d='M 384,0 L 384,48' fill='none' stroke='currentColor'></path>
+<path d='M 384,48 L 384,64' fill='none' stroke='currentColor'></path>
+<path d='M 576,16 L 576,48' fill='none' stroke='currentColor'></path>
+<path d='M 664,16 L 664,32' fill='none' stroke='currentColor'></path>
+<path d='M 664,32 L 664,48' fill='none' stroke='currentColor'></path>
+<polygon points='128.000000,32.000000 116.000000,26.400000 116.000000,37.599998' fill='currentColor' transform='rotate(180.000000, 120.000000, 32.000000)'></polygon>
+<polygon points='288.000000,32.000000 276.000000,26.400000 276.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 280.000000, 32.000000)'></polygon>
+<polygon points='400.000000,16.000000 388.000000,10.400000 388.000000,21.600000' fill='currentColor' transform='rotate(180.000000, 392.000000, 16.000000)'></polygon>
+<polygon points='576.000000,48.000000 564.000000,42.400002 564.000000,53.599998' fill='currentColor' transform='rotate(0.000000, 568.000000, 48.000000)'></polygon>
+<polygon points='680.000000,16.000000 668.000000,10.400000 668.000000,21.600000' fill='currentColor' transform='rotate(180.000000, 672.000000, 16.000000)'></polygon>
+<path d='M 592,0 A 16,16 0 0,0 576,16' fill='none' stroke='currentColor'></path>
+<path d='M 648,0 A 16,16 0 0,1 664,16' fill='none' stroke='currentColor'></path>
+<path d='M 680,16 A 16,16 0 0,1 696,32' fill='none' stroke='currentColor'></path>
+<path d='M 696,32 A 16,16 0 0,1 680,48' fill='none' stroke='currentColor'></path>
+<path d='M 576,48 A 16,16 0 0,0 592,64' fill='none' stroke='currentColor'></path>
+<path d='M 664,48 A 16,16 0 0,1 648,64' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>C</text>
+<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='168' y='20' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='176' y='20' fill='currentColor' style='font-size:1em'>N</text>
+<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='200' y='20' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='224' y='20' fill='currentColor' style='font-size:1em'>X</text>
+<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='312' y='36' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='320' y='36' fill='currentColor' style='font-size:1em'>M</text>
+<text text-anchor='middle' x='328' y='36' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='336' y='36' fill='currentColor' style='font-size:1em'>L</text>
+<text text-anchor='middle' x='344' y='36' fill='currentColor' style='font-size:1em'>A</text>
+<text text-anchor='middle' x='352' y='36' fill='currentColor' style='font-size:1em'>N</text>
+<text text-anchor='middle' x='360' y='36' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='432' y='36' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='440' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='448' y='36' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='456' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='464' y='36' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='472' y='36' fill='currentColor' style='font-size:1em'>w</text>
+<text text-anchor='middle' x='488' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='488' y='36' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='504' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='504' y='36' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='512' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='512' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='520' y='4' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='520' y='36' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='528' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='528' y='36' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='536' y='4' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='536' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='544' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='592' y='36' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='600' y='36' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='608' y='36' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='616' y='36' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='624' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='632' y='36' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='640' y='36' fill='currentColor' style='font-size:1em'>e</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>La fonction payload va en ensuite transmettre les commandes au shell en passant par les pipes en utilisant les fonctions de la <code>WinAPI</code> <code>ReadFile</code> et <code>WriteFile</code>. par exemple, voilà la fonction <code>Write</code> qui se charge de transmettre la commande au shell:</p>
+<div>
+    <img src="assets/Write.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Je ne vais pas aller trop dans les détails du code mais le payload va ensuite rentrer dans une boucle qui recevra les commandes, les exécuter avec un appel à <code>Write</code> et ensuite les renverra au C2 grâce à une fonction que l&rsquo;on nommera <code>access_network</code>. On peut voir la boucle en question ci-dessous:</p>
+<div>
+    <img src="assets/loop.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Mais nous, ce qui nous intéresse c&rsquo;est la fonction <code>access_network</code> car c&rsquo;est elle qui va nous aider à retrouver les données exfiltrées, penchons nous un peu sur celle ci.</p>
+<h3 id="reverse-de-la-fonction-de-transmission-des-données">Reverse de la fonction de transmission des données</h3>
+<p>Cette fonction prend en premier paramètre, une structure associée à une clé <code>AES</code> (j&rsquo;y reviendrai), un pointeur vers une variable où stocker la valeur de retour et le retour de la commande contenue dans une structure assez explicite, de cette forme:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">struct</span> <span class="n">C2Chunk</span> <span class="n">__packed</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">buf_begin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint8_t</span><span class="o">*</span> <span class="n">buf_end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><strong>Remarque:</strong>
+Cette structure correspond surement à une structure standard du C++, je n&rsquo;ai pas pris le temps de chercher mais il est très probable que le programmeur du malware ne l&rsquo;ai pas définie telle quelle.</p>
+<p>Pour chaque chunk de data, la fonction va dans un premier temps appliquer un padding de type <a href="https://www.ibm.com/docs/en/zos/2.4.0?topic=rules-pkcs-padding-method">PKCS</a> et en parallèle calculer un hash du timestamp actuel en passant par cette fonction que l&rsquo;on nommera <code>hash_timestamp</code>:</p>
+<div>
+    <img src="assets/hash_timestamp.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ce hash sera ajouté avant les données réelles. Ensuite une fonction chargée de chiffrer les données va être appellée et va ajouter la taille des données à chiffrer juste avant le hash, ce qui fait que les données chiffrées seront encapsulées sous cette forme:</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 384 57"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 0,0 L 72,0' fill='none' stroke='currentColor'></path>
+<path d='M 72,0 L 168,0' fill='none' stroke='currentColor'></path>
+<path d='M 168,0 L 248,0' fill='none' stroke='currentColor'></path>
+<path d='M 248,0 L 368,0' fill='none' stroke='currentColor'></path>
+<path d='M 0,32 L 72,32' fill='none' stroke='currentColor'></path>
+<path d='M 72,32 L 168,32' fill='none' stroke='currentColor'></path>
+<path d='M 168,32 L 248,32' fill='none' stroke='currentColor'></path>
+<path d='M 248,32 L 368,32' fill='none' stroke='currentColor'></path>
+<path d='M 0,0 L 0,32' fill='none' stroke='currentColor'></path>
+<path d='M 72,0 L 72,32' fill='none' stroke='currentColor'></path>
+<path d='M 168,0 L 168,32' fill='none' stroke='currentColor'></path>
+<path d='M 248,0 L 248,32' fill='none' stroke='currentColor'></path>
+<path d='M 368,0 L 368,32' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='16' y='20' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='24' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='32' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='40' y='20' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='48' y='20' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='88' y='20' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='96' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='104' y='20' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='112' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='120' y='20' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='128' y='20' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='136' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='144' y='20' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='152' y='20' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='192' y='20' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='200' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='208' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='216' y='20' fill='currentColor' style='font-size:1em'>é</text>
+<text text-anchor='middle' x='224' y='20' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='232' y='20' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='264' y='20' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='272' y='20' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='280' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='288' y='20' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='296' y='20' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='304' y='20' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='312' y='20' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='328' y='20' fill='currentColor' style='font-size:1em'>P</text>
+<text text-anchor='middle' x='336' y='20' fill='currentColor' style='font-size:1em'>K</text>
+<text text-anchor='middle' x='344' y='20' fill='currentColor' style='font-size:1em'>C</text>
+<text text-anchor='middle' x='352' y='20' fill='currentColor' style='font-size:1em'>S</text>
+</g>
+
+    </svg>
+  
+</div>
+<div>
+    <img src="assets/encrypt_data.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et c&rsquo;est là qu&rsquo;il faut parler de comment la clé AES et son <code>Initialization vector</code> sont générés. Au début de la fonction main, une fonction que j&rsquo;avais nommée <code>gen_key</code> est appellée et va renvoyer la structure qui contiendra, la clé et l&rsquo;initialization vector qui est toujours le même et que l&rsquo;on peut retrouver dans le code mais pour ce qui est de la clé cela va nous poser problème étant donné que la clé est générée aléatoirement en utilisant la fonction <code>BCryptGenRandom</code>:</p>
+<div>
+    <img src="assets/gen_AES.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Quoi mais comment le C2 sera au courant de la clé de chiffrement utilisée pour transmettre les données 🤔 ?
+En fait la fonction <code>gen_key</code> va ensuite envoyer la clé au C2 en utilisant le même encodage mais l&rsquo;ayant chiffré au préalable  dans une fonction que l&rsquo;on nommera <code>RSA_encrypt</code>:</p>
+<div>
+    <img src="assets/RSA_encrypt.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Et le problème c&rsquo;est que cette fonction se base sur un chiffrement <code>RSA</code> et sur une clé publique hardcodée dans le binaire comme vous pouvez le constater:</p>
+<div>
+    <img src="assets/gen_AES.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ici, j&rsquo;ai simplement renommé et retypé quelques variables, mais la fonction va d&rsquo;abord encoder la clé en <code>base64</code>, puis va importer la clé publique depuis la section <code>.rdata</code> du binaire et va ensuite la chiffrer avec l&rsquo;algorithme RSA. La fonction que j&rsquo;ai renommé <code>create_struct</code> et qui se retrouve à plein d&rsquo;endroits dans le binaire va juste allouer l&rsquo;espace mémoire nécessaire à la structure <code>C2Chunk</code>. Ici vous pouvez voir la clé publique contenue dans le programme:</p>
+<div>
+    <img src="assets/RSA_key.png", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Une fois celà fait, le code va envoyer au C2 la clé par le même procédé que les résultats des commandes.
+Et ça c&rsquo;est la tuile 😕! Car cela ne nous permet pas de retrouver la clé AES chiffrée et si l&rsquo;on veut décoder les paquets envoyées au C2, il nous faut absolument cette clé. Après un rapide coup d&rsquo;oeil il n&rsquo;y pas de mauvaises utilisations des fonctions de crypto dans le code qui nous permettraient de la retrouver, il va falloir nous débrouiller autrement. Et c&rsquo;est là qu&rsquo;on se rappelle que la capture mémoire contient encore le processus du malware et en utilisant un programme comme <code>findaes</code> on peut essayer d&rsquo;extraire les clés AES depuis l&rsquo;espace mémoire du processus!
+On commence donc par récupérer ce dernier et on lance ensuite findaes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 vol.py -f cracken.raw windows.memmap --dump --pid <span class="m">4016</span>
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">../findaes-1.2/findaes pid.4016.dmp
+</span></span><span class="line"><span class="cl">Searching pid.4016.dmp
+</span></span><span class="line"><span class="cl">Found AES-256 key schedule at offset 0x4e4a0: 
+</span></span><span class="line"><span class="cl">6c bb f2 a3 9f c7 a2 a6 4e <span class="m">92</span> <span class="m">17</span> c8 <span class="m">72</span> <span class="m">48</span> 5e <span class="m">41</span> <span class="m">51</span> ec fe f9 e3 <span class="m">48</span> e2 <span class="m">07</span> <span class="m">07</span> ec 1b d3 <span class="m">65</span> b1 <span class="m">12</span> 2d 
+</span></span><span class="line"><span class="cl">Found AES-256 key schedule at offset 0x1374240: 
+</span></span><span class="line"><span class="cl"><span class="m">32</span> c5 ba 3a f0 2f <span class="m">53</span> f0 <span class="m">45</span> <span class="m">21</span> <span class="m">98</span> <span class="m">86</span> <span class="m">86</span> <span class="m">42</span> <span class="m">40</span> <span class="m">42</span> b1 9e bb 5c f4 <span class="m">16</span> <span class="m">00</span> ed 6f <span class="m">66</span> f6 fe <span class="m">59</span> 1f d8 7d 
+</span></span><span class="line"><span class="cl">Found AES-256 key schedule at offset 0x13744d0: 
+</span></span><span class="line"><span class="cl">de <span class="m">99</span> c8 <span class="m">34</span> <span class="m">52</span> a4 <span class="m">21</span> 7c c4 e8 <span class="m">03</span> bd b7 <span class="m">56</span> <span class="m">56</span> <span class="m">80</span> <span class="nb">cd</span> <span class="m">23</span> <span class="m">40</span> 5c e7 <span class="m">70</span> ec <span class="m">53</span> 4d <span class="m">43</span> e5 <span class="m">01</span> ae <span class="m">78</span> <span class="m">87</span> f4 
+</span></span><span class="line"><span class="cl">Found AES-128 key schedule at offset 0x3a8d920: 
+</span></span><span class="line"><span class="cl"><span class="m">86</span> <span class="m">12</span> <span class="m">28</span> <span class="m">25</span> <span class="m">41</span> <span class="m">20</span> <span class="m">90</span> c3 <span class="m">51</span> <span class="m">85</span> <span class="m">13</span> 8b <span class="m">20</span> <span class="m">76</span> ae <span class="nb">fc</span> 
+</span></span><span class="line"><span class="cl">Found AES-256 key schedule at offset 0x3b567e0: 
+</span></span><span class="line"><span class="cl">4a bf 8b <span class="nb">fc</span> e3 f4 d7 c7 f8 2d <span class="m">00</span> <span class="m">41</span> 9d <span class="m">22</span> 9a b0 <span class="m">83</span> d8 <span class="m">83</span> c9 2e 2d 5c c3 d0 2c a4 ed cf <span class="m">06</span> <span class="m">97</span> 7d 
+</span></span><span class="line"><span class="cl">Found AES-128 key schedule at offset 0x8f68dc0: 
+</span></span><span class="line"><span class="cl">e6 b7 dd <span class="m">82</span> <span class="m">14</span> 1c 5d <span class="m">19</span> b8 f3 e3 f6 4c <span class="m">19</span> c0 ac 
+</span></span><span class="line"><span class="cl">Found AES-128 key schedule at offset 0x600aecd0: 
+</span></span><span class="line"><span class="cl"><span class="m">84</span> c8 d6 <span class="m">69</span> <span class="m">51</span> <span class="nb">fc</span> <span class="m">01</span> <span class="m">61</span> e5 ff 4a <span class="m">50</span> bf ca 5c b5
+</span></span></code></pre></div><p>Étant donné que la taille de la clé spécifiée lors de l&rsquo;appel à <code>BCryptGenRandom</code> est de 256 bits, il y&rsquo;a seulement 4 possibilités et il s&rsquo;avèrera que la clé utilisée par le payload est <code>6cbbf2a39fc7a2a64e9217c872485e4151ecfef9e348e20707ec1bd365b1122d</code>.
+Yes! On a maintenant toutes les informations qu&rsquo;il nous faut pour commencer à décoder les données exfiltrées.</p>
+<p>Juste histoire d&rsquo;être sur, on peut regarder la suite du code de la fonction <code>access_network</code>, on va tomber entre autre sur une fonction dont le code s&rsquo;apparente fortement à l&rsquo;algorithme d&rsquo;encodage en <code>base32</code> et qui va se charger d&rsquo;encoder le chunk de donénes chiffrée.</p>
+<div>
+    <img src="assets/base32.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Une autre function que l&rsquo;on nommera <code>make_dns_query</code>, va commencer par ajouter le suffixe du nom de domaine ainsi qu&rsquo;un point à la fin en utilisant une fonction qui s&rsquo;apparente à un <code>strcat</code>:</p>
+<div>
+    <img src="assets/str_append.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Finalement, la requête est faite:</p>
+<div>
+    <img src="assets/make_query.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<p>Ca y&rsquo;est on va enfin pouvoir commencer à décoder les données récupérées par le C2. Étant donné que seuls les résultats des commandes nous intéresse, on a pas besoin de s&rsquo;attaquer à comment les commandes sont envoyées au poste infecté mais seulement comment les retours sont envoyés au C2 (dans tous les cas le binaire <code>cmd.exe</code>, inclut les commandes sur la sortie standard juste avant les retours donc aucun souci à ce niveau là).</p>
+<h2 id="décodage-des-données">Décodage des données</h2>
+<h3 id="extraction-des-noms-de-domaines-de-la-capture-réseau">Extraction des noms de domaines de la capture réseau</h3>
+<p>Pour retrouver les noms de domaines on va utiliser scapy pour cibler les paquets qui ont une couche <code>DNS</code> et dont le type de la requête
+est <code>TXT</code>, donc qui auront une valeur <code>qtype</code> égale à 16:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">extract_names</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ret</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">capture</span> <span class="o">=</span> <span class="n">rdpcap</span><span class="p">(</span><span class="s2">&#34;capture.pcap&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">packet</span> <span class="ow">in</span> <span class="n">capture</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">packet</span><span class="o">.</span><span class="n">haslayer</span><span class="p">(</span><span class="n">DNSQR</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">packet</span><span class="o">.</span><span class="n">haslayer</span><span class="p">(</span><span class="n">DNSRR</span><span class="p">)</span> <span class="ow">and</span> <span class="n">packet</span><span class="p">[</span><span class="n">DNSQR</span><span class="p">]</span><span class="o">.</span><span class="n">qtype</span> <span class="o">==</span> <span class="mh">0x10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">domain_name</span> <span class="o">=</span> <span class="n">packet</span><span class="p">[</span><span class="n">DNSQR</span><span class="p">]</span><span class="o">.</span><span class="n">qname</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">domain_name</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ret</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">KXMG7D7DOTK56NOZYNTVA4T37KBYPSD6AVWNIRRFYWFHNE36CCOA</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">VVSHRFTUHZBO2DJGQGJI5UZKX4T3DCYMOH7GKMOKOQPRLM3IOTFQ</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">GORJCILYKAR7UZ56XNDEXTEFE53CN5ERDWIH3XTHUNMO6IEAGG7A</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3</span><span class="n">VGPIU3WAELD2DCJUPWMT23PPXNINJCYDZHT7QSKAQR6VGZKH5KA</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">FT4MGZXAVMD6AVYMLVFKRDWTPFL2LJ55G3UM2H5O4TD7BIM3L72A</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">WLZ4JY76CO33B3BQOD4TWHHGPTZR3R2O5LPTFRLZ2EVATIJRDJIQ</span><span class="mf">.7</span><span class="o">.</span><span class="n">cxu5zdk80j3rtqqm1xk5nikxitq2ub</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span>
+</span></span></code></pre></div><p>Parfait, maintenant on va déchiffrer les préfixes encodés, pour retrouver le contenu des commandes!</p>
+<h3 id="déchiffrement-des-commandes">Déchiffrement des commandes</h3>
+<p>J&rsquo;ai remarqué que certains noms de domaines ciblés par les requêtes étaient envoyés deux fois d&rsquo;affilée, il va falloir faire attention à ne pas prendre en compte les doublons sinon les données retrouvées ne seront pas correctes. De plus l&rsquo;encodage en base32 appliqué par le binaire ne prend pas en compte les <code>=</code> de padding, ce sera à nous de les rajouter.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">decrypt_AES</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;out.bin&#34;</span><span class="p">,</span> <span class="s2">&#34;wb&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">domain</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">last_block_width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span> <span class="o">%</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">last_block_width</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">domain</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="n">last_block_width</span><span class="p">)</span> <span class="o">*</span> <span class="s1">&#39;=&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">domain</span> <span class="o">==</span> <span class="n">last</span><span class="p">:</span> <span class="k">continue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">cipher_text</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b32decode</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CBC</span><span class="p">,</span> <span class="n">IV</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plain_text</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher_text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">padding</span> <span class="o">=</span> <span class="n">plain_text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">plain_text</span><span class="p">[</span><span class="mi">9</span><span class="p">:</span><span class="o">-</span><span class="n">padding</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">last</span> <span class="o">=</span> <span class="n">domain</span>
+</span></span></code></pre></div><p>Et enfin, on obtient quelque chose de très prometteur:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">// out.bin
+</span></span><span class="line"><span class="cl">C:\Users\Matelot\Downloads&gt;whoami
+</span></span><span class="line"><span class="cl">nautilus\matelot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Matelot\Downloads&gt;cd /
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\&gt;dir
+</span></span><span class="line"><span class="cl"> Le volume dans le lecteur C n&#39;a pas de nom.
+</span></span><span class="line"><span class="cl"> Le num�ro de s�rie du volume est BACF-3566
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> R�pertoire de C:\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">07/05/2022  07:24    &lt;DIR&gt;          PerfLogs
+</span></span><span class="line"><span class="cl">24/05/2023  03:27    &lt;DIR&gt;          Program Files
+</span></span><span class="line"><span class="cl">23/05/2023  11:14    &lt;DIR&gt;          Program Files (x86)
+</span></span><span class="line"><span class="cl">23/05/2023  12:50    &lt;DIR&gt;          Users
+</span></span><span class="line"><span class="cl">23/05/2023  01:06    &lt;DIR&gt;          Windows
+</span></span><span class="line"><span class="cl">               0 fichier(s)                0 octets
+</span></span><span class="line"><span class="cl">               5 R�p(s)  53�285�601�280 octets libres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\&gt;dir
+</span></span><span class="line"><span class="cl"> Le volume dans le lecteur C n&#39;a pas de nom.
+</span></span><span class="line"><span class="cl"> Le num�ro de s�rie du volume est BACF-3566
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> R�pertoire de C:\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">07/05/2022  07:24    &lt;DIR&gt;          PerfLogs
+</span></span><span class="line"><span class="cl">24/05/2023  03:27    &lt;DIR&gt;          Program Files
+</span></span><span class="line"><span class="cl">23/05/2023  11:14    &lt;DIR&gt;          Program Files (x86)
+</span></span><span class="line"><span class="cl">23/05/2023  12:50    &lt;DIR&gt;          Users
+</span></span><span class="line"><span class="cl">23/05/2023  01:06    &lt;DIR&gt;          Windows
+</span></span><span class="line"><span class="cl">               0 fichier(s)                0 octets
+</span></span><span class="line"><span class="cl">               5 R�p(s)  53�285�601�280 octets libres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\&gt;dir
+</span></span><span class="line"><span class="cl"> Le volume dans le lecteur C n&#39;a pas de nom.
+</span></span><span class="line"><span class="cl"> Le num�ro de s�rie du volume est BACF-3566
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> R�pertoire de C:\
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">07/05/2022  07:24    &lt;DIR&gt;          PerfLogs
+</span></span><span class="line"><span class="cl">24/05/2023  03:27    &lt;DIR&gt;          Program Files
+</span></span><span class="line"><span class="cl">23/05/2023  11:14    &lt;DIR&gt;          Program Files (x86)
+</span></span><span class="line"><span class="cl">23/05/2023  12:50    &lt;DIR&gt;          Users
+</span></span><span class="line"><span class="cl">23/05/2023  01:06    &lt;DIR&gt;          Windows
+</span></span><span class="line"><span class="cl">               0 fichier(s)                0 octets
+</span></span><span class="line"><span class="cl">               5 R�p(s)  53�285�605�376 octets libres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\&gt;cd Users
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users&gt;dir
+</span></span><span class="line"><span class="cl"> Le volume dans le lecteur C n&#39;a pas de nom.
+</span></span><span class="line"><span class="cl"> Le num�ro de s�rie du volume est BACF-3566
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> R�pertoire de C:\Users
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">23/05/2023  12:50    &lt;DIR&gt;          .
+</span></span><span class="line"><span class="cl">22/05/2023  20:39    &lt;DIR&gt;          Capitaine
+</span></span><span class="line"><span class="cl">23/05/2023  11:16    &lt;DIR&gt;          Capitaine N�mo
+</span></span><span class="line"><span class="cl">23/05/2023  22:49    &lt;DIR&gt;          Matelot
+</span></span><span class="line"><span class="cl">22/05/2023  20:33    &lt;DIR&gt;          Public
+</span></span><span class="line"><span class="cl">               0 fichier(s)                0 octets
+</span></span><span class="line"><span class="cl">               5 R�p(s)  53�282�295�808 octets libres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users&gt;cd Capitaine
+</span></span><span class="line"><span class="cl">Acc�s refus�.
+</span></span></code></pre></div><p>On obtiens bien les commandes exécutées par le C2, et en cherchant un peu, une de ces dernières attire notre attention:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">C:\Users\Matelot\Desktop&gt;dir
+</span></span><span class="line"><span class="cl"> Le volume dans le lecteur C n&#39;a pas de nom.
+</span></span><span class="line"><span class="cl"> Le num�ro de s�rie du volume est BACF-3566
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> R�pertoire de C:\Users\Matelot\Desktop
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">24/05/2023  04:58    &lt;DIR&gt;          .
+</span></span><span class="line"><span class="cl">23/05/2023  22:49    &lt;DIR&gt;          ..
+</span></span><span class="line"><span class="cl">24/05/2023  04:56               751 acquire_w.bat
+</span></span><span class="line"><span class="cl">24/05/2023  04:56    &lt;DIR&gt;          beta_project
+</span></span><span class="line"><span class="cl">23/05/2023  13:00             8�284 ComptaCuisine.xlsx
+</span></span><span class="line"><span class="cl">24/05/2023  04:56           207�496 DumpIt.exe
+</span></span><span class="line"><span class="cl">21/05/2023  22:36         1�208�059 LeNautilus.pdf
+</span></span><span class="line"><span class="cl">23/05/2023  21:59            12�695 Manuel du r�cureur de pont.docx
+</span></span><span class="line"><span class="cl">23/05/2023  15:36             2�366 Microsoft Teams.lnk
+</span></span><span class="line"><span class="cl">24/05/2023  04:56               476 README.txt
+</span></span><span class="line"><span class="cl">24/05/2023  04:58                86 volatile_info_w.txt
+</span></span><span class="line"><span class="cl">24/05/2023  05:00     4�831�838�208 WS02-20230524-025804.raw
+</span></span><span class="line"><span class="cl">               9 fichier(s)    4�833�278�421 octets
+</span></span><span class="line"><span class="cl">               3 R�p(s)  48�436�264�960 octets libres
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">C:\Users\Matelot\Desktop&gt;powershell
+</span></span><span class="line"><span class="cl">Windows PowerShell
+</span></span><span class="line"><span class="cl">Copyright (C) Microsoft Corporation. Tous droits r�serv�s.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Installez la derni�re version de PowerShell pour de nouvelles fonctionnalit�s et am�liorations�! https://aka.ms/PSWindows
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PS C:\Users\Matelot\Desktop&gt; [convert]::ToBase64String((Get-Content -Path LeNautilus.pdf -Encoding byte))
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>L&rsquo;attaquant a trouvé un fichier nommé <code>Nautilus.pdf</code> et lance une commande powershell chargée d&rsquo;en afficher une version encodée en <code>base64</code> qui a donc été affichée sur la sortie standard du shell! Il ne nous reste plus qu&rsquo;à la décoder poure retrouver le fichier originel exfiltrée:</p>
+<div>
+    <img src="assets/flag.PNG", style="max-width:140%;margin-left: 50%;transform: translateX(-50%);">
+</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>J&rsquo;ai trouvé ce challenge super intéressant pour plusieurs raisons, tout d&rsquo;abord il commence avec plusieurs sources d&rsquo;informations (capture réseau, capture mémoire, cartographie réseau) ce qui permet d&rsquo;avoir une vraie vue d&rsquo;ensemble sur le problème. Ensuite il mêle bien la partie forensics et la partie reverse (qui s&rsquo;avère relativement plus exigente que ce que j&rsquo;ai pu retranscrire dans ce write-up, comme expliqué précédemment le fait que beaucoup de symboles de C++ 11 ne soient pas détectés par <code>Binary Ninja</code> rend la tâche plus ardue). Et finalement il traite d&rsquo;une technique d&rsquo;exfiltration que l&rsquo;on peut retrouver dans le wild pour ses qualités de discretion.</p>
+</div>
+  
+    <div class="mt-16">
+
+</div>
+  
+</article>
+      </div>
+    </main><footer class="fixed left-0 bottom-0 w-full bg-base px-page-gutter">
+  <div class="flex justify-center items-center h-footer-height">
+    <div
+      class="flex flex-row w-full max-w-content justify-between lowercase italic gap-3"
+    >
+      <nav>
+        <a href="http://localhost:1313//index.xml"
+          ><svg
+            width="18px"
+            height="18px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+        </a>
+      </nav>
+      <span class="text-muted hidden md:block">
+        &copy;
+        2025
+        <a
+          href="https://github.com/ntk148v/hugo-toigian"
+          class="font-bold hover:underline"
+          >hugo-toigian</a
+        >
+      </span>
+      <div id="header-theme-button">
+        <svg
+          id="dark_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          />
+        </svg>
+        <svg
+          id="light_mode_btn"
+          class="hidden toolbox-btn"
+          width="18px"
+          height="18px"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
