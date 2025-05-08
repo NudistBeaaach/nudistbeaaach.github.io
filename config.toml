@@ -31,6 +31,10 @@ email = "taylordedordogne@gmail.com"
 [build]
   writeStats = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [frontmatter]
   date = ['date', 'publishDate', 'lastmod']
   expiryDate = ['expiryDate']
